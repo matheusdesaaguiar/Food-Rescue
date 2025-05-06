@@ -1,0 +1,27 @@
+{
+  "name": "squadm4",
+  "version": "1.0.0",
+  "main": "/src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiel7/SquadM4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadiel7/SquadM4/issues"
+  },
+  "homepage": "https://github.com/hadiel7/SquadM4#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
