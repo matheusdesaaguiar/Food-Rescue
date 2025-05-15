@@ -38,8 +38,25 @@ const deleteReport = async (req, res) => {
   }
 };
 
-const getGlobalImpact = async (req, res) => {};
-const calculateEquivalence = async (req, res) => {};
+const getGlobalImpact = async (req, res) => {
+  try {
+    const total = await impactService.getGlobalImpact();
+    res.json({message: 'Impacto global calculado com sucesso', totalSavedFoodKg: total});//vai retorna o total de todos os relatórios
+  } catch (error) {
+    res.status(500).json({message: 'Erro ao buscar o impacto global', error: error.message});
+  }
+};
+// a lógica para os cálculos do impact global e para calcular a equivalência irei colocar no service
+// assim como alguma validação de dados que seja necessária após os testes iniciais de rota.
+
+const calculateEquivalence = async (req, res) => {
+  try {
+    const result = await impactService.calculeteEquivalence(req.body.savedFoodKg);
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({message: 'Erro ao calcular a equivalência', error: error.message});
+  }
+};
 
 export default {
   createReport,
