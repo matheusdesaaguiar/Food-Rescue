@@ -1,6 +1,6 @@
 import impactService from '../services/impactService.js';//precisa criar ainda
 
-//falta implementar a lógica de cada função, mas a estrutura está pronta das rotas
+//falta implementar a lógica de cada função, mas a estrutura está pronta das rotas: feito
 const createReport = async (req, res) => {
   try {
     const report = await impactService.createReport(req.body);//preciso criar o service 
