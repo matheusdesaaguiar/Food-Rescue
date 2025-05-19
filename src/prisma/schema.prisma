@@ -10,6 +10,64 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file: .src/data/banco.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
+
+model Donars{ 
+  id          Int     @id @default(autoincrement())
+  nome        String
+  email       String
+  telefone    String
+  endereco    String
+  cnpj        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Beneficiary {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  email       String
+  telefone    String
+  endereco    String
+  cpf         String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ColectionPoints {
+  id          Int     @id @default(autoincrement())
+  nome        String
+  endereco    String
+  telefone    String
+  horario_de_funcionamento DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CampaingsAwareness {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  descricao   String
+  data_inicio DateTime
+  data_fim    DateTime
+  localizacao String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ReportsCampaign {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  descricao   String
+  localizacao String
+  quantidade_alimentos Int
+  quantidade_beneficiarios Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+
+
+
