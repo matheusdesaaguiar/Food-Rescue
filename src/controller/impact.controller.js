@@ -1,4 +1,4 @@
-import impactService from '../services/impactService.js';//precisa criar ainda
+import impactService from '../services/impact.service.js';//precisa criar ainda
 
 //falta implementar a lógica de cada função, mas a estrutura está pronta das rotas: feito
 const createReport = async (req, res) => {
