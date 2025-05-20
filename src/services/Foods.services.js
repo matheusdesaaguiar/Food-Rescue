@@ -23,3 +23,16 @@ export const getAllFoodsByCategory = async (categoryId) => {
     throw new Error("Error fetching foods by category: " + error.message);
   }
 }
+
+const getAllFoodsByCategory = async (categoryId) => {
+  try {
+    const foods = await prisma.food.Update({
+      where: {
+        categoryId: categoryId
+      }
+    });
+    return foods;
+  }
+  catch (error) {
+    throw new Error("Error fetching foods by category: " + error.message);
+  }}
