@@ -120,7 +120,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.DonarsScalarFieldEnum = {
+exports.Prisma.DonorScalarFieldEnum = {
   id: 'id',
   nome: 'nome',
   email: 'email',
@@ -142,8 +142,11 @@ exports.Prisma.BeneficiaryScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ColectionPointsScalarFieldEnum = {
+exports.Prisma.CollectionPointsScalarFieldEnum = {
   id: 'id',
+  beneficiaryId: 'beneficiaryId',
+  impactReportId: 'impactReportId',
+  campaigsAwarenessId: 'campaigsAwarenessId',
   nome: 'nome',
   endereco: 'endereco',
   telefone: 'telefone',
@@ -152,7 +155,7 @@ exports.Prisma.ColectionPointsScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.CampaingsAwarenessScalarFieldEnum = {
+exports.Prisma.CampaigsAwarenessScalarFieldEnum = {
   id: 'id',
   nome: 'nome',
   descricao: 'descricao',
@@ -186,10 +189,10 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Donars: 'Donars',
+  Donor: 'Donor',
   Beneficiary: 'Beneficiary',
-  ColectionPoints: 'ColectionPoints',
-  CampaingsAwareness: 'CampaingsAwareness',
+  CollectionPoints: 'CollectionPoints',
+  CampaigsAwareness: 'CampaigsAwareness',
   ReportsCampaign: 'ReportsCampaign'
 };
 

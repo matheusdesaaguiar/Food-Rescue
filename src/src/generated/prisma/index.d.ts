@@ -14,25 +14,25 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Donars
+ * Model Donor
  * 
  */
-export type Donars = $Result.DefaultSelection<Prisma.$DonarsPayload>
+export type Donor = $Result.DefaultSelection<Prisma.$DonorPayload>
 /**
  * Model Beneficiary
  * 
  */
 export type Beneficiary = $Result.DefaultSelection<Prisma.$BeneficiaryPayload>
 /**
- * Model ColectionPoints
+ * Model CollectionPoints
  * 
  */
-export type ColectionPoints = $Result.DefaultSelection<Prisma.$ColectionPointsPayload>
+export type CollectionPoints = $Result.DefaultSelection<Prisma.$CollectionPointsPayload>
 /**
- * Model CampaingsAwareness
+ * Model CampaigsAwareness
  * 
  */
-export type CampaingsAwareness = $Result.DefaultSelection<Prisma.$CampaingsAwarenessPayload>
+export type CampaigsAwareness = $Result.DefaultSelection<Prisma.$CampaigsAwarenessPayload>
 /**
  * Model ReportsCampaign
  * 
@@ -46,8 +46,8 @@ export type ReportsCampaign = $Result.DefaultSelection<Prisma.$ReportsCampaignPa
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Donars
- * const donars = await prisma.donars.findMany()
+ * // Fetch zero or more Donors
+ * const donors = await prisma.donor.findMany()
  * ```
  *
  *
@@ -67,8 +67,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Donars
-   * const donars = await prisma.donars.findMany()
+   * // Fetch zero or more Donors
+   * const donors = await prisma.donor.findMany()
    * ```
    *
    *
@@ -165,14 +165,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.donars`: Exposes CRUD operations for the **Donars** model.
+   * `prisma.donor`: Exposes CRUD operations for the **Donor** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Donars
-    * const donars = await prisma.donars.findMany()
+    * // Fetch zero or more Donors
+    * const donors = await prisma.donor.findMany()
     * ```
     */
-  get donars(): Prisma.DonarsDelegate<ExtArgs, ClientOptions>;
+  get donor(): Prisma.DonorDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.beneficiary`: Exposes CRUD operations for the **Beneficiary** model.
@@ -185,24 +185,24 @@ export class PrismaClient<
   get beneficiary(): Prisma.BeneficiaryDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.colectionPoints`: Exposes CRUD operations for the **ColectionPoints** model.
+   * `prisma.collectionPoints`: Exposes CRUD operations for the **CollectionPoints** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more ColectionPoints
-    * const colectionPoints = await prisma.colectionPoints.findMany()
+    * // Fetch zero or more CollectionPoints
+    * const collectionPoints = await prisma.collectionPoints.findMany()
     * ```
     */
-  get colectionPoints(): Prisma.ColectionPointsDelegate<ExtArgs, ClientOptions>;
+  get collectionPoints(): Prisma.CollectionPointsDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.campaingsAwareness`: Exposes CRUD operations for the **CampaingsAwareness** model.
+   * `prisma.campaigsAwareness`: Exposes CRUD operations for the **CampaigsAwareness** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more CampaingsAwarenesses
-    * const campaingsAwarenesses = await prisma.campaingsAwareness.findMany()
+    * // Fetch zero or more CampaigsAwarenesses
+    * const campaigsAwarenesses = await prisma.campaigsAwareness.findMany()
     * ```
     */
-  get campaingsAwareness(): Prisma.CampaingsAwarenessDelegate<ExtArgs, ClientOptions>;
+  get campaigsAwareness(): Prisma.CampaigsAwarenessDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.reportsCampaign`: Exposes CRUD operations for the **ReportsCampaign** model.
@@ -653,10 +653,10 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Donars: 'Donars',
+    Donor: 'Donor',
     Beneficiary: 'Beneficiary',
-    ColectionPoints: 'ColectionPoints',
-    CampaingsAwareness: 'CampaingsAwareness',
+    CollectionPoints: 'CollectionPoints',
+    CampaigsAwareness: 'CampaigsAwareness',
     ReportsCampaign: 'ReportsCampaign'
   };
 
@@ -676,81 +676,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "donars" | "beneficiary" | "colectionPoints" | "campaingsAwareness" | "reportsCampaign"
+      modelProps: "donor" | "beneficiary" | "collectionPoints" | "campaigsAwareness" | "reportsCampaign"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Donars: {
-        payload: Prisma.$DonarsPayload<ExtArgs>
-        fields: Prisma.DonarsFieldRefs
+      Donor: {
+        payload: Prisma.$DonorPayload<ExtArgs>
+        fields: Prisma.DonorFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.DonarsFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload> | null
+            args: Prisma.DonorFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.DonarsFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           findFirst: {
-            args: Prisma.DonarsFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload> | null
+            args: Prisma.DonorFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.DonarsFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           findMany: {
-            args: Prisma.DonarsFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>[]
+            args: Prisma.DonorFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>[]
           }
           create: {
-            args: Prisma.DonarsCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           createMany: {
-            args: Prisma.DonarsCreateManyArgs<ExtArgs>
+            args: Prisma.DonorCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.DonarsCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>[]
+            args: Prisma.DonorCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>[]
           }
           delete: {
-            args: Prisma.DonarsDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           update: {
-            args: Prisma.DonarsUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           deleteMany: {
-            args: Prisma.DonarsDeleteManyArgs<ExtArgs>
+            args: Prisma.DonorDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.DonarsUpdateManyArgs<ExtArgs>
+            args: Prisma.DonorUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.DonarsUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>[]
+            args: Prisma.DonorUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>[]
           }
           upsert: {
-            args: Prisma.DonarsUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$DonarsPayload>
+            args: Prisma.DonorUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DonorPayload>
           }
           aggregate: {
-            args: Prisma.DonarsAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateDonars>
+            args: Prisma.DonorAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateDonor>
           }
           groupBy: {
-            args: Prisma.DonarsGroupByArgs<ExtArgs>
-            result: $Utils.Optional<DonarsGroupByOutputType>[]
+            args: Prisma.DonorGroupByArgs<ExtArgs>
+            result: $Utils.Optional<DonorGroupByOutputType>[]
           }
           count: {
-            args: Prisma.DonarsCountArgs<ExtArgs>
-            result: $Utils.Optional<DonarsCountAggregateOutputType> | number
+            args: Prisma.DonorCountArgs<ExtArgs>
+            result: $Utils.Optional<DonorCountAggregateOutputType> | number
           }
         }
       }
@@ -828,151 +828,151 @@ export namespace Prisma {
           }
         }
       }
-      ColectionPoints: {
-        payload: Prisma.$ColectionPointsPayload<ExtArgs>
-        fields: Prisma.ColectionPointsFieldRefs
+      CollectionPoints: {
+        payload: Prisma.$CollectionPointsPayload<ExtArgs>
+        fields: Prisma.CollectionPointsFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ColectionPointsFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload> | null
+            args: Prisma.CollectionPointsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ColectionPointsFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           findFirst: {
-            args: Prisma.ColectionPointsFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload> | null
+            args: Prisma.CollectionPointsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ColectionPointsFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           findMany: {
-            args: Prisma.ColectionPointsFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>[]
+            args: Prisma.CollectionPointsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>[]
           }
           create: {
-            args: Prisma.ColectionPointsCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           createMany: {
-            args: Prisma.ColectionPointsCreateManyArgs<ExtArgs>
+            args: Prisma.CollectionPointsCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ColectionPointsCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>[]
+            args: Prisma.CollectionPointsCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>[]
           }
           delete: {
-            args: Prisma.ColectionPointsDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           update: {
-            args: Prisma.ColectionPointsUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           deleteMany: {
-            args: Prisma.ColectionPointsDeleteManyArgs<ExtArgs>
+            args: Prisma.CollectionPointsDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ColectionPointsUpdateManyArgs<ExtArgs>
+            args: Prisma.CollectionPointsUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ColectionPointsUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>[]
+            args: Prisma.CollectionPointsUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>[]
           }
           upsert: {
-            args: Prisma.ColectionPointsUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ColectionPointsPayload>
+            args: Prisma.CollectionPointsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CollectionPointsPayload>
           }
           aggregate: {
-            args: Prisma.ColectionPointsAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateColectionPoints>
+            args: Prisma.CollectionPointsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCollectionPoints>
           }
           groupBy: {
-            args: Prisma.ColectionPointsGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ColectionPointsGroupByOutputType>[]
+            args: Prisma.CollectionPointsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CollectionPointsGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ColectionPointsCountArgs<ExtArgs>
-            result: $Utils.Optional<ColectionPointsCountAggregateOutputType> | number
+            args: Prisma.CollectionPointsCountArgs<ExtArgs>
+            result: $Utils.Optional<CollectionPointsCountAggregateOutputType> | number
           }
         }
       }
-      CampaingsAwareness: {
-        payload: Prisma.$CampaingsAwarenessPayload<ExtArgs>
-        fields: Prisma.CampaingsAwarenessFieldRefs
+      CampaigsAwareness: {
+        payload: Prisma.$CampaigsAwarenessPayload<ExtArgs>
+        fields: Prisma.CampaigsAwarenessFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.CampaingsAwarenessFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload> | null
+            args: Prisma.CampaigsAwarenessFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.CampaingsAwarenessFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           findFirst: {
-            args: Prisma.CampaingsAwarenessFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload> | null
+            args: Prisma.CampaigsAwarenessFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.CampaingsAwarenessFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           findMany: {
-            args: Prisma.CampaingsAwarenessFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>[]
+            args: Prisma.CampaigsAwarenessFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>[]
           }
           create: {
-            args: Prisma.CampaingsAwarenessCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           createMany: {
-            args: Prisma.CampaingsAwarenessCreateManyArgs<ExtArgs>
+            args: Prisma.CampaigsAwarenessCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.CampaingsAwarenessCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>[]
+            args: Prisma.CampaigsAwarenessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>[]
           }
           delete: {
-            args: Prisma.CampaingsAwarenessDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           update: {
-            args: Prisma.CampaingsAwarenessUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           deleteMany: {
-            args: Prisma.CampaingsAwarenessDeleteManyArgs<ExtArgs>
+            args: Prisma.CampaigsAwarenessDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.CampaingsAwarenessUpdateManyArgs<ExtArgs>
+            args: Prisma.CampaigsAwarenessUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.CampaingsAwarenessUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>[]
+            args: Prisma.CampaigsAwarenessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>[]
           }
           upsert: {
-            args: Prisma.CampaingsAwarenessUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CampaingsAwarenessPayload>
+            args: Prisma.CampaigsAwarenessUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CampaigsAwarenessPayload>
           }
           aggregate: {
-            args: Prisma.CampaingsAwarenessAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateCampaingsAwareness>
+            args: Prisma.CampaigsAwarenessAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCampaigsAwareness>
           }
           groupBy: {
-            args: Prisma.CampaingsAwarenessGroupByArgs<ExtArgs>
-            result: $Utils.Optional<CampaingsAwarenessGroupByOutputType>[]
+            args: Prisma.CampaigsAwarenessGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CampaigsAwarenessGroupByOutputType>[]
           }
           count: {
-            args: Prisma.CampaingsAwarenessCountArgs<ExtArgs>
-            result: $Utils.Optional<CampaingsAwarenessCountAggregateOutputType> | number
+            args: Prisma.CampaigsAwarenessCountArgs<ExtArgs>
+            result: $Utils.Optional<CampaigsAwarenessCountAggregateOutputType> | number
           }
         }
       }
@@ -1134,10 +1134,10 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    donars?: DonarsOmit
+    donor?: DonorOmit
     beneficiary?: BeneficiaryOmit
-    colectionPoints?: ColectionPointsOmit
-    campaingsAwareness?: CampaingsAwarenessOmit
+    collectionPoints?: CollectionPointsOmit
+    campaigsAwareness?: CampaigsAwarenessOmit
     reportsCampaign?: ReportsCampaignOmit
   }
 
@@ -1228,43 +1228,124 @@ export namespace Prisma {
    */
 
 
+  /**
+   * Count Type BeneficiaryCountOutputType
+   */
+
+  export type BeneficiaryCountOutputType = {
+    collectionPoints: number
+  }
+
+  export type BeneficiaryCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | BeneficiaryCountOutputTypeCountCollectionPointsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * BeneficiaryCountOutputType without action
+   */
+  export type BeneficiaryCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BeneficiaryCountOutputType
+     */
+    select?: BeneficiaryCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * BeneficiaryCountOutputType without action
+   */
+  export type BeneficiaryCountOutputTypeCountCollectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CollectionPointsWhereInput
+  }
+
+
+  /**
+   * Count Type CampaigsAwarenessCountOutputType
+   */
+
+  export type CampaigsAwarenessCountOutputType = {
+    collectionPoints: number
+  }
+
+  export type CampaigsAwarenessCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | CampaigsAwarenessCountOutputTypeCountCollectionPointsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * CampaigsAwarenessCountOutputType without action
+   */
+  export type CampaigsAwarenessCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CampaigsAwarenessCountOutputType
+     */
+    select?: CampaigsAwarenessCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * CampaigsAwarenessCountOutputType without action
+   */
+  export type CampaigsAwarenessCountOutputTypeCountCollectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CollectionPointsWhereInput
+  }
+
+
+  /**
+   * Count Type ReportsCampaignCountOutputType
+   */
+
+  export type ReportsCampaignCountOutputType = {
+    collectionPoints: number
+  }
+
+  export type ReportsCampaignCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | ReportsCampaignCountOutputTypeCountCollectionPointsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ReportsCampaignCountOutputType without action
+   */
+  export type ReportsCampaignCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportsCampaignCountOutputType
+     */
+    select?: ReportsCampaignCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ReportsCampaignCountOutputType without action
+   */
+  export type ReportsCampaignCountOutputTypeCountCollectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CollectionPointsWhereInput
+  }
+
 
   /**
    * Models
    */
 
   /**
-   * Model Donars
+   * Model Donor
    */
 
-  export type AggregateDonars = {
-    _count: DonarsCountAggregateOutputType | null
-    _avg: DonarsAvgAggregateOutputType | null
-    _sum: DonarsSumAggregateOutputType | null
-    _min: DonarsMinAggregateOutputType | null
-    _max: DonarsMaxAggregateOutputType | null
+  export type AggregateDonor = {
+    _count: DonorCountAggregateOutputType | null
+    _avg: DonorAvgAggregateOutputType | null
+    _sum: DonorSumAggregateOutputType | null
+    _min: DonorMinAggregateOutputType | null
+    _max: DonorMaxAggregateOutputType | null
   }
 
-  export type DonarsAvgAggregateOutputType = {
+  export type DonorAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type DonarsSumAggregateOutputType = {
+  export type DonorSumAggregateOutputType = {
     id: number | null
   }
 
-  export type DonarsMinAggregateOutputType = {
-    id: number | null
-    nome: string | null
-    email: string | null
-    telefone: string | null
-    endereco: string | null
-    cnpj: string | null
-    createdAt: Date | null
-    updatedAt: Date | null
-  }
-
-  export type DonarsMaxAggregateOutputType = {
+  export type DonorMinAggregateOutputType = {
     id: number | null
     nome: string | null
     email: string | null
@@ -1275,7 +1356,18 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type DonarsCountAggregateOutputType = {
+  export type DonorMaxAggregateOutputType = {
+    id: number | null
+    nome: string | null
+    email: string | null
+    telefone: string | null
+    endereco: string | null
+    cnpj: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DonorCountAggregateOutputType = {
     id: number
     nome: number
     email: number
@@ -1288,26 +1380,15 @@ export namespace Prisma {
   }
 
 
-  export type DonarsAvgAggregateInputType = {
+  export type DonorAvgAggregateInputType = {
     id?: true
   }
 
-  export type DonarsSumAggregateInputType = {
+  export type DonorSumAggregateInputType = {
     id?: true
   }
 
-  export type DonarsMinAggregateInputType = {
-    id?: true
-    nome?: true
-    email?: true
-    telefone?: true
-    endereco?: true
-    cnpj?: true
-    createdAt?: true
-    updatedAt?: true
-  }
-
-  export type DonarsMaxAggregateInputType = {
+  export type DonorMinAggregateInputType = {
     id?: true
     nome?: true
     email?: true
@@ -1318,7 +1399,18 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type DonarsCountAggregateInputType = {
+  export type DonorMaxAggregateInputType = {
+    id?: true
+    nome?: true
+    email?: true
+    telefone?: true
+    endereco?: true
+    cnpj?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DonorCountAggregateInputType = {
     id?: true
     nome?: true
     email?: true
@@ -1330,93 +1422,93 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type DonarsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Donars to aggregate.
+     * Filter which Donor to aggregate.
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Donars to fetch.
+     * Determine the order of Donors to fetch.
      */
-    orderBy?: DonarsOrderByWithRelationInput | DonarsOrderByWithRelationInput[]
+    orderBy?: DonorOrderByWithRelationInput | DonorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: DonarsWhereUniqueInput
+    cursor?: DonorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Donars from the position of the cursor.
+     * Take `±n` Donors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Donars.
+     * Skip the first `n` Donors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Donars
+     * Count returned Donors
     **/
-    _count?: true | DonarsCountAggregateInputType
+    _count?: true | DonorCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: DonarsAvgAggregateInputType
+    _avg?: DonorAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: DonarsSumAggregateInputType
+    _sum?: DonorSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: DonarsMinAggregateInputType
+    _min?: DonorMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: DonarsMaxAggregateInputType
+    _max?: DonorMaxAggregateInputType
   }
 
-  export type GetDonarsAggregateType<T extends DonarsAggregateArgs> = {
-        [P in keyof T & keyof AggregateDonars]: P extends '_count' | 'count'
+  export type GetDonorAggregateType<T extends DonorAggregateArgs> = {
+        [P in keyof T & keyof AggregateDonor]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateDonars[P]>
-      : GetScalarType<T[P], AggregateDonars[P]>
+        : GetScalarType<T[P], AggregateDonor[P]>
+      : GetScalarType<T[P], AggregateDonor[P]>
   }
 
 
 
 
-  export type DonarsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: DonarsWhereInput
-    orderBy?: DonarsOrderByWithAggregationInput | DonarsOrderByWithAggregationInput[]
-    by: DonarsScalarFieldEnum[] | DonarsScalarFieldEnum
-    having?: DonarsScalarWhereWithAggregatesInput
+  export type DonorGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DonorWhereInput
+    orderBy?: DonorOrderByWithAggregationInput | DonorOrderByWithAggregationInput[]
+    by: DonorScalarFieldEnum[] | DonorScalarFieldEnum
+    having?: DonorScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: DonarsCountAggregateInputType | true
-    _avg?: DonarsAvgAggregateInputType
-    _sum?: DonarsSumAggregateInputType
-    _min?: DonarsMinAggregateInputType
-    _max?: DonarsMaxAggregateInputType
+    _count?: DonorCountAggregateInputType | true
+    _avg?: DonorAvgAggregateInputType
+    _sum?: DonorSumAggregateInputType
+    _min?: DonorMinAggregateInputType
+    _max?: DonorMaxAggregateInputType
   }
 
-  export type DonarsGroupByOutputType = {
+  export type DonorGroupByOutputType = {
     id: number
     nome: string
     email: string
@@ -1425,28 +1517,28 @@ export namespace Prisma {
     cnpj: string
     createdAt: Date
     updatedAt: Date
-    _count: DonarsCountAggregateOutputType | null
-    _avg: DonarsAvgAggregateOutputType | null
-    _sum: DonarsSumAggregateOutputType | null
-    _min: DonarsMinAggregateOutputType | null
-    _max: DonarsMaxAggregateOutputType | null
+    _count: DonorCountAggregateOutputType | null
+    _avg: DonorAvgAggregateOutputType | null
+    _sum: DonorSumAggregateOutputType | null
+    _min: DonorMinAggregateOutputType | null
+    _max: DonorMaxAggregateOutputType | null
   }
 
-  type GetDonarsGroupByPayload<T extends DonarsGroupByArgs> = Prisma.PrismaPromise<
+  type GetDonorGroupByPayload<T extends DonorGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<DonarsGroupByOutputType, T['by']> &
+      PickEnumerable<DonorGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof DonarsGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof DonorGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], DonarsGroupByOutputType[P]>
-            : GetScalarType<T[P], DonarsGroupByOutputType[P]>
+              : GetScalarType<T[P], DonorGroupByOutputType[P]>
+            : GetScalarType<T[P], DonorGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type DonarsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type DonorSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     email?: boolean
@@ -1455,9 +1547,9 @@ export namespace Prisma {
     cnpj?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["donars"]>
+  }, ExtArgs["result"]["donor"]>
 
-  export type DonarsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type DonorSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     email?: boolean
@@ -1466,9 +1558,9 @@ export namespace Prisma {
     cnpj?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["donars"]>
+  }, ExtArgs["result"]["donor"]>
 
-  export type DonarsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type DonorSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     email?: boolean
@@ -1477,9 +1569,9 @@ export namespace Prisma {
     cnpj?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["donars"]>
+  }, ExtArgs["result"]["donor"]>
 
-  export type DonarsSelectScalar = {
+  export type DonorSelectScalar = {
     id?: boolean
     nome?: boolean
     email?: boolean
@@ -1490,10 +1582,10 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type DonarsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "email" | "telefone" | "endereco" | "cnpj" | "createdAt" | "updatedAt", ExtArgs["result"]["donars"]>
+  export type DonorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "email" | "telefone" | "endereco" | "cnpj" | "createdAt" | "updatedAt", ExtArgs["result"]["donor"]>
 
-  export type $DonarsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Donars"
+  export type $DonorPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Donor"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1504,136 +1596,136 @@ export namespace Prisma {
       cnpj: string
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["donars"]>
+    }, ExtArgs["result"]["donor"]>
     composites: {}
   }
 
-  type DonarsGetPayload<S extends boolean | null | undefined | DonarsDefaultArgs> = $Result.GetResult<Prisma.$DonarsPayload, S>
+  type DonorGetPayload<S extends boolean | null | undefined | DonorDefaultArgs> = $Result.GetResult<Prisma.$DonorPayload, S>
 
-  type DonarsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<DonarsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: DonarsCountAggregateInputType | true
+  type DonorCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<DonorFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: DonorCountAggregateInputType | true
     }
 
-  export interface DonarsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Donars'], meta: { name: 'Donars' } }
+  export interface DonorDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Donor'], meta: { name: 'Donor' } }
     /**
-     * Find zero or one Donars that matches the filter.
-     * @param {DonarsFindUniqueArgs} args - Arguments to find a Donars
+     * Find zero or one Donor that matches the filter.
+     * @param {DonorFindUniqueArgs} args - Arguments to find a Donor
      * @example
-     * // Get one Donars
-     * const donars = await prisma.donars.findUnique({
+     * // Get one Donor
+     * const donor = await prisma.donor.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends DonarsFindUniqueArgs>(args: SelectSubset<T, DonarsFindUniqueArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends DonorFindUniqueArgs>(args: SelectSubset<T, DonorFindUniqueArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Donars that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Donor that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {DonarsFindUniqueOrThrowArgs} args - Arguments to find a Donars
+     * @param {DonorFindUniqueOrThrowArgs} args - Arguments to find a Donor
      * @example
-     * // Get one Donars
-     * const donars = await prisma.donars.findUniqueOrThrow({
+     * // Get one Donor
+     * const donor = await prisma.donor.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends DonarsFindUniqueOrThrowArgs>(args: SelectSubset<T, DonarsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends DonorFindUniqueOrThrowArgs>(args: SelectSubset<T, DonorFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Donars that matches the filter.
+     * Find the first Donor that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsFindFirstArgs} args - Arguments to find a Donars
+     * @param {DonorFindFirstArgs} args - Arguments to find a Donor
      * @example
-     * // Get one Donars
-     * const donars = await prisma.donars.findFirst({
+     * // Get one Donor
+     * const donor = await prisma.donor.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends DonarsFindFirstArgs>(args?: SelectSubset<T, DonarsFindFirstArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends DonorFindFirstArgs>(args?: SelectSubset<T, DonorFindFirstArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Donars that matches the filter or
+     * Find the first Donor that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsFindFirstOrThrowArgs} args - Arguments to find a Donars
+     * @param {DonorFindFirstOrThrowArgs} args - Arguments to find a Donor
      * @example
-     * // Get one Donars
-     * const donars = await prisma.donars.findFirstOrThrow({
+     * // Get one Donor
+     * const donor = await prisma.donor.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends DonarsFindFirstOrThrowArgs>(args?: SelectSubset<T, DonarsFindFirstOrThrowArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends DonorFindFirstOrThrowArgs>(args?: SelectSubset<T, DonorFindFirstOrThrowArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Donars that matches the filter.
+     * Find zero or more Donors that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {DonorFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Donars
-     * const donars = await prisma.donars.findMany()
+     * // Get all Donors
+     * const donors = await prisma.donor.findMany()
      * 
-     * // Get first 10 Donars
-     * const donars = await prisma.donars.findMany({ take: 10 })
+     * // Get first 10 Donors
+     * const donors = await prisma.donor.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const donarsWithIdOnly = await prisma.donars.findMany({ select: { id: true } })
+     * const donorWithIdOnly = await prisma.donor.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends DonarsFindManyArgs>(args?: SelectSubset<T, DonarsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends DonorFindManyArgs>(args?: SelectSubset<T, DonorFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Donars.
-     * @param {DonarsCreateArgs} args - Arguments to create a Donars.
+     * Create a Donor.
+     * @param {DonorCreateArgs} args - Arguments to create a Donor.
      * @example
-     * // Create one Donars
-     * const Donars = await prisma.donars.create({
+     * // Create one Donor
+     * const Donor = await prisma.donor.create({
      *   data: {
-     *     // ... data to create a Donars
+     *     // ... data to create a Donor
      *   }
      * })
      * 
      */
-    create<T extends DonarsCreateArgs>(args: SelectSubset<T, DonarsCreateArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends DonorCreateArgs>(args: SelectSubset<T, DonorCreateArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Donars.
-     * @param {DonarsCreateManyArgs} args - Arguments to create many Donars.
+     * Create many Donors.
+     * @param {DonorCreateManyArgs} args - Arguments to create many Donors.
      * @example
-     * // Create many Donars
-     * const donars = await prisma.donars.createMany({
+     * // Create many Donors
+     * const donor = await prisma.donor.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends DonarsCreateManyArgs>(args?: SelectSubset<T, DonarsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends DonorCreateManyArgs>(args?: SelectSubset<T, DonorCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Donars and returns the data saved in the database.
-     * @param {DonarsCreateManyAndReturnArgs} args - Arguments to create many Donars.
+     * Create many Donors and returns the data saved in the database.
+     * @param {DonorCreateManyAndReturnArgs} args - Arguments to create many Donors.
      * @example
-     * // Create many Donars
-     * const donars = await prisma.donars.createManyAndReturn({
+     * // Create many Donors
+     * const donor = await prisma.donor.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Donars and only return the `id`
-     * const donarsWithIdOnly = await prisma.donars.createManyAndReturn({
+     * // Create many Donors and only return the `id`
+     * const donorWithIdOnly = await prisma.donor.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1643,28 +1735,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends DonarsCreateManyAndReturnArgs>(args?: SelectSubset<T, DonarsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends DonorCreateManyAndReturnArgs>(args?: SelectSubset<T, DonorCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Donars.
-     * @param {DonarsDeleteArgs} args - Arguments to delete one Donars.
+     * Delete a Donor.
+     * @param {DonorDeleteArgs} args - Arguments to delete one Donor.
      * @example
-     * // Delete one Donars
-     * const Donars = await prisma.donars.delete({
+     * // Delete one Donor
+     * const Donor = await prisma.donor.delete({
      *   where: {
-     *     // ... filter to delete one Donars
+     *     // ... filter to delete one Donor
      *   }
      * })
      * 
      */
-    delete<T extends DonarsDeleteArgs>(args: SelectSubset<T, DonarsDeleteArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends DonorDeleteArgs>(args: SelectSubset<T, DonorDeleteArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Donars.
-     * @param {DonarsUpdateArgs} args - Arguments to update one Donars.
+     * Update one Donor.
+     * @param {DonorUpdateArgs} args - Arguments to update one Donor.
      * @example
-     * // Update one Donars
-     * const donars = await prisma.donars.update({
+     * // Update one Donor
+     * const donor = await prisma.donor.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1674,30 +1766,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends DonarsUpdateArgs>(args: SelectSubset<T, DonarsUpdateArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends DonorUpdateArgs>(args: SelectSubset<T, DonorUpdateArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Donars.
-     * @param {DonarsDeleteManyArgs} args - Arguments to filter Donars to delete.
+     * Delete zero or more Donors.
+     * @param {DonorDeleteManyArgs} args - Arguments to filter Donors to delete.
      * @example
-     * // Delete a few Donars
-     * const { count } = await prisma.donars.deleteMany({
+     * // Delete a few Donors
+     * const { count } = await prisma.donor.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends DonarsDeleteManyArgs>(args?: SelectSubset<T, DonarsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends DonorDeleteManyArgs>(args?: SelectSubset<T, DonorDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Donars.
+     * Update zero or more Donors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {DonorUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Donars
-     * const donars = await prisma.donars.updateMany({
+     * // Update many Donors
+     * const donor = await prisma.donor.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1707,14 +1799,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends DonarsUpdateManyArgs>(args: SelectSubset<T, DonarsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends DonorUpdateManyArgs>(args: SelectSubset<T, DonorUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Donars and returns the data updated in the database.
-     * @param {DonarsUpdateManyAndReturnArgs} args - Arguments to update many Donars.
+     * Update zero or more Donors and returns the data updated in the database.
+     * @param {DonorUpdateManyAndReturnArgs} args - Arguments to update many Donors.
      * @example
-     * // Update many Donars
-     * const donars = await prisma.donars.updateManyAndReturn({
+     * // Update many Donors
+     * const donor = await prisma.donor.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1723,8 +1815,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Donars and only return the `id`
-     * const donarsWithIdOnly = await prisma.donars.updateManyAndReturn({
+     * // Update zero or more Donors and only return the `id`
+     * const donorWithIdOnly = await prisma.donor.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1737,56 +1829,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends DonarsUpdateManyAndReturnArgs>(args: SelectSubset<T, DonarsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends DonorUpdateManyAndReturnArgs>(args: SelectSubset<T, DonorUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Donars.
-     * @param {DonarsUpsertArgs} args - Arguments to update or create a Donars.
+     * Create or update one Donor.
+     * @param {DonorUpsertArgs} args - Arguments to update or create a Donor.
      * @example
-     * // Update or create a Donars
-     * const donars = await prisma.donars.upsert({
+     * // Update or create a Donor
+     * const donor = await prisma.donor.upsert({
      *   create: {
-     *     // ... data to create a Donars
+     *     // ... data to create a Donor
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Donars we want to update
+     *     // ... the filter for the Donor we want to update
      *   }
      * })
      */
-    upsert<T extends DonarsUpsertArgs>(args: SelectSubset<T, DonarsUpsertArgs<ExtArgs>>): Prisma__DonarsClient<$Result.GetResult<Prisma.$DonarsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends DonorUpsertArgs>(args: SelectSubset<T, DonorUpsertArgs<ExtArgs>>): Prisma__DonorClient<$Result.GetResult<Prisma.$DonorPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Donars.
+     * Count the number of Donors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsCountArgs} args - Arguments to filter Donars to count.
+     * @param {DonorCountArgs} args - Arguments to filter Donors to count.
      * @example
-     * // Count the number of Donars
-     * const count = await prisma.donars.count({
+     * // Count the number of Donors
+     * const count = await prisma.donor.count({
      *   where: {
-     *     // ... the filter for the Donars we want to count
+     *     // ... the filter for the Donors we want to count
      *   }
      * })
     **/
-    count<T extends DonarsCountArgs>(
-      args?: Subset<T, DonarsCountArgs>,
+    count<T extends DonorCountArgs>(
+      args?: Subset<T, DonorCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], DonarsCountAggregateOutputType>
+          : GetScalarType<T['select'], DonorCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Donars.
+     * Allows you to perform aggregations operations on a Donor.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {DonorAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1806,13 +1898,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends DonarsAggregateArgs>(args: Subset<T, DonarsAggregateArgs>): Prisma.PrismaPromise<GetDonarsAggregateType<T>>
+    aggregate<T extends DonorAggregateArgs>(args: Subset<T, DonorAggregateArgs>): Prisma.PrismaPromise<GetDonorAggregateType<T>>
 
     /**
-     * Group by Donars.
+     * Group by Donor.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {DonarsGroupByArgs} args - Group by arguments.
+     * @param {DonorGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1827,14 +1919,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends DonarsGroupByArgs,
+      T extends DonorGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: DonarsGroupByArgs['orderBy'] }
-        : { orderBy?: DonarsGroupByArgs['orderBy'] },
+        ? { orderBy: DonorGroupByArgs['orderBy'] }
+        : { orderBy?: DonorGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1883,20 +1975,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, DonarsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDonarsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, DonorGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDonorGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Donars model
+   * Fields of the Donor model
    */
-  readonly fields: DonarsFieldRefs;
+  readonly fields: DonorFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Donars.
+   * The delegate class that acts as a "Promise-like" for Donor.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__DonarsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__DonorClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1924,380 +2016,380 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Donars model
+   * Fields of the Donor model
    */
-  interface DonarsFieldRefs {
-    readonly id: FieldRef<"Donars", 'Int'>
-    readonly nome: FieldRef<"Donars", 'String'>
-    readonly email: FieldRef<"Donars", 'String'>
-    readonly telefone: FieldRef<"Donars", 'String'>
-    readonly endereco: FieldRef<"Donars", 'String'>
-    readonly cnpj: FieldRef<"Donars", 'String'>
-    readonly createdAt: FieldRef<"Donars", 'DateTime'>
-    readonly updatedAt: FieldRef<"Donars", 'DateTime'>
+  interface DonorFieldRefs {
+    readonly id: FieldRef<"Donor", 'Int'>
+    readonly nome: FieldRef<"Donor", 'String'>
+    readonly email: FieldRef<"Donor", 'String'>
+    readonly telefone: FieldRef<"Donor", 'String'>
+    readonly endereco: FieldRef<"Donor", 'String'>
+    readonly cnpj: FieldRef<"Donor", 'String'>
+    readonly createdAt: FieldRef<"Donor", 'DateTime'>
+    readonly updatedAt: FieldRef<"Donor", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Donars findUnique
+   * Donor findUnique
    */
-  export type DonarsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter, which Donars to fetch.
+     * Filter, which Donor to fetch.
      */
-    where: DonarsWhereUniqueInput
+    where: DonorWhereUniqueInput
   }
 
   /**
-   * Donars findUniqueOrThrow
+   * Donor findUniqueOrThrow
    */
-  export type DonarsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter, which Donars to fetch.
+     * Filter, which Donor to fetch.
      */
-    where: DonarsWhereUniqueInput
+    where: DonorWhereUniqueInput
   }
 
   /**
-   * Donars findFirst
+   * Donor findFirst
    */
-  export type DonarsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter, which Donars to fetch.
+     * Filter, which Donor to fetch.
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Donars to fetch.
+     * Determine the order of Donors to fetch.
      */
-    orderBy?: DonarsOrderByWithRelationInput | DonarsOrderByWithRelationInput[]
+    orderBy?: DonorOrderByWithRelationInput | DonorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Donars.
+     * Sets the position for searching for Donors.
      */
-    cursor?: DonarsWhereUniqueInput
+    cursor?: DonorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Donars from the position of the cursor.
+     * Take `±n` Donors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Donars.
+     * Skip the first `n` Donors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Donars.
+     * Filter by unique combinations of Donors.
      */
-    distinct?: DonarsScalarFieldEnum | DonarsScalarFieldEnum[]
+    distinct?: DonorScalarFieldEnum | DonorScalarFieldEnum[]
   }
 
   /**
-   * Donars findFirstOrThrow
+   * Donor findFirstOrThrow
    */
-  export type DonarsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter, which Donars to fetch.
+     * Filter, which Donor to fetch.
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Donars to fetch.
+     * Determine the order of Donors to fetch.
      */
-    orderBy?: DonarsOrderByWithRelationInput | DonarsOrderByWithRelationInput[]
+    orderBy?: DonorOrderByWithRelationInput | DonorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Donars.
+     * Sets the position for searching for Donors.
      */
-    cursor?: DonarsWhereUniqueInput
+    cursor?: DonorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Donars from the position of the cursor.
+     * Take `±n` Donors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Donars.
+     * Skip the first `n` Donors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Donars.
+     * Filter by unique combinations of Donors.
      */
-    distinct?: DonarsScalarFieldEnum | DonarsScalarFieldEnum[]
+    distinct?: DonorScalarFieldEnum | DonorScalarFieldEnum[]
   }
 
   /**
-   * Donars findMany
+   * Donor findMany
    */
-  export type DonarsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter, which Donars to fetch.
+     * Filter, which Donors to fetch.
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Donars to fetch.
+     * Determine the order of Donors to fetch.
      */
-    orderBy?: DonarsOrderByWithRelationInput | DonarsOrderByWithRelationInput[]
+    orderBy?: DonorOrderByWithRelationInput | DonorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Donars.
+     * Sets the position for listing Donors.
      */
-    cursor?: DonarsWhereUniqueInput
+    cursor?: DonorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Donars from the position of the cursor.
+     * Take `±n` Donors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Donars.
+     * Skip the first `n` Donors.
      */
     skip?: number
-    distinct?: DonarsScalarFieldEnum | DonarsScalarFieldEnum[]
+    distinct?: DonorScalarFieldEnum | DonorScalarFieldEnum[]
   }
 
   /**
-   * Donars create
+   * Donor create
    */
-  export type DonarsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * The data needed to create a Donars.
+     * The data needed to create a Donor.
      */
-    data: XOR<DonarsCreateInput, DonarsUncheckedCreateInput>
+    data: XOR<DonorCreateInput, DonorUncheckedCreateInput>
   }
 
   /**
-   * Donars createMany
+   * Donor createMany
    */
-  export type DonarsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Donars.
+     * The data used to create many Donors.
      */
-    data: DonarsCreateManyInput | DonarsCreateManyInput[]
+    data: DonorCreateManyInput | DonorCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Donars createManyAndReturn
+   * Donor createManyAndReturn
    */
-  export type DonarsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelectCreateManyAndReturn<ExtArgs> | null
+    select?: DonorSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * The data used to create many Donars.
+     * The data used to create many Donors.
      */
-    data: DonarsCreateManyInput | DonarsCreateManyInput[]
+    data: DonorCreateManyInput | DonorCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Donars update
+   * Donor update
    */
-  export type DonarsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * The data needed to update a Donars.
+     * The data needed to update a Donor.
      */
-    data: XOR<DonarsUpdateInput, DonarsUncheckedUpdateInput>
+    data: XOR<DonorUpdateInput, DonorUncheckedUpdateInput>
     /**
-     * Choose, which Donars to update.
+     * Choose, which Donor to update.
      */
-    where: DonarsWhereUniqueInput
+    where: DonorWhereUniqueInput
   }
 
   /**
-   * Donars updateMany
+   * Donor updateMany
    */
-  export type DonarsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Donars.
+     * The data used to update Donors.
      */
-    data: XOR<DonarsUpdateManyMutationInput, DonarsUncheckedUpdateManyInput>
+    data: XOR<DonorUpdateManyMutationInput, DonorUncheckedUpdateManyInput>
     /**
-     * Filter which Donars to update
+     * Filter which Donors to update
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
-     * Limit how many Donars to update.
+     * Limit how many Donors to update.
      */
     limit?: number
   }
 
   /**
-   * Donars updateManyAndReturn
+   * Donor updateManyAndReturn
    */
-  export type DonarsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: DonorSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * The data used to update Donars.
+     * The data used to update Donors.
      */
-    data: XOR<DonarsUpdateManyMutationInput, DonarsUncheckedUpdateManyInput>
+    data: XOR<DonorUpdateManyMutationInput, DonorUncheckedUpdateManyInput>
     /**
-     * Filter which Donars to update
+     * Filter which Donors to update
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
-     * Limit how many Donars to update.
+     * Limit how many Donors to update.
      */
     limit?: number
   }
 
   /**
-   * Donars upsert
+   * Donor upsert
    */
-  export type DonarsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * The filter to search for the Donars to update in case it exists.
+     * The filter to search for the Donor to update in case it exists.
      */
-    where: DonarsWhereUniqueInput
+    where: DonorWhereUniqueInput
     /**
-     * In case the Donars found by the `where` argument doesn't exist, create a new Donars with this data.
+     * In case the Donor found by the `where` argument doesn't exist, create a new Donor with this data.
      */
-    create: XOR<DonarsCreateInput, DonarsUncheckedCreateInput>
+    create: XOR<DonorCreateInput, DonorUncheckedCreateInput>
     /**
-     * In case the Donars was found with the provided `where` argument, update it with this data.
+     * In case the Donor was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<DonarsUpdateInput, DonarsUncheckedUpdateInput>
+    update: XOR<DonorUpdateInput, DonorUncheckedUpdateInput>
   }
 
   /**
-   * Donars delete
+   * Donor delete
    */
-  export type DonarsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
     /**
-     * Filter which Donars to delete.
+     * Filter which Donor to delete.
      */
-    where: DonarsWhereUniqueInput
+    where: DonorWhereUniqueInput
   }
 
   /**
-   * Donars deleteMany
+   * Donor deleteMany
    */
-  export type DonarsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Donars to delete
+     * Filter which Donors to delete
      */
-    where?: DonarsWhereInput
+    where?: DonorWhereInput
     /**
-     * Limit how many Donars to delete.
+     * Limit how many Donors to delete.
      */
     limit?: number
   }
 
   /**
-   * Donars without action
+   * Donor without action
    */
-  export type DonarsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DonorDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Donars
+     * Select specific fields to fetch from the Donor
      */
-    select?: DonarsSelect<ExtArgs> | null
+    select?: DonorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Donars
+     * Omit specific fields from the Donor
      */
-    omit?: DonarsOmit<ExtArgs> | null
+    omit?: DonorOmit<ExtArgs> | null
   }
 
 
@@ -2523,6 +2615,8 @@ export namespace Prisma {
     cpf?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    collectionPoints?: boolean | Beneficiary$collectionPointsArgs<ExtArgs>
+    _count?: boolean | BeneficiaryCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["beneficiary"]>
 
   export type BeneficiarySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -2559,10 +2653,18 @@ export namespace Prisma {
   }
 
   export type BeneficiaryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "email" | "telefone" | "endereco" | "cpf" | "createdAt" | "updatedAt", ExtArgs["result"]["beneficiary"]>
+  export type BeneficiaryInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | Beneficiary$collectionPointsArgs<ExtArgs>
+    _count?: boolean | BeneficiaryCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type BeneficiaryIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type BeneficiaryIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $BeneficiaryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Beneficiary"
-    objects: {}
+    objects: {
+      collectionPoints: Prisma.$CollectionPointsPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       nome: string
@@ -2966,6 +3068,7 @@ export namespace Prisma {
    */
   export interface Prisma__BeneficiaryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    collectionPoints<T extends Beneficiary$collectionPointsArgs<ExtArgs> = {}>(args?: Subset<T, Beneficiary$collectionPointsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3020,6 +3123,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * Filter, which Beneficiary to fetch.
      */
     where: BeneficiaryWhereUniqueInput
@@ -3038,6 +3145,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * Filter, which Beneficiary to fetch.
      */
     where: BeneficiaryWhereUniqueInput
@@ -3055,6 +3166,10 @@ export namespace Prisma {
      * Omit specific fields from the Beneficiary
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
     /**
      * Filter, which Beneficiary to fetch.
      */
@@ -3104,6 +3219,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * Filter, which Beneficiary to fetch.
      */
     where?: BeneficiaryWhereInput
@@ -3152,6 +3271,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * Filter, which Beneficiaries to fetch.
      */
     where?: BeneficiaryWhereInput
@@ -3194,6 +3317,10 @@ export namespace Prisma {
      * Omit specific fields from the Beneficiary
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
     /**
      * The data needed to create a Beneficiary.
      */
@@ -3242,6 +3369,10 @@ export namespace Prisma {
      * Omit specific fields from the Beneficiary
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
     /**
      * The data needed to update a Beneficiary.
      */
@@ -3309,6 +3440,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * The filter to search for the Beneficiary to update in case it exists.
      */
     where: BeneficiaryWhereUniqueInput
@@ -3335,6 +3470,10 @@ export namespace Prisma {
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
+    /**
      * Filter which Beneficiary to delete.
      */
     where: BeneficiaryWhereUniqueInput
@@ -3355,6 +3494,30 @@ export namespace Prisma {
   }
 
   /**
+   * Beneficiary.collectionPoints
+   */
+  export type Beneficiary$collectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CollectionPoints
+     */
+    select?: CollectionPointsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CollectionPoints
+     */
+    omit?: CollectionPointsOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsInclude<ExtArgs> | null
+    where?: CollectionPointsWhereInput
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
+    cursor?: CollectionPointsWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
+  }
+
+  /**
    * Beneficiary without action
    */
   export type BeneficiaryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3366,31 +3529,44 @@ export namespace Prisma {
      * Omit specific fields from the Beneficiary
      */
     omit?: BeneficiaryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BeneficiaryInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model ColectionPoints
+   * Model CollectionPoints
    */
 
-  export type AggregateColectionPoints = {
-    _count: ColectionPointsCountAggregateOutputType | null
-    _avg: ColectionPointsAvgAggregateOutputType | null
-    _sum: ColectionPointsSumAggregateOutputType | null
-    _min: ColectionPointsMinAggregateOutputType | null
-    _max: ColectionPointsMaxAggregateOutputType | null
+  export type AggregateCollectionPoints = {
+    _count: CollectionPointsCountAggregateOutputType | null
+    _avg: CollectionPointsAvgAggregateOutputType | null
+    _sum: CollectionPointsSumAggregateOutputType | null
+    _min: CollectionPointsMinAggregateOutputType | null
+    _max: CollectionPointsMaxAggregateOutputType | null
   }
 
-  export type ColectionPointsAvgAggregateOutputType = {
+  export type CollectionPointsAvgAggregateOutputType = {
     id: number | null
+    beneficiaryId: number | null
+    impactReportId: number | null
+    campaigsAwarenessId: number | null
   }
 
-  export type ColectionPointsSumAggregateOutputType = {
+  export type CollectionPointsSumAggregateOutputType = {
     id: number | null
+    beneficiaryId: number | null
+    impactReportId: number | null
+    campaigsAwarenessId: number | null
   }
 
-  export type ColectionPointsMinAggregateOutputType = {
+  export type CollectionPointsMinAggregateOutputType = {
     id: number | null
+    beneficiaryId: number | null
+    impactReportId: number | null
+    campaigsAwarenessId: number | null
     nome: string | null
     endereco: string | null
     telefone: string | null
@@ -3399,8 +3575,11 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type ColectionPointsMaxAggregateOutputType = {
+  export type CollectionPointsMaxAggregateOutputType = {
     id: number | null
+    beneficiaryId: number | null
+    impactReportId: number | null
+    campaigsAwarenessId: number | null
     nome: string | null
     endereco: string | null
     telefone: string | null
@@ -3409,8 +3588,11 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type ColectionPointsCountAggregateOutputType = {
+  export type CollectionPointsCountAggregateOutputType = {
     id: number
+    beneficiaryId: number
+    impactReportId: number
+    campaigsAwarenessId: number
     nome: number
     endereco: number
     telefone: number
@@ -3421,16 +3603,25 @@ export namespace Prisma {
   }
 
 
-  export type ColectionPointsAvgAggregateInputType = {
+  export type CollectionPointsAvgAggregateInputType = {
     id?: true
+    beneficiaryId?: true
+    impactReportId?: true
+    campaigsAwarenessId?: true
   }
 
-  export type ColectionPointsSumAggregateInputType = {
+  export type CollectionPointsSumAggregateInputType = {
     id?: true
+    beneficiaryId?: true
+    impactReportId?: true
+    campaigsAwarenessId?: true
   }
 
-  export type ColectionPointsMinAggregateInputType = {
+  export type CollectionPointsMinAggregateInputType = {
     id?: true
+    beneficiaryId?: true
+    impactReportId?: true
+    campaigsAwarenessId?: true
     nome?: true
     endereco?: true
     telefone?: true
@@ -3439,8 +3630,11 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type ColectionPointsMaxAggregateInputType = {
+  export type CollectionPointsMaxAggregateInputType = {
     id?: true
+    beneficiaryId?: true
+    impactReportId?: true
+    campaigsAwarenessId?: true
     nome?: true
     endereco?: true
     telefone?: true
@@ -3449,8 +3643,11 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type ColectionPointsCountAggregateInputType = {
+  export type CollectionPointsCountAggregateInputType = {
     id?: true
+    beneficiaryId?: true
+    impactReportId?: true
+    campaigsAwarenessId?: true
     nome?: true
     endereco?: true
     telefone?: true
@@ -3460,153 +3657,177 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type ColectionPointsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which ColectionPoints to aggregate.
+     * Filter which CollectionPoints to aggregate.
      */
-    where?: ColectionPointsWhereInput
+    where?: CollectionPointsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ColectionPoints to fetch.
+     * Determine the order of CollectionPoints to fetch.
      */
-    orderBy?: ColectionPointsOrderByWithRelationInput | ColectionPointsOrderByWithRelationInput[]
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ColectionPointsWhereUniqueInput
+    cursor?: CollectionPointsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ColectionPoints from the position of the cursor.
+     * Take `±n` CollectionPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ColectionPoints.
+     * Skip the first `n` CollectionPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned ColectionPoints
+     * Count returned CollectionPoints
     **/
-    _count?: true | ColectionPointsCountAggregateInputType
+    _count?: true | CollectionPointsCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ColectionPointsAvgAggregateInputType
+    _avg?: CollectionPointsAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ColectionPointsSumAggregateInputType
+    _sum?: CollectionPointsSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ColectionPointsMinAggregateInputType
+    _min?: CollectionPointsMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ColectionPointsMaxAggregateInputType
+    _max?: CollectionPointsMaxAggregateInputType
   }
 
-  export type GetColectionPointsAggregateType<T extends ColectionPointsAggregateArgs> = {
-        [P in keyof T & keyof AggregateColectionPoints]: P extends '_count' | 'count'
+  export type GetCollectionPointsAggregateType<T extends CollectionPointsAggregateArgs> = {
+        [P in keyof T & keyof AggregateCollectionPoints]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateColectionPoints[P]>
-      : GetScalarType<T[P], AggregateColectionPoints[P]>
+        : GetScalarType<T[P], AggregateCollectionPoints[P]>
+      : GetScalarType<T[P], AggregateCollectionPoints[P]>
   }
 
 
 
 
-  export type ColectionPointsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ColectionPointsWhereInput
-    orderBy?: ColectionPointsOrderByWithAggregationInput | ColectionPointsOrderByWithAggregationInput[]
-    by: ColectionPointsScalarFieldEnum[] | ColectionPointsScalarFieldEnum
-    having?: ColectionPointsScalarWhereWithAggregatesInput
+  export type CollectionPointsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CollectionPointsWhereInput
+    orderBy?: CollectionPointsOrderByWithAggregationInput | CollectionPointsOrderByWithAggregationInput[]
+    by: CollectionPointsScalarFieldEnum[] | CollectionPointsScalarFieldEnum
+    having?: CollectionPointsScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ColectionPointsCountAggregateInputType | true
-    _avg?: ColectionPointsAvgAggregateInputType
-    _sum?: ColectionPointsSumAggregateInputType
-    _min?: ColectionPointsMinAggregateInputType
-    _max?: ColectionPointsMaxAggregateInputType
+    _count?: CollectionPointsCountAggregateInputType | true
+    _avg?: CollectionPointsAvgAggregateInputType
+    _sum?: CollectionPointsSumAggregateInputType
+    _min?: CollectionPointsMinAggregateInputType
+    _max?: CollectionPointsMaxAggregateInputType
   }
 
-  export type ColectionPointsGroupByOutputType = {
+  export type CollectionPointsGroupByOutputType = {
     id: number
+    beneficiaryId: number
+    impactReportId: number
+    campaigsAwarenessId: number
     nome: string
     endereco: string
     telefone: string
     horario_de_funcionamento: Date
     createdAt: Date
     updatedAt: Date
-    _count: ColectionPointsCountAggregateOutputType | null
-    _avg: ColectionPointsAvgAggregateOutputType | null
-    _sum: ColectionPointsSumAggregateOutputType | null
-    _min: ColectionPointsMinAggregateOutputType | null
-    _max: ColectionPointsMaxAggregateOutputType | null
+    _count: CollectionPointsCountAggregateOutputType | null
+    _avg: CollectionPointsAvgAggregateOutputType | null
+    _sum: CollectionPointsSumAggregateOutputType | null
+    _min: CollectionPointsMinAggregateOutputType | null
+    _max: CollectionPointsMaxAggregateOutputType | null
   }
 
-  type GetColectionPointsGroupByPayload<T extends ColectionPointsGroupByArgs> = Prisma.PrismaPromise<
+  type GetCollectionPointsGroupByPayload<T extends CollectionPointsGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ColectionPointsGroupByOutputType, T['by']> &
+      PickEnumerable<CollectionPointsGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ColectionPointsGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof CollectionPointsGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ColectionPointsGroupByOutputType[P]>
-            : GetScalarType<T[P], ColectionPointsGroupByOutputType[P]>
+              : GetScalarType<T[P], CollectionPointsGroupByOutputType[P]>
+            : GetScalarType<T[P], CollectionPointsGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ColectionPointsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CollectionPointsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    beneficiaryId?: boolean
+    impactReportId?: boolean
+    campaigsAwarenessId?: boolean
     nome?: boolean
     endereco?: boolean
     telefone?: boolean
     horario_de_funcionamento?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["colectionPoints"]>
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["collectionPoints"]>
 
-  export type ColectionPointsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CollectionPointsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    beneficiaryId?: boolean
+    impactReportId?: boolean
+    campaigsAwarenessId?: boolean
     nome?: boolean
     endereco?: boolean
     telefone?: boolean
     horario_de_funcionamento?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["colectionPoints"]>
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["collectionPoints"]>
 
-  export type ColectionPointsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CollectionPointsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    beneficiaryId?: boolean
+    impactReportId?: boolean
+    campaigsAwarenessId?: boolean
     nome?: boolean
     endereco?: boolean
     telefone?: boolean
     horario_de_funcionamento?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["colectionPoints"]>
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["collectionPoints"]>
 
-  export type ColectionPointsSelectScalar = {
+  export type CollectionPointsSelectScalar = {
     id?: boolean
+    beneficiaryId?: boolean
+    impactReportId?: boolean
+    campaigsAwarenessId?: boolean
     nome?: boolean
     endereco?: boolean
     telefone?: boolean
@@ -3615,149 +3836,171 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type ColectionPointsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "endereco" | "telefone" | "horario_de_funcionamento" | "createdAt" | "updatedAt", ExtArgs["result"]["colectionPoints"]>
+  export type CollectionPointsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "beneficiaryId" | "impactReportId" | "campaigsAwarenessId" | "nome" | "endereco" | "telefone" | "horario_de_funcionamento" | "createdAt" | "updatedAt", ExtArgs["result"]["collectionPoints"]>
+  export type CollectionPointsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }
+  export type CollectionPointsIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }
+  export type CollectionPointsIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    beneficiary?: boolean | BeneficiaryDefaultArgs<ExtArgs>
+    impactReport?: boolean | ReportsCampaignDefaultArgs<ExtArgs>
+    campaigsAwareness?: boolean | CampaigsAwarenessDefaultArgs<ExtArgs>
+  }
 
-  export type $ColectionPointsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "ColectionPoints"
-    objects: {}
+  export type $CollectionPointsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CollectionPoints"
+    objects: {
+      beneficiary: Prisma.$BeneficiaryPayload<ExtArgs>
+      impactReport: Prisma.$ReportsCampaignPayload<ExtArgs>
+      campaigsAwareness: Prisma.$CampaigsAwarenessPayload<ExtArgs>
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
+      beneficiaryId: number
+      impactReportId: number
+      campaigsAwarenessId: number
       nome: string
       endereco: string
       telefone: string
       horario_de_funcionamento: Date
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["colectionPoints"]>
+    }, ExtArgs["result"]["collectionPoints"]>
     composites: {}
   }
 
-  type ColectionPointsGetPayload<S extends boolean | null | undefined | ColectionPointsDefaultArgs> = $Result.GetResult<Prisma.$ColectionPointsPayload, S>
+  type CollectionPointsGetPayload<S extends boolean | null | undefined | CollectionPointsDefaultArgs> = $Result.GetResult<Prisma.$CollectionPointsPayload, S>
 
-  type ColectionPointsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ColectionPointsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ColectionPointsCountAggregateInputType | true
+  type CollectionPointsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CollectionPointsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CollectionPointsCountAggregateInputType | true
     }
 
-  export interface ColectionPointsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ColectionPoints'], meta: { name: 'ColectionPoints' } }
+  export interface CollectionPointsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CollectionPoints'], meta: { name: 'CollectionPoints' } }
     /**
-     * Find zero or one ColectionPoints that matches the filter.
-     * @param {ColectionPointsFindUniqueArgs} args - Arguments to find a ColectionPoints
+     * Find zero or one CollectionPoints that matches the filter.
+     * @param {CollectionPointsFindUniqueArgs} args - Arguments to find a CollectionPoints
      * @example
-     * // Get one ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findUnique({
+     * // Get one CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ColectionPointsFindUniqueArgs>(args: SelectSubset<T, ColectionPointsFindUniqueArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends CollectionPointsFindUniqueArgs>(args: SelectSubset<T, CollectionPointsFindUniqueArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one ColectionPoints that matches the filter or throw an error with `error.code='P2025'`
+     * Find one CollectionPoints that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ColectionPointsFindUniqueOrThrowArgs} args - Arguments to find a ColectionPoints
+     * @param {CollectionPointsFindUniqueOrThrowArgs} args - Arguments to find a CollectionPoints
      * @example
-     * // Get one ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findUniqueOrThrow({
+     * // Get one CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ColectionPointsFindUniqueOrThrowArgs>(args: SelectSubset<T, ColectionPointsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends CollectionPointsFindUniqueOrThrowArgs>(args: SelectSubset<T, CollectionPointsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first ColectionPoints that matches the filter.
+     * Find the first CollectionPoints that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsFindFirstArgs} args - Arguments to find a ColectionPoints
+     * @param {CollectionPointsFindFirstArgs} args - Arguments to find a CollectionPoints
      * @example
-     * // Get one ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findFirst({
+     * // Get one CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ColectionPointsFindFirstArgs>(args?: SelectSubset<T, ColectionPointsFindFirstArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends CollectionPointsFindFirstArgs>(args?: SelectSubset<T, CollectionPointsFindFirstArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first ColectionPoints that matches the filter or
+     * Find the first CollectionPoints that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsFindFirstOrThrowArgs} args - Arguments to find a ColectionPoints
+     * @param {CollectionPointsFindFirstOrThrowArgs} args - Arguments to find a CollectionPoints
      * @example
-     * // Get one ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findFirstOrThrow({
+     * // Get one CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ColectionPointsFindFirstOrThrowArgs>(args?: SelectSubset<T, ColectionPointsFindFirstOrThrowArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends CollectionPointsFindFirstOrThrowArgs>(args?: SelectSubset<T, CollectionPointsFindFirstOrThrowArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more ColectionPoints that matches the filter.
+     * Find zero or more CollectionPoints that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {CollectionPointsFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findMany()
+     * // Get all CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findMany()
      * 
-     * // Get first 10 ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.findMany({ take: 10 })
+     * // Get first 10 CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const colectionPointsWithIdOnly = await prisma.colectionPoints.findMany({ select: { id: true } })
+     * const collectionPointsWithIdOnly = await prisma.collectionPoints.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ColectionPointsFindManyArgs>(args?: SelectSubset<T, ColectionPointsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends CollectionPointsFindManyArgs>(args?: SelectSubset<T, CollectionPointsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a ColectionPoints.
-     * @param {ColectionPointsCreateArgs} args - Arguments to create a ColectionPoints.
+     * Create a CollectionPoints.
+     * @param {CollectionPointsCreateArgs} args - Arguments to create a CollectionPoints.
      * @example
-     * // Create one ColectionPoints
-     * const ColectionPoints = await prisma.colectionPoints.create({
+     * // Create one CollectionPoints
+     * const CollectionPoints = await prisma.collectionPoints.create({
      *   data: {
-     *     // ... data to create a ColectionPoints
+     *     // ... data to create a CollectionPoints
      *   }
      * })
      * 
      */
-    create<T extends ColectionPointsCreateArgs>(args: SelectSubset<T, ColectionPointsCreateArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends CollectionPointsCreateArgs>(args: SelectSubset<T, CollectionPointsCreateArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many ColectionPoints.
-     * @param {ColectionPointsCreateManyArgs} args - Arguments to create many ColectionPoints.
+     * Create many CollectionPoints.
+     * @param {CollectionPointsCreateManyArgs} args - Arguments to create many CollectionPoints.
      * @example
-     * // Create many ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.createMany({
+     * // Create many CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ColectionPointsCreateManyArgs>(args?: SelectSubset<T, ColectionPointsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends CollectionPointsCreateManyArgs>(args?: SelectSubset<T, CollectionPointsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many ColectionPoints and returns the data saved in the database.
-     * @param {ColectionPointsCreateManyAndReturnArgs} args - Arguments to create many ColectionPoints.
+     * Create many CollectionPoints and returns the data saved in the database.
+     * @param {CollectionPointsCreateManyAndReturnArgs} args - Arguments to create many CollectionPoints.
      * @example
-     * // Create many ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.createManyAndReturn({
+     * // Create many CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many ColectionPoints and only return the `id`
-     * const colectionPointsWithIdOnly = await prisma.colectionPoints.createManyAndReturn({
+     * // Create many CollectionPoints and only return the `id`
+     * const collectionPointsWithIdOnly = await prisma.collectionPoints.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3767,28 +4010,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ColectionPointsCreateManyAndReturnArgs>(args?: SelectSubset<T, ColectionPointsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends CollectionPointsCreateManyAndReturnArgs>(args?: SelectSubset<T, CollectionPointsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a ColectionPoints.
-     * @param {ColectionPointsDeleteArgs} args - Arguments to delete one ColectionPoints.
+     * Delete a CollectionPoints.
+     * @param {CollectionPointsDeleteArgs} args - Arguments to delete one CollectionPoints.
      * @example
-     * // Delete one ColectionPoints
-     * const ColectionPoints = await prisma.colectionPoints.delete({
+     * // Delete one CollectionPoints
+     * const CollectionPoints = await prisma.collectionPoints.delete({
      *   where: {
-     *     // ... filter to delete one ColectionPoints
+     *     // ... filter to delete one CollectionPoints
      *   }
      * })
      * 
      */
-    delete<T extends ColectionPointsDeleteArgs>(args: SelectSubset<T, ColectionPointsDeleteArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends CollectionPointsDeleteArgs>(args: SelectSubset<T, CollectionPointsDeleteArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one ColectionPoints.
-     * @param {ColectionPointsUpdateArgs} args - Arguments to update one ColectionPoints.
+     * Update one CollectionPoints.
+     * @param {CollectionPointsUpdateArgs} args - Arguments to update one CollectionPoints.
      * @example
-     * // Update one ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.update({
+     * // Update one CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3798,30 +4041,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ColectionPointsUpdateArgs>(args: SelectSubset<T, ColectionPointsUpdateArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends CollectionPointsUpdateArgs>(args: SelectSubset<T, CollectionPointsUpdateArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more ColectionPoints.
-     * @param {ColectionPointsDeleteManyArgs} args - Arguments to filter ColectionPoints to delete.
+     * Delete zero or more CollectionPoints.
+     * @param {CollectionPointsDeleteManyArgs} args - Arguments to filter CollectionPoints to delete.
      * @example
-     * // Delete a few ColectionPoints
-     * const { count } = await prisma.colectionPoints.deleteMany({
+     * // Delete a few CollectionPoints
+     * const { count } = await prisma.collectionPoints.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ColectionPointsDeleteManyArgs>(args?: SelectSubset<T, ColectionPointsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends CollectionPointsDeleteManyArgs>(args?: SelectSubset<T, CollectionPointsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more ColectionPoints.
+     * Update zero or more CollectionPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {CollectionPointsUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.updateMany({
+     * // Update many CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3831,14 +4074,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ColectionPointsUpdateManyArgs>(args: SelectSubset<T, ColectionPointsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends CollectionPointsUpdateManyArgs>(args: SelectSubset<T, CollectionPointsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more ColectionPoints and returns the data updated in the database.
-     * @param {ColectionPointsUpdateManyAndReturnArgs} args - Arguments to update many ColectionPoints.
+     * Update zero or more CollectionPoints and returns the data updated in the database.
+     * @param {CollectionPointsUpdateManyAndReturnArgs} args - Arguments to update many CollectionPoints.
      * @example
-     * // Update many ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.updateManyAndReturn({
+     * // Update many CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3847,8 +4090,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more ColectionPoints and only return the `id`
-     * const colectionPointsWithIdOnly = await prisma.colectionPoints.updateManyAndReturn({
+     * // Update zero or more CollectionPoints and only return the `id`
+     * const collectionPointsWithIdOnly = await prisma.collectionPoints.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -3861,56 +4104,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ColectionPointsUpdateManyAndReturnArgs>(args: SelectSubset<T, ColectionPointsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends CollectionPointsUpdateManyAndReturnArgs>(args: SelectSubset<T, CollectionPointsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one ColectionPoints.
-     * @param {ColectionPointsUpsertArgs} args - Arguments to update or create a ColectionPoints.
+     * Create or update one CollectionPoints.
+     * @param {CollectionPointsUpsertArgs} args - Arguments to update or create a CollectionPoints.
      * @example
-     * // Update or create a ColectionPoints
-     * const colectionPoints = await prisma.colectionPoints.upsert({
+     * // Update or create a CollectionPoints
+     * const collectionPoints = await prisma.collectionPoints.upsert({
      *   create: {
-     *     // ... data to create a ColectionPoints
+     *     // ... data to create a CollectionPoints
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the ColectionPoints we want to update
+     *     // ... the filter for the CollectionPoints we want to update
      *   }
      * })
      */
-    upsert<T extends ColectionPointsUpsertArgs>(args: SelectSubset<T, ColectionPointsUpsertArgs<ExtArgs>>): Prisma__ColectionPointsClient<$Result.GetResult<Prisma.$ColectionPointsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends CollectionPointsUpsertArgs>(args: SelectSubset<T, CollectionPointsUpsertArgs<ExtArgs>>): Prisma__CollectionPointsClient<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of ColectionPoints.
+     * Count the number of CollectionPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsCountArgs} args - Arguments to filter ColectionPoints to count.
+     * @param {CollectionPointsCountArgs} args - Arguments to filter CollectionPoints to count.
      * @example
-     * // Count the number of ColectionPoints
-     * const count = await prisma.colectionPoints.count({
+     * // Count the number of CollectionPoints
+     * const count = await prisma.collectionPoints.count({
      *   where: {
-     *     // ... the filter for the ColectionPoints we want to count
+     *     // ... the filter for the CollectionPoints we want to count
      *   }
      * })
     **/
-    count<T extends ColectionPointsCountArgs>(
-      args?: Subset<T, ColectionPointsCountArgs>,
+    count<T extends CollectionPointsCountArgs>(
+      args?: Subset<T, CollectionPointsCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ColectionPointsCountAggregateOutputType>
+          : GetScalarType<T['select'], CollectionPointsCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a ColectionPoints.
+     * Allows you to perform aggregations operations on a CollectionPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {CollectionPointsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3930,13 +4173,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ColectionPointsAggregateArgs>(args: Subset<T, ColectionPointsAggregateArgs>): Prisma.PrismaPromise<GetColectionPointsAggregateType<T>>
+    aggregate<T extends CollectionPointsAggregateArgs>(args: Subset<T, CollectionPointsAggregateArgs>): Prisma.PrismaPromise<GetCollectionPointsAggregateType<T>>
 
     /**
-     * Group by ColectionPoints.
+     * Group by CollectionPoints.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ColectionPointsGroupByArgs} args - Group by arguments.
+     * @param {CollectionPointsGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3951,14 +4194,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ColectionPointsGroupByArgs,
+      T extends CollectionPointsGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ColectionPointsGroupByArgs['orderBy'] }
-        : { orderBy?: ColectionPointsGroupByArgs['orderBy'] },
+        ? { orderBy: CollectionPointsGroupByArgs['orderBy'] }
+        : { orderBy?: CollectionPointsGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4007,21 +4250,24 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ColectionPointsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetColectionPointsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, CollectionPointsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCollectionPointsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the ColectionPoints model
+   * Fields of the CollectionPoints model
    */
-  readonly fields: ColectionPointsFieldRefs;
+  readonly fields: CollectionPointsFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for ColectionPoints.
+   * The delegate class that acts as a "Promise-like" for CollectionPoints.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ColectionPointsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__CollectionPointsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    beneficiary<T extends BeneficiaryDefaultArgs<ExtArgs> = {}>(args?: Subset<T, BeneficiaryDefaultArgs<ExtArgs>>): Prisma__BeneficiaryClient<$Result.GetResult<Prisma.$BeneficiaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    impactReport<T extends ReportsCampaignDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ReportsCampaignDefaultArgs<ExtArgs>>): Prisma__ReportsCampaignClient<$Result.GetResult<Prisma.$ReportsCampaignPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    campaigsAwareness<T extends CampaigsAwarenessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CampaigsAwarenessDefaultArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4048,403 +4294,454 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the ColectionPoints model
+   * Fields of the CollectionPoints model
    */
-  interface ColectionPointsFieldRefs {
-    readonly id: FieldRef<"ColectionPoints", 'Int'>
-    readonly nome: FieldRef<"ColectionPoints", 'String'>
-    readonly endereco: FieldRef<"ColectionPoints", 'String'>
-    readonly telefone: FieldRef<"ColectionPoints", 'String'>
-    readonly horario_de_funcionamento: FieldRef<"ColectionPoints", 'DateTime'>
-    readonly createdAt: FieldRef<"ColectionPoints", 'DateTime'>
-    readonly updatedAt: FieldRef<"ColectionPoints", 'DateTime'>
+  interface CollectionPointsFieldRefs {
+    readonly id: FieldRef<"CollectionPoints", 'Int'>
+    readonly beneficiaryId: FieldRef<"CollectionPoints", 'Int'>
+    readonly impactReportId: FieldRef<"CollectionPoints", 'Int'>
+    readonly campaigsAwarenessId: FieldRef<"CollectionPoints", 'Int'>
+    readonly nome: FieldRef<"CollectionPoints", 'String'>
+    readonly endereco: FieldRef<"CollectionPoints", 'String'>
+    readonly telefone: FieldRef<"CollectionPoints", 'String'>
+    readonly horario_de_funcionamento: FieldRef<"CollectionPoints", 'DateTime'>
+    readonly createdAt: FieldRef<"CollectionPoints", 'DateTime'>
+    readonly updatedAt: FieldRef<"CollectionPoints", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * ColectionPoints findUnique
+   * CollectionPoints findUnique
    */
-  export type ColectionPointsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * Filter, which ColectionPoints to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: ColectionPointsWhereUniqueInput
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter, which CollectionPoints to fetch.
+     */
+    where: CollectionPointsWhereUniqueInput
   }
 
   /**
-   * ColectionPoints findUniqueOrThrow
+   * CollectionPoints findUniqueOrThrow
    */
-  export type ColectionPointsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * Filter, which ColectionPoints to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: ColectionPointsWhereUniqueInput
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter, which CollectionPoints to fetch.
+     */
+    where: CollectionPointsWhereUniqueInput
   }
 
   /**
-   * ColectionPoints findFirst
+   * CollectionPoints findFirst
    */
-  export type ColectionPointsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * Filter, which ColectionPoints to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: ColectionPointsWhereInput
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter, which CollectionPoints to fetch.
+     */
+    where?: CollectionPointsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ColectionPoints to fetch.
+     * Determine the order of CollectionPoints to fetch.
      */
-    orderBy?: ColectionPointsOrderByWithRelationInput | ColectionPointsOrderByWithRelationInput[]
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for ColectionPoints.
+     * Sets the position for searching for CollectionPoints.
      */
-    cursor?: ColectionPointsWhereUniqueInput
+    cursor?: CollectionPointsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ColectionPoints from the position of the cursor.
+     * Take `±n` CollectionPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ColectionPoints.
+     * Skip the first `n` CollectionPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of ColectionPoints.
+     * Filter by unique combinations of CollectionPoints.
      */
-    distinct?: ColectionPointsScalarFieldEnum | ColectionPointsScalarFieldEnum[]
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
   }
 
   /**
-   * ColectionPoints findFirstOrThrow
+   * CollectionPoints findFirstOrThrow
    */
-  export type ColectionPointsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * Filter, which ColectionPoints to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: ColectionPointsWhereInput
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter, which CollectionPoints to fetch.
+     */
+    where?: CollectionPointsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ColectionPoints to fetch.
+     * Determine the order of CollectionPoints to fetch.
      */
-    orderBy?: ColectionPointsOrderByWithRelationInput | ColectionPointsOrderByWithRelationInput[]
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for ColectionPoints.
+     * Sets the position for searching for CollectionPoints.
      */
-    cursor?: ColectionPointsWhereUniqueInput
+    cursor?: CollectionPointsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ColectionPoints from the position of the cursor.
+     * Take `±n` CollectionPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ColectionPoints.
+     * Skip the first `n` CollectionPoints.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of ColectionPoints.
+     * Filter by unique combinations of CollectionPoints.
      */
-    distinct?: ColectionPointsScalarFieldEnum | ColectionPointsScalarFieldEnum[]
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
   }
 
   /**
-   * ColectionPoints findMany
+   * CollectionPoints findMany
    */
-  export type ColectionPointsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * Filter, which ColectionPoints to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: ColectionPointsWhereInput
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter, which CollectionPoints to fetch.
+     */
+    where?: CollectionPointsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ColectionPoints to fetch.
+     * Determine the order of CollectionPoints to fetch.
      */
-    orderBy?: ColectionPointsOrderByWithRelationInput | ColectionPointsOrderByWithRelationInput[]
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing ColectionPoints.
+     * Sets the position for listing CollectionPoints.
      */
-    cursor?: ColectionPointsWhereUniqueInput
+    cursor?: CollectionPointsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ColectionPoints from the position of the cursor.
+     * Take `±n` CollectionPoints from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ColectionPoints.
+     * Skip the first `n` CollectionPoints.
      */
     skip?: number
-    distinct?: ColectionPointsScalarFieldEnum | ColectionPointsScalarFieldEnum[]
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
   }
 
   /**
-   * ColectionPoints create
+   * CollectionPoints create
    */
-  export type ColectionPointsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * The data needed to create a ColectionPoints.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<ColectionPointsCreateInput, ColectionPointsUncheckedCreateInput>
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CollectionPoints.
+     */
+    data: XOR<CollectionPointsCreateInput, CollectionPointsUncheckedCreateInput>
   }
 
   /**
-   * ColectionPoints createMany
+   * CollectionPoints createMany
    */
-  export type ColectionPointsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many ColectionPoints.
+     * The data used to create many CollectionPoints.
      */
-    data: ColectionPointsCreateManyInput | ColectionPointsCreateManyInput[]
+    data: CollectionPointsCreateManyInput | CollectionPointsCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * ColectionPoints createManyAndReturn
+   * CollectionPoints createManyAndReturn
    */
-  export type ColectionPointsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelectCreateManyAndReturn<ExtArgs> | null
+    select?: CollectionPointsSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * The data used to create many ColectionPoints.
+     * The data used to create many CollectionPoints.
      */
-    data: ColectionPointsCreateManyInput | ColectionPointsCreateManyInput[]
+    data: CollectionPointsCreateManyInput | CollectionPointsCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * ColectionPoints update
+   * CollectionPoints update
    */
-  export type ColectionPointsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * The data needed to update a ColectionPoints.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<ColectionPointsUpdateInput, ColectionPointsUncheckedUpdateInput>
+    include?: CollectionPointsInclude<ExtArgs> | null
     /**
-     * Choose, which ColectionPoints to update.
+     * The data needed to update a CollectionPoints.
      */
-    where: ColectionPointsWhereUniqueInput
+    data: XOR<CollectionPointsUpdateInput, CollectionPointsUncheckedUpdateInput>
+    /**
+     * Choose, which CollectionPoints to update.
+     */
+    where: CollectionPointsWhereUniqueInput
   }
 
   /**
-   * ColectionPoints updateMany
+   * CollectionPoints updateMany
    */
-  export type ColectionPointsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update ColectionPoints.
+     * The data used to update CollectionPoints.
      */
-    data: XOR<ColectionPointsUpdateManyMutationInput, ColectionPointsUncheckedUpdateManyInput>
+    data: XOR<CollectionPointsUpdateManyMutationInput, CollectionPointsUncheckedUpdateManyInput>
     /**
-     * Filter which ColectionPoints to update
+     * Filter which CollectionPoints to update
      */
-    where?: ColectionPointsWhereInput
+    where?: CollectionPointsWhereInput
     /**
-     * Limit how many ColectionPoints to update.
+     * Limit how many CollectionPoints to update.
      */
     limit?: number
   }
 
   /**
-   * ColectionPoints updateManyAndReturn
+   * CollectionPoints updateManyAndReturn
    */
-  export type ColectionPointsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: CollectionPointsSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * The data used to update ColectionPoints.
+     * The data used to update CollectionPoints.
      */
-    data: XOR<ColectionPointsUpdateManyMutationInput, ColectionPointsUncheckedUpdateManyInput>
+    data: XOR<CollectionPointsUpdateManyMutationInput, CollectionPointsUncheckedUpdateManyInput>
     /**
-     * Filter which ColectionPoints to update
+     * Filter which CollectionPoints to update
      */
-    where?: ColectionPointsWhereInput
+    where?: CollectionPointsWhereInput
     /**
-     * Limit how many ColectionPoints to update.
+     * Limit how many CollectionPoints to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CollectionPoints upsert
+   */
+  export type CollectionPointsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CollectionPoints
+     */
+    select?: CollectionPointsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CollectionPoints
+     */
+    omit?: CollectionPointsOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * The filter to search for the CollectionPoints to update in case it exists.
+     */
+    where: CollectionPointsWhereUniqueInput
+    /**
+     * In case the CollectionPoints found by the `where` argument doesn't exist, create a new CollectionPoints with this data.
+     */
+    create: XOR<CollectionPointsCreateInput, CollectionPointsUncheckedCreateInput>
+    /**
+     * In case the CollectionPoints was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CollectionPointsUpdateInput, CollectionPointsUncheckedUpdateInput>
+  }
+
+  /**
+   * CollectionPoints delete
+   */
+  export type CollectionPointsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CollectionPoints
+     */
+    select?: CollectionPointsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CollectionPoints
+     */
+    omit?: CollectionPointsOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsInclude<ExtArgs> | null
+    /**
+     * Filter which CollectionPoints to delete.
+     */
+    where: CollectionPointsWhereUniqueInput
+  }
+
+  /**
+   * CollectionPoints deleteMany
+   */
+  export type CollectionPointsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CollectionPoints to delete
+     */
+    where?: CollectionPointsWhereInput
+    /**
+     * Limit how many CollectionPoints to delete.
      */
     limit?: number
   }
 
   /**
-   * ColectionPoints upsert
+   * CollectionPoints without action
    */
-  export type ColectionPointsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CollectionPointsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ColectionPoints
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: ColectionPointsSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ColectionPoints
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
     /**
-     * The filter to search for the ColectionPoints to update in case it exists.
+     * Choose, which related nodes to fetch as well
      */
-    where: ColectionPointsWhereUniqueInput
-    /**
-     * In case the ColectionPoints found by the `where` argument doesn't exist, create a new ColectionPoints with this data.
-     */
-    create: XOR<ColectionPointsCreateInput, ColectionPointsUncheckedCreateInput>
-    /**
-     * In case the ColectionPoints was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<ColectionPointsUpdateInput, ColectionPointsUncheckedUpdateInput>
-  }
-
-  /**
-   * ColectionPoints delete
-   */
-  export type ColectionPointsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the ColectionPoints
-     */
-    select?: ColectionPointsSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the ColectionPoints
-     */
-    omit?: ColectionPointsOmit<ExtArgs> | null
-    /**
-     * Filter which ColectionPoints to delete.
-     */
-    where: ColectionPointsWhereUniqueInput
-  }
-
-  /**
-   * ColectionPoints deleteMany
-   */
-  export type ColectionPointsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which ColectionPoints to delete
-     */
-    where?: ColectionPointsWhereInput
-    /**
-     * Limit how many ColectionPoints to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * ColectionPoints without action
-   */
-  export type ColectionPointsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the ColectionPoints
-     */
-    select?: ColectionPointsSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the ColectionPoints
-     */
-    omit?: ColectionPointsOmit<ExtArgs> | null
+    include?: CollectionPointsInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model CampaingsAwareness
+   * Model CampaigsAwareness
    */
 
-  export type AggregateCampaingsAwareness = {
-    _count: CampaingsAwarenessCountAggregateOutputType | null
-    _avg: CampaingsAwarenessAvgAggregateOutputType | null
-    _sum: CampaingsAwarenessSumAggregateOutputType | null
-    _min: CampaingsAwarenessMinAggregateOutputType | null
-    _max: CampaingsAwarenessMaxAggregateOutputType | null
+  export type AggregateCampaigsAwareness = {
+    _count: CampaigsAwarenessCountAggregateOutputType | null
+    _avg: CampaigsAwarenessAvgAggregateOutputType | null
+    _sum: CampaigsAwarenessSumAggregateOutputType | null
+    _min: CampaigsAwarenessMinAggregateOutputType | null
+    _max: CampaigsAwarenessMaxAggregateOutputType | null
   }
 
-  export type CampaingsAwarenessAvgAggregateOutputType = {
+  export type CampaigsAwarenessAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type CampaingsAwarenessSumAggregateOutputType = {
+  export type CampaigsAwarenessSumAggregateOutputType = {
     id: number | null
   }
 
-  export type CampaingsAwarenessMinAggregateOutputType = {
+  export type CampaigsAwarenessMinAggregateOutputType = {
     id: number | null
     nome: string | null
     descricao: string | null
@@ -4455,7 +4752,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type CampaingsAwarenessMaxAggregateOutputType = {
+  export type CampaigsAwarenessMaxAggregateOutputType = {
     id: number | null
     nome: string | null
     descricao: string | null
@@ -4466,7 +4763,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type CampaingsAwarenessCountAggregateOutputType = {
+  export type CampaigsAwarenessCountAggregateOutputType = {
     id: number
     nome: number
     descricao: number
@@ -4479,26 +4776,15 @@ export namespace Prisma {
   }
 
 
-  export type CampaingsAwarenessAvgAggregateInputType = {
+  export type CampaigsAwarenessAvgAggregateInputType = {
     id?: true
   }
 
-  export type CampaingsAwarenessSumAggregateInputType = {
+  export type CampaigsAwarenessSumAggregateInputType = {
     id?: true
   }
 
-  export type CampaingsAwarenessMinAggregateInputType = {
-    id?: true
-    nome?: true
-    descricao?: true
-    data_inicio?: true
-    data_fim?: true
-    localizacao?: true
-    createdAt?: true
-    updatedAt?: true
-  }
-
-  export type CampaingsAwarenessMaxAggregateInputType = {
+  export type CampaigsAwarenessMinAggregateInputType = {
     id?: true
     nome?: true
     descricao?: true
@@ -4509,7 +4795,18 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type CampaingsAwarenessCountAggregateInputType = {
+  export type CampaigsAwarenessMaxAggregateInputType = {
+    id?: true
+    nome?: true
+    descricao?: true
+    data_inicio?: true
+    data_fim?: true
+    localizacao?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CampaigsAwarenessCountAggregateInputType = {
     id?: true
     nome?: true
     descricao?: true
@@ -4521,93 +4818,93 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type CampaingsAwarenessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which CampaingsAwareness to aggregate.
+     * Filter which CampaigsAwareness to aggregate.
      */
-    where?: CampaingsAwarenessWhereInput
+    where?: CampaigsAwarenessWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CampaingsAwarenesses to fetch.
+     * Determine the order of CampaigsAwarenesses to fetch.
      */
-    orderBy?: CampaingsAwarenessOrderByWithRelationInput | CampaingsAwarenessOrderByWithRelationInput[]
+    orderBy?: CampaigsAwarenessOrderByWithRelationInput | CampaigsAwarenessOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: CampaingsAwarenessWhereUniqueInput
+    cursor?: CampaigsAwarenessWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CampaingsAwarenesses from the position of the cursor.
+     * Take `±n` CampaigsAwarenesses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CampaingsAwarenesses.
+     * Skip the first `n` CampaigsAwarenesses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned CampaingsAwarenesses
+     * Count returned CampaigsAwarenesses
     **/
-    _count?: true | CampaingsAwarenessCountAggregateInputType
+    _count?: true | CampaigsAwarenessCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: CampaingsAwarenessAvgAggregateInputType
+    _avg?: CampaigsAwarenessAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: CampaingsAwarenessSumAggregateInputType
+    _sum?: CampaigsAwarenessSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: CampaingsAwarenessMinAggregateInputType
+    _min?: CampaigsAwarenessMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: CampaingsAwarenessMaxAggregateInputType
+    _max?: CampaigsAwarenessMaxAggregateInputType
   }
 
-  export type GetCampaingsAwarenessAggregateType<T extends CampaingsAwarenessAggregateArgs> = {
-        [P in keyof T & keyof AggregateCampaingsAwareness]: P extends '_count' | 'count'
+  export type GetCampaigsAwarenessAggregateType<T extends CampaigsAwarenessAggregateArgs> = {
+        [P in keyof T & keyof AggregateCampaigsAwareness]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateCampaingsAwareness[P]>
-      : GetScalarType<T[P], AggregateCampaingsAwareness[P]>
+        : GetScalarType<T[P], AggregateCampaigsAwareness[P]>
+      : GetScalarType<T[P], AggregateCampaigsAwareness[P]>
   }
 
 
 
 
-  export type CampaingsAwarenessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: CampaingsAwarenessWhereInput
-    orderBy?: CampaingsAwarenessOrderByWithAggregationInput | CampaingsAwarenessOrderByWithAggregationInput[]
-    by: CampaingsAwarenessScalarFieldEnum[] | CampaingsAwarenessScalarFieldEnum
-    having?: CampaingsAwarenessScalarWhereWithAggregatesInput
+  export type CampaigsAwarenessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CampaigsAwarenessWhereInput
+    orderBy?: CampaigsAwarenessOrderByWithAggregationInput | CampaigsAwarenessOrderByWithAggregationInput[]
+    by: CampaigsAwarenessScalarFieldEnum[] | CampaigsAwarenessScalarFieldEnum
+    having?: CampaigsAwarenessScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: CampaingsAwarenessCountAggregateInputType | true
-    _avg?: CampaingsAwarenessAvgAggregateInputType
-    _sum?: CampaingsAwarenessSumAggregateInputType
-    _min?: CampaingsAwarenessMinAggregateInputType
-    _max?: CampaingsAwarenessMaxAggregateInputType
+    _count?: CampaigsAwarenessCountAggregateInputType | true
+    _avg?: CampaigsAwarenessAvgAggregateInputType
+    _sum?: CampaigsAwarenessSumAggregateInputType
+    _min?: CampaigsAwarenessMinAggregateInputType
+    _max?: CampaigsAwarenessMaxAggregateInputType
   }
 
-  export type CampaingsAwarenessGroupByOutputType = {
+  export type CampaigsAwarenessGroupByOutputType = {
     id: number
     nome: string
     descricao: string
@@ -4616,28 +4913,28 @@ export namespace Prisma {
     localizacao: string
     createdAt: Date
     updatedAt: Date
-    _count: CampaingsAwarenessCountAggregateOutputType | null
-    _avg: CampaingsAwarenessAvgAggregateOutputType | null
-    _sum: CampaingsAwarenessSumAggregateOutputType | null
-    _min: CampaingsAwarenessMinAggregateOutputType | null
-    _max: CampaingsAwarenessMaxAggregateOutputType | null
+    _count: CampaigsAwarenessCountAggregateOutputType | null
+    _avg: CampaigsAwarenessAvgAggregateOutputType | null
+    _sum: CampaigsAwarenessSumAggregateOutputType | null
+    _min: CampaigsAwarenessMinAggregateOutputType | null
+    _max: CampaigsAwarenessMaxAggregateOutputType | null
   }
 
-  type GetCampaingsAwarenessGroupByPayload<T extends CampaingsAwarenessGroupByArgs> = Prisma.PrismaPromise<
+  type GetCampaigsAwarenessGroupByPayload<T extends CampaigsAwarenessGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<CampaingsAwarenessGroupByOutputType, T['by']> &
+      PickEnumerable<CampaigsAwarenessGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof CampaingsAwarenessGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof CampaigsAwarenessGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], CampaingsAwarenessGroupByOutputType[P]>
-            : GetScalarType<T[P], CampaingsAwarenessGroupByOutputType[P]>
+              : GetScalarType<T[P], CampaigsAwarenessGroupByOutputType[P]>
+            : GetScalarType<T[P], CampaigsAwarenessGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type CampaingsAwarenessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CampaigsAwarenessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     descricao?: boolean
@@ -4646,9 +4943,11 @@ export namespace Prisma {
     localizacao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["campaingsAwareness"]>
+    collectionPoints?: boolean | CampaigsAwareness$collectionPointsArgs<ExtArgs>
+    _count?: boolean | CampaigsAwarenessCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["campaigsAwareness"]>
 
-  export type CampaingsAwarenessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CampaigsAwarenessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     descricao?: boolean
@@ -4657,9 +4956,9 @@ export namespace Prisma {
     localizacao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["campaingsAwareness"]>
+  }, ExtArgs["result"]["campaigsAwareness"]>
 
-  export type CampaingsAwarenessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CampaigsAwarenessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     descricao?: boolean
@@ -4668,9 +4967,9 @@ export namespace Prisma {
     localizacao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["campaingsAwareness"]>
+  }, ExtArgs["result"]["campaigsAwareness"]>
 
-  export type CampaingsAwarenessSelectScalar = {
+  export type CampaigsAwarenessSelectScalar = {
     id?: boolean
     nome?: boolean
     descricao?: boolean
@@ -4681,11 +4980,19 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type CampaingsAwarenessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "descricao" | "data_inicio" | "data_fim" | "localizacao" | "createdAt" | "updatedAt", ExtArgs["result"]["campaingsAwareness"]>
+  export type CampaigsAwarenessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "descricao" | "data_inicio" | "data_fim" | "localizacao" | "createdAt" | "updatedAt", ExtArgs["result"]["campaigsAwareness"]>
+  export type CampaigsAwarenessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | CampaigsAwareness$collectionPointsArgs<ExtArgs>
+    _count?: boolean | CampaigsAwarenessCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type CampaigsAwarenessIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type CampaigsAwarenessIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $CampaingsAwarenessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "CampaingsAwareness"
-    objects: {}
+  export type $CampaigsAwarenessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CampaigsAwareness"
+    objects: {
+      collectionPoints: Prisma.$CollectionPointsPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       nome: string
@@ -4695,136 +5002,136 @@ export namespace Prisma {
       localizacao: string
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["campaingsAwareness"]>
+    }, ExtArgs["result"]["campaigsAwareness"]>
     composites: {}
   }
 
-  type CampaingsAwarenessGetPayload<S extends boolean | null | undefined | CampaingsAwarenessDefaultArgs> = $Result.GetResult<Prisma.$CampaingsAwarenessPayload, S>
+  type CampaigsAwarenessGetPayload<S extends boolean | null | undefined | CampaigsAwarenessDefaultArgs> = $Result.GetResult<Prisma.$CampaigsAwarenessPayload, S>
 
-  type CampaingsAwarenessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<CampaingsAwarenessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: CampaingsAwarenessCountAggregateInputType | true
+  type CampaigsAwarenessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CampaigsAwarenessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CampaigsAwarenessCountAggregateInputType | true
     }
 
-  export interface CampaingsAwarenessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CampaingsAwareness'], meta: { name: 'CampaingsAwareness' } }
+  export interface CampaigsAwarenessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CampaigsAwareness'], meta: { name: 'CampaigsAwareness' } }
     /**
-     * Find zero or one CampaingsAwareness that matches the filter.
-     * @param {CampaingsAwarenessFindUniqueArgs} args - Arguments to find a CampaingsAwareness
+     * Find zero or one CampaigsAwareness that matches the filter.
+     * @param {CampaigsAwarenessFindUniqueArgs} args - Arguments to find a CampaigsAwareness
      * @example
-     * // Get one CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.findUnique({
+     * // Get one CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends CampaingsAwarenessFindUniqueArgs>(args: SelectSubset<T, CampaingsAwarenessFindUniqueArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends CampaigsAwarenessFindUniqueArgs>(args: SelectSubset<T, CampaigsAwarenessFindUniqueArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one CampaingsAwareness that matches the filter or throw an error with `error.code='P2025'`
+     * Find one CampaigsAwareness that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {CampaingsAwarenessFindUniqueOrThrowArgs} args - Arguments to find a CampaingsAwareness
+     * @param {CampaigsAwarenessFindUniqueOrThrowArgs} args - Arguments to find a CampaigsAwareness
      * @example
-     * // Get one CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.findUniqueOrThrow({
+     * // Get one CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends CampaingsAwarenessFindUniqueOrThrowArgs>(args: SelectSubset<T, CampaingsAwarenessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends CampaigsAwarenessFindUniqueOrThrowArgs>(args: SelectSubset<T, CampaigsAwarenessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first CampaingsAwareness that matches the filter.
+     * Find the first CampaigsAwareness that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessFindFirstArgs} args - Arguments to find a CampaingsAwareness
+     * @param {CampaigsAwarenessFindFirstArgs} args - Arguments to find a CampaigsAwareness
      * @example
-     * // Get one CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.findFirst({
+     * // Get one CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends CampaingsAwarenessFindFirstArgs>(args?: SelectSubset<T, CampaingsAwarenessFindFirstArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends CampaigsAwarenessFindFirstArgs>(args?: SelectSubset<T, CampaigsAwarenessFindFirstArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first CampaingsAwareness that matches the filter or
+     * Find the first CampaigsAwareness that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessFindFirstOrThrowArgs} args - Arguments to find a CampaingsAwareness
+     * @param {CampaigsAwarenessFindFirstOrThrowArgs} args - Arguments to find a CampaigsAwareness
      * @example
-     * // Get one CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.findFirstOrThrow({
+     * // Get one CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends CampaingsAwarenessFindFirstOrThrowArgs>(args?: SelectSubset<T, CampaingsAwarenessFindFirstOrThrowArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends CampaigsAwarenessFindFirstOrThrowArgs>(args?: SelectSubset<T, CampaigsAwarenessFindFirstOrThrowArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more CampaingsAwarenesses that matches the filter.
+     * Find zero or more CampaigsAwarenesses that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {CampaigsAwarenessFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all CampaingsAwarenesses
-     * const campaingsAwarenesses = await prisma.campaingsAwareness.findMany()
+     * // Get all CampaigsAwarenesses
+     * const campaigsAwarenesses = await prisma.campaigsAwareness.findMany()
      * 
-     * // Get first 10 CampaingsAwarenesses
-     * const campaingsAwarenesses = await prisma.campaingsAwareness.findMany({ take: 10 })
+     * // Get first 10 CampaigsAwarenesses
+     * const campaigsAwarenesses = await prisma.campaigsAwareness.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const campaingsAwarenessWithIdOnly = await prisma.campaingsAwareness.findMany({ select: { id: true } })
+     * const campaigsAwarenessWithIdOnly = await prisma.campaigsAwareness.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends CampaingsAwarenessFindManyArgs>(args?: SelectSubset<T, CampaingsAwarenessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends CampaigsAwarenessFindManyArgs>(args?: SelectSubset<T, CampaigsAwarenessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a CampaingsAwareness.
-     * @param {CampaingsAwarenessCreateArgs} args - Arguments to create a CampaingsAwareness.
+     * Create a CampaigsAwareness.
+     * @param {CampaigsAwarenessCreateArgs} args - Arguments to create a CampaigsAwareness.
      * @example
-     * // Create one CampaingsAwareness
-     * const CampaingsAwareness = await prisma.campaingsAwareness.create({
+     * // Create one CampaigsAwareness
+     * const CampaigsAwareness = await prisma.campaigsAwareness.create({
      *   data: {
-     *     // ... data to create a CampaingsAwareness
+     *     // ... data to create a CampaigsAwareness
      *   }
      * })
      * 
      */
-    create<T extends CampaingsAwarenessCreateArgs>(args: SelectSubset<T, CampaingsAwarenessCreateArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends CampaigsAwarenessCreateArgs>(args: SelectSubset<T, CampaigsAwarenessCreateArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many CampaingsAwarenesses.
-     * @param {CampaingsAwarenessCreateManyArgs} args - Arguments to create many CampaingsAwarenesses.
+     * Create many CampaigsAwarenesses.
+     * @param {CampaigsAwarenessCreateManyArgs} args - Arguments to create many CampaigsAwarenesses.
      * @example
-     * // Create many CampaingsAwarenesses
-     * const campaingsAwareness = await prisma.campaingsAwareness.createMany({
+     * // Create many CampaigsAwarenesses
+     * const campaigsAwareness = await prisma.campaigsAwareness.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends CampaingsAwarenessCreateManyArgs>(args?: SelectSubset<T, CampaingsAwarenessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends CampaigsAwarenessCreateManyArgs>(args?: SelectSubset<T, CampaigsAwarenessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many CampaingsAwarenesses and returns the data saved in the database.
-     * @param {CampaingsAwarenessCreateManyAndReturnArgs} args - Arguments to create many CampaingsAwarenesses.
+     * Create many CampaigsAwarenesses and returns the data saved in the database.
+     * @param {CampaigsAwarenessCreateManyAndReturnArgs} args - Arguments to create many CampaigsAwarenesses.
      * @example
-     * // Create many CampaingsAwarenesses
-     * const campaingsAwareness = await prisma.campaingsAwareness.createManyAndReturn({
+     * // Create many CampaigsAwarenesses
+     * const campaigsAwareness = await prisma.campaigsAwareness.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many CampaingsAwarenesses and only return the `id`
-     * const campaingsAwarenessWithIdOnly = await prisma.campaingsAwareness.createManyAndReturn({
+     * // Create many CampaigsAwarenesses and only return the `id`
+     * const campaigsAwarenessWithIdOnly = await prisma.campaigsAwareness.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -4834,28 +5141,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends CampaingsAwarenessCreateManyAndReturnArgs>(args?: SelectSubset<T, CampaingsAwarenessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends CampaigsAwarenessCreateManyAndReturnArgs>(args?: SelectSubset<T, CampaigsAwarenessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a CampaingsAwareness.
-     * @param {CampaingsAwarenessDeleteArgs} args - Arguments to delete one CampaingsAwareness.
+     * Delete a CampaigsAwareness.
+     * @param {CampaigsAwarenessDeleteArgs} args - Arguments to delete one CampaigsAwareness.
      * @example
-     * // Delete one CampaingsAwareness
-     * const CampaingsAwareness = await prisma.campaingsAwareness.delete({
+     * // Delete one CampaigsAwareness
+     * const CampaigsAwareness = await prisma.campaigsAwareness.delete({
      *   where: {
-     *     // ... filter to delete one CampaingsAwareness
+     *     // ... filter to delete one CampaigsAwareness
      *   }
      * })
      * 
      */
-    delete<T extends CampaingsAwarenessDeleteArgs>(args: SelectSubset<T, CampaingsAwarenessDeleteArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends CampaigsAwarenessDeleteArgs>(args: SelectSubset<T, CampaigsAwarenessDeleteArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one CampaingsAwareness.
-     * @param {CampaingsAwarenessUpdateArgs} args - Arguments to update one CampaingsAwareness.
+     * Update one CampaigsAwareness.
+     * @param {CampaigsAwarenessUpdateArgs} args - Arguments to update one CampaigsAwareness.
      * @example
-     * // Update one CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.update({
+     * // Update one CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4865,30 +5172,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends CampaingsAwarenessUpdateArgs>(args: SelectSubset<T, CampaingsAwarenessUpdateArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends CampaigsAwarenessUpdateArgs>(args: SelectSubset<T, CampaigsAwarenessUpdateArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more CampaingsAwarenesses.
-     * @param {CampaingsAwarenessDeleteManyArgs} args - Arguments to filter CampaingsAwarenesses to delete.
+     * Delete zero or more CampaigsAwarenesses.
+     * @param {CampaigsAwarenessDeleteManyArgs} args - Arguments to filter CampaigsAwarenesses to delete.
      * @example
-     * // Delete a few CampaingsAwarenesses
-     * const { count } = await prisma.campaingsAwareness.deleteMany({
+     * // Delete a few CampaigsAwarenesses
+     * const { count } = await prisma.campaigsAwareness.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends CampaingsAwarenessDeleteManyArgs>(args?: SelectSubset<T, CampaingsAwarenessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends CampaigsAwarenessDeleteManyArgs>(args?: SelectSubset<T, CampaigsAwarenessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more CampaingsAwarenesses.
+     * Update zero or more CampaigsAwarenesses.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {CampaigsAwarenessUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many CampaingsAwarenesses
-     * const campaingsAwareness = await prisma.campaingsAwareness.updateMany({
+     * // Update many CampaigsAwarenesses
+     * const campaigsAwareness = await prisma.campaigsAwareness.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4898,14 +5205,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends CampaingsAwarenessUpdateManyArgs>(args: SelectSubset<T, CampaingsAwarenessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends CampaigsAwarenessUpdateManyArgs>(args: SelectSubset<T, CampaigsAwarenessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more CampaingsAwarenesses and returns the data updated in the database.
-     * @param {CampaingsAwarenessUpdateManyAndReturnArgs} args - Arguments to update many CampaingsAwarenesses.
+     * Update zero or more CampaigsAwarenesses and returns the data updated in the database.
+     * @param {CampaigsAwarenessUpdateManyAndReturnArgs} args - Arguments to update many CampaigsAwarenesses.
      * @example
-     * // Update many CampaingsAwarenesses
-     * const campaingsAwareness = await prisma.campaingsAwareness.updateManyAndReturn({
+     * // Update many CampaigsAwarenesses
+     * const campaigsAwareness = await prisma.campaigsAwareness.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4914,8 +5221,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more CampaingsAwarenesses and only return the `id`
-     * const campaingsAwarenessWithIdOnly = await prisma.campaingsAwareness.updateManyAndReturn({
+     * // Update zero or more CampaigsAwarenesses and only return the `id`
+     * const campaigsAwarenessWithIdOnly = await prisma.campaigsAwareness.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -4928,56 +5235,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends CampaingsAwarenessUpdateManyAndReturnArgs>(args: SelectSubset<T, CampaingsAwarenessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends CampaigsAwarenessUpdateManyAndReturnArgs>(args: SelectSubset<T, CampaigsAwarenessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one CampaingsAwareness.
-     * @param {CampaingsAwarenessUpsertArgs} args - Arguments to update or create a CampaingsAwareness.
+     * Create or update one CampaigsAwareness.
+     * @param {CampaigsAwarenessUpsertArgs} args - Arguments to update or create a CampaigsAwareness.
      * @example
-     * // Update or create a CampaingsAwareness
-     * const campaingsAwareness = await prisma.campaingsAwareness.upsert({
+     * // Update or create a CampaigsAwareness
+     * const campaigsAwareness = await prisma.campaigsAwareness.upsert({
      *   create: {
-     *     // ... data to create a CampaingsAwareness
+     *     // ... data to create a CampaigsAwareness
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the CampaingsAwareness we want to update
+     *     // ... the filter for the CampaigsAwareness we want to update
      *   }
      * })
      */
-    upsert<T extends CampaingsAwarenessUpsertArgs>(args: SelectSubset<T, CampaingsAwarenessUpsertArgs<ExtArgs>>): Prisma__CampaingsAwarenessClient<$Result.GetResult<Prisma.$CampaingsAwarenessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends CampaigsAwarenessUpsertArgs>(args: SelectSubset<T, CampaigsAwarenessUpsertArgs<ExtArgs>>): Prisma__CampaigsAwarenessClient<$Result.GetResult<Prisma.$CampaigsAwarenessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of CampaingsAwarenesses.
+     * Count the number of CampaigsAwarenesses.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessCountArgs} args - Arguments to filter CampaingsAwarenesses to count.
+     * @param {CampaigsAwarenessCountArgs} args - Arguments to filter CampaigsAwarenesses to count.
      * @example
-     * // Count the number of CampaingsAwarenesses
-     * const count = await prisma.campaingsAwareness.count({
+     * // Count the number of CampaigsAwarenesses
+     * const count = await prisma.campaigsAwareness.count({
      *   where: {
-     *     // ... the filter for the CampaingsAwarenesses we want to count
+     *     // ... the filter for the CampaigsAwarenesses we want to count
      *   }
      * })
     **/
-    count<T extends CampaingsAwarenessCountArgs>(
-      args?: Subset<T, CampaingsAwarenessCountArgs>,
+    count<T extends CampaigsAwarenessCountArgs>(
+      args?: Subset<T, CampaigsAwarenessCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], CampaingsAwarenessCountAggregateOutputType>
+          : GetScalarType<T['select'], CampaigsAwarenessCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a CampaingsAwareness.
+     * Allows you to perform aggregations operations on a CampaigsAwareness.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {CampaigsAwarenessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4997,13 +5304,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends CampaingsAwarenessAggregateArgs>(args: Subset<T, CampaingsAwarenessAggregateArgs>): Prisma.PrismaPromise<GetCampaingsAwarenessAggregateType<T>>
+    aggregate<T extends CampaigsAwarenessAggregateArgs>(args: Subset<T, CampaigsAwarenessAggregateArgs>): Prisma.PrismaPromise<GetCampaigsAwarenessAggregateType<T>>
 
     /**
-     * Group by CampaingsAwareness.
+     * Group by CampaigsAwareness.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CampaingsAwarenessGroupByArgs} args - Group by arguments.
+     * @param {CampaigsAwarenessGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -5018,14 +5325,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends CampaingsAwarenessGroupByArgs,
+      T extends CampaigsAwarenessGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: CampaingsAwarenessGroupByArgs['orderBy'] }
-        : { orderBy?: CampaingsAwarenessGroupByArgs['orderBy'] },
+        ? { orderBy: CampaigsAwarenessGroupByArgs['orderBy'] }
+        : { orderBy?: CampaigsAwarenessGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -5074,21 +5381,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, CampaingsAwarenessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCampaingsAwarenessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, CampaigsAwarenessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCampaigsAwarenessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the CampaingsAwareness model
+   * Fields of the CampaigsAwareness model
    */
-  readonly fields: CampaingsAwarenessFieldRefs;
+  readonly fields: CampaigsAwarenessFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for CampaingsAwareness.
+   * The delegate class that acts as a "Promise-like" for CampaigsAwareness.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__CampaingsAwarenessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__CampaigsAwarenessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    collectionPoints<T extends CampaigsAwareness$collectionPointsArgs<ExtArgs> = {}>(args?: Subset<T, CampaigsAwareness$collectionPointsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5115,380 +5423,444 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the CampaingsAwareness model
+   * Fields of the CampaigsAwareness model
    */
-  interface CampaingsAwarenessFieldRefs {
-    readonly id: FieldRef<"CampaingsAwareness", 'Int'>
-    readonly nome: FieldRef<"CampaingsAwareness", 'String'>
-    readonly descricao: FieldRef<"CampaingsAwareness", 'String'>
-    readonly data_inicio: FieldRef<"CampaingsAwareness", 'DateTime'>
-    readonly data_fim: FieldRef<"CampaingsAwareness", 'DateTime'>
-    readonly localizacao: FieldRef<"CampaingsAwareness", 'String'>
-    readonly createdAt: FieldRef<"CampaingsAwareness", 'DateTime'>
-    readonly updatedAt: FieldRef<"CampaingsAwareness", 'DateTime'>
+  interface CampaigsAwarenessFieldRefs {
+    readonly id: FieldRef<"CampaigsAwareness", 'Int'>
+    readonly nome: FieldRef<"CampaigsAwareness", 'String'>
+    readonly descricao: FieldRef<"CampaigsAwareness", 'String'>
+    readonly data_inicio: FieldRef<"CampaigsAwareness", 'DateTime'>
+    readonly data_fim: FieldRef<"CampaigsAwareness", 'DateTime'>
+    readonly localizacao: FieldRef<"CampaigsAwareness", 'String'>
+    readonly createdAt: FieldRef<"CampaigsAwareness", 'DateTime'>
+    readonly updatedAt: FieldRef<"CampaigsAwareness", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * CampaingsAwareness findUnique
+   * CampaigsAwareness findUnique
    */
-  export type CampaingsAwarenessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter, which CampaingsAwareness to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: CampaingsAwarenessWhereUniqueInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter, which CampaigsAwareness to fetch.
+     */
+    where: CampaigsAwarenessWhereUniqueInput
   }
 
   /**
-   * CampaingsAwareness findUniqueOrThrow
+   * CampaigsAwareness findUniqueOrThrow
    */
-  export type CampaingsAwarenessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter, which CampaingsAwareness to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: CampaingsAwarenessWhereUniqueInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter, which CampaigsAwareness to fetch.
+     */
+    where: CampaigsAwarenessWhereUniqueInput
   }
 
   /**
-   * CampaingsAwareness findFirst
+   * CampaigsAwareness findFirst
    */
-  export type CampaingsAwarenessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter, which CampaingsAwareness to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: CampaingsAwarenessWhereInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter, which CampaigsAwareness to fetch.
+     */
+    where?: CampaigsAwarenessWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CampaingsAwarenesses to fetch.
+     * Determine the order of CampaigsAwarenesses to fetch.
      */
-    orderBy?: CampaingsAwarenessOrderByWithRelationInput | CampaingsAwarenessOrderByWithRelationInput[]
+    orderBy?: CampaigsAwarenessOrderByWithRelationInput | CampaigsAwarenessOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for CampaingsAwarenesses.
+     * Sets the position for searching for CampaigsAwarenesses.
      */
-    cursor?: CampaingsAwarenessWhereUniqueInput
+    cursor?: CampaigsAwarenessWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CampaingsAwarenesses from the position of the cursor.
+     * Take `±n` CampaigsAwarenesses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CampaingsAwarenesses.
+     * Skip the first `n` CampaigsAwarenesses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of CampaingsAwarenesses.
+     * Filter by unique combinations of CampaigsAwarenesses.
      */
-    distinct?: CampaingsAwarenessScalarFieldEnum | CampaingsAwarenessScalarFieldEnum[]
+    distinct?: CampaigsAwarenessScalarFieldEnum | CampaigsAwarenessScalarFieldEnum[]
   }
 
   /**
-   * CampaingsAwareness findFirstOrThrow
+   * CampaigsAwareness findFirstOrThrow
    */
-  export type CampaingsAwarenessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter, which CampaingsAwareness to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: CampaingsAwarenessWhereInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter, which CampaigsAwareness to fetch.
+     */
+    where?: CampaigsAwarenessWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CampaingsAwarenesses to fetch.
+     * Determine the order of CampaigsAwarenesses to fetch.
      */
-    orderBy?: CampaingsAwarenessOrderByWithRelationInput | CampaingsAwarenessOrderByWithRelationInput[]
+    orderBy?: CampaigsAwarenessOrderByWithRelationInput | CampaigsAwarenessOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for CampaingsAwarenesses.
+     * Sets the position for searching for CampaigsAwarenesses.
      */
-    cursor?: CampaingsAwarenessWhereUniqueInput
+    cursor?: CampaigsAwarenessWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CampaingsAwarenesses from the position of the cursor.
+     * Take `±n` CampaigsAwarenesses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CampaingsAwarenesses.
+     * Skip the first `n` CampaigsAwarenesses.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of CampaingsAwarenesses.
+     * Filter by unique combinations of CampaigsAwarenesses.
      */
-    distinct?: CampaingsAwarenessScalarFieldEnum | CampaingsAwarenessScalarFieldEnum[]
+    distinct?: CampaigsAwarenessScalarFieldEnum | CampaigsAwarenessScalarFieldEnum[]
   }
 
   /**
-   * CampaingsAwareness findMany
+   * CampaigsAwareness findMany
    */
-  export type CampaingsAwarenessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter, which CampaingsAwarenesses to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: CampaingsAwarenessWhereInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter, which CampaigsAwarenesses to fetch.
+     */
+    where?: CampaigsAwarenessWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CampaingsAwarenesses to fetch.
+     * Determine the order of CampaigsAwarenesses to fetch.
      */
-    orderBy?: CampaingsAwarenessOrderByWithRelationInput | CampaingsAwarenessOrderByWithRelationInput[]
+    orderBy?: CampaigsAwarenessOrderByWithRelationInput | CampaigsAwarenessOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing CampaingsAwarenesses.
+     * Sets the position for listing CampaigsAwarenesses.
      */
-    cursor?: CampaingsAwarenessWhereUniqueInput
+    cursor?: CampaigsAwarenessWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CampaingsAwarenesses from the position of the cursor.
+     * Take `±n` CampaigsAwarenesses from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CampaingsAwarenesses.
+     * Skip the first `n` CampaigsAwarenesses.
      */
     skip?: number
-    distinct?: CampaingsAwarenessScalarFieldEnum | CampaingsAwarenessScalarFieldEnum[]
+    distinct?: CampaigsAwarenessScalarFieldEnum | CampaigsAwarenessScalarFieldEnum[]
   }
 
   /**
-   * CampaingsAwareness create
+   * CampaigsAwareness create
    */
-  export type CampaingsAwarenessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * The data needed to create a CampaingsAwareness.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<CampaingsAwarenessCreateInput, CampaingsAwarenessUncheckedCreateInput>
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CampaigsAwareness.
+     */
+    data: XOR<CampaigsAwarenessCreateInput, CampaigsAwarenessUncheckedCreateInput>
   }
 
   /**
-   * CampaingsAwareness createMany
+   * CampaigsAwareness createMany
    */
-  export type CampaingsAwarenessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many CampaingsAwarenesses.
+     * The data used to create many CampaigsAwarenesses.
      */
-    data: CampaingsAwarenessCreateManyInput | CampaingsAwarenessCreateManyInput[]
+    data: CampaigsAwarenessCreateManyInput | CampaigsAwarenessCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * CampaingsAwareness createManyAndReturn
+   * CampaigsAwareness createManyAndReturn
    */
-  export type CampaingsAwarenessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelectCreateManyAndReturn<ExtArgs> | null
+    select?: CampaigsAwarenessSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * The data used to create many CampaingsAwarenesses.
+     * The data used to create many CampaigsAwarenesses.
      */
-    data: CampaingsAwarenessCreateManyInput | CampaingsAwarenessCreateManyInput[]
+    data: CampaigsAwarenessCreateManyInput | CampaigsAwarenessCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * CampaingsAwareness update
+   * CampaigsAwareness update
    */
-  export type CampaingsAwarenessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * The data needed to update a CampaingsAwareness.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<CampaingsAwarenessUpdateInput, CampaingsAwarenessUncheckedUpdateInput>
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
     /**
-     * Choose, which CampaingsAwareness to update.
+     * The data needed to update a CampaigsAwareness.
      */
-    where: CampaingsAwarenessWhereUniqueInput
+    data: XOR<CampaigsAwarenessUpdateInput, CampaigsAwarenessUncheckedUpdateInput>
+    /**
+     * Choose, which CampaigsAwareness to update.
+     */
+    where: CampaigsAwarenessWhereUniqueInput
   }
 
   /**
-   * CampaingsAwareness updateMany
+   * CampaigsAwareness updateMany
    */
-  export type CampaingsAwarenessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update CampaingsAwarenesses.
+     * The data used to update CampaigsAwarenesses.
      */
-    data: XOR<CampaingsAwarenessUpdateManyMutationInput, CampaingsAwarenessUncheckedUpdateManyInput>
+    data: XOR<CampaigsAwarenessUpdateManyMutationInput, CampaigsAwarenessUncheckedUpdateManyInput>
     /**
-     * Filter which CampaingsAwarenesses to update
+     * Filter which CampaigsAwarenesses to update
      */
-    where?: CampaingsAwarenessWhereInput
+    where?: CampaigsAwarenessWhereInput
     /**
-     * Limit how many CampaingsAwarenesses to update.
+     * Limit how many CampaigsAwarenesses to update.
      */
     limit?: number
   }
 
   /**
-   * CampaingsAwareness updateManyAndReturn
+   * CampaigsAwareness updateManyAndReturn
    */
-  export type CampaingsAwarenessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: CampaigsAwarenessSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * The data used to update CampaingsAwarenesses.
+     * The data used to update CampaigsAwarenesses.
      */
-    data: XOR<CampaingsAwarenessUpdateManyMutationInput, CampaingsAwarenessUncheckedUpdateManyInput>
+    data: XOR<CampaigsAwarenessUpdateManyMutationInput, CampaigsAwarenessUncheckedUpdateManyInput>
     /**
-     * Filter which CampaingsAwarenesses to update
+     * Filter which CampaigsAwarenesses to update
      */
-    where?: CampaingsAwarenessWhereInput
+    where?: CampaigsAwarenessWhereInput
     /**
-     * Limit how many CampaingsAwarenesses to update.
+     * Limit how many CampaigsAwarenesses to update.
      */
     limit?: number
   }
 
   /**
-   * CampaingsAwareness upsert
+   * CampaigsAwareness upsert
    */
-  export type CampaingsAwarenessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * The filter to search for the CampaingsAwareness to update in case it exists.
+     * Choose, which related nodes to fetch as well
      */
-    where: CampaingsAwarenessWhereUniqueInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
     /**
-     * In case the CampaingsAwareness found by the `where` argument doesn't exist, create a new CampaingsAwareness with this data.
+     * The filter to search for the CampaigsAwareness to update in case it exists.
      */
-    create: XOR<CampaingsAwarenessCreateInput, CampaingsAwarenessUncheckedCreateInput>
+    where: CampaigsAwarenessWhereUniqueInput
     /**
-     * In case the CampaingsAwareness was found with the provided `where` argument, update it with this data.
+     * In case the CampaigsAwareness found by the `where` argument doesn't exist, create a new CampaigsAwareness with this data.
      */
-    update: XOR<CampaingsAwarenessUpdateInput, CampaingsAwarenessUncheckedUpdateInput>
+    create: XOR<CampaigsAwarenessCreateInput, CampaigsAwarenessUncheckedCreateInput>
+    /**
+     * In case the CampaigsAwareness was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CampaigsAwarenessUpdateInput, CampaigsAwarenessUncheckedUpdateInput>
   }
 
   /**
-   * CampaingsAwareness delete
+   * CampaigsAwareness delete
    */
-  export type CampaingsAwarenessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CampaigsAwareness
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CampaigsAwareness
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
     /**
-     * Filter which CampaingsAwareness to delete.
+     * Choose, which related nodes to fetch as well
      */
-    where: CampaingsAwarenessWhereUniqueInput
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
+    /**
+     * Filter which CampaigsAwareness to delete.
+     */
+    where: CampaigsAwarenessWhereUniqueInput
   }
 
   /**
-   * CampaingsAwareness deleteMany
+   * CampaigsAwareness deleteMany
    */
-  export type CampaingsAwarenessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwarenessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which CampaingsAwarenesses to delete
+     * Filter which CampaigsAwarenesses to delete
      */
-    where?: CampaingsAwarenessWhereInput
+    where?: CampaigsAwarenessWhereInput
     /**
-     * Limit how many CampaingsAwarenesses to delete.
+     * Limit how many CampaigsAwarenesses to delete.
      */
     limit?: number
   }
 
   /**
-   * CampaingsAwareness without action
+   * CampaigsAwareness.collectionPoints
    */
-  export type CampaingsAwarenessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CampaigsAwareness$collectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CampaingsAwareness
+     * Select specific fields to fetch from the CollectionPoints
      */
-    select?: CampaingsAwarenessSelect<ExtArgs> | null
+    select?: CollectionPointsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CampaingsAwareness
+     * Omit specific fields from the CollectionPoints
      */
-    omit?: CampaingsAwarenessOmit<ExtArgs> | null
+    omit?: CollectionPointsOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsInclude<ExtArgs> | null
+    where?: CollectionPointsWhereInput
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
+    cursor?: CollectionPointsWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
+  }
+
+  /**
+   * CampaigsAwareness without action
+   */
+  export type CampaigsAwarenessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CampaigsAwareness
+     */
+    select?: CampaigsAwarenessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CampaigsAwareness
+     */
+    omit?: CampaigsAwarenessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CampaigsAwarenessInclude<ExtArgs> | null
   }
 
 
@@ -5722,6 +6094,8 @@ export namespace Prisma {
     quantidade_beneficiarios?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    collectionPoints?: boolean | ReportsCampaign$collectionPointsArgs<ExtArgs>
+    _count?: boolean | ReportsCampaignCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["reportsCampaign"]>
 
   export type ReportsCampaignSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -5758,10 +6132,18 @@ export namespace Prisma {
   }
 
   export type ReportsCampaignOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "descricao" | "localizacao" | "quantidade_alimentos" | "quantidade_beneficiarios" | "createdAt" | "updatedAt", ExtArgs["result"]["reportsCampaign"]>
+  export type ReportsCampaignInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    collectionPoints?: boolean | ReportsCampaign$collectionPointsArgs<ExtArgs>
+    _count?: boolean | ReportsCampaignCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ReportsCampaignIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type ReportsCampaignIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $ReportsCampaignPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "ReportsCampaign"
-    objects: {}
+    objects: {
+      collectionPoints: Prisma.$CollectionPointsPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       nome: string
@@ -6165,6 +6547,7 @@ export namespace Prisma {
    */
   export interface Prisma__ReportsCampaignClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    collectionPoints<T extends ReportsCampaign$collectionPointsArgs<ExtArgs> = {}>(args?: Subset<T, ReportsCampaign$collectionPointsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CollectionPointsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6219,6 +6602,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * Filter, which ReportsCampaign to fetch.
      */
     where: ReportsCampaignWhereUniqueInput
@@ -6237,6 +6624,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * Filter, which ReportsCampaign to fetch.
      */
     where: ReportsCampaignWhereUniqueInput
@@ -6254,6 +6645,10 @@ export namespace Prisma {
      * Omit specific fields from the ReportsCampaign
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
     /**
      * Filter, which ReportsCampaign to fetch.
      */
@@ -6303,6 +6698,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * Filter, which ReportsCampaign to fetch.
      */
     where?: ReportsCampaignWhereInput
@@ -6351,6 +6750,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * Filter, which ReportsCampaigns to fetch.
      */
     where?: ReportsCampaignWhereInput
@@ -6393,6 +6796,10 @@ export namespace Prisma {
      * Omit specific fields from the ReportsCampaign
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
     /**
      * The data needed to create a ReportsCampaign.
      */
@@ -6441,6 +6848,10 @@ export namespace Prisma {
      * Omit specific fields from the ReportsCampaign
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
     /**
      * The data needed to update a ReportsCampaign.
      */
@@ -6508,6 +6919,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * The filter to search for the ReportsCampaign to update in case it exists.
      */
     where: ReportsCampaignWhereUniqueInput
@@ -6534,6 +6949,10 @@ export namespace Prisma {
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
+    /**
      * Filter which ReportsCampaign to delete.
      */
     where: ReportsCampaignWhereUniqueInput
@@ -6554,6 +6973,30 @@ export namespace Prisma {
   }
 
   /**
+   * ReportsCampaign.collectionPoints
+   */
+  export type ReportsCampaign$collectionPointsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CollectionPoints
+     */
+    select?: CollectionPointsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CollectionPoints
+     */
+    omit?: CollectionPointsOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CollectionPointsInclude<ExtArgs> | null
+    where?: CollectionPointsWhereInput
+    orderBy?: CollectionPointsOrderByWithRelationInput | CollectionPointsOrderByWithRelationInput[]
+    cursor?: CollectionPointsWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CollectionPointsScalarFieldEnum | CollectionPointsScalarFieldEnum[]
+  }
+
+  /**
    * ReportsCampaign without action
    */
   export type ReportsCampaignDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -6565,6 +7008,10 @@ export namespace Prisma {
      * Omit specific fields from the ReportsCampaign
      */
     omit?: ReportsCampaignOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportsCampaignInclude<ExtArgs> | null
   }
 
 
@@ -6582,7 +7029,7 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const DonarsScalarFieldEnum: {
+  export const DonorScalarFieldEnum: {
     id: 'id',
     nome: 'nome',
     email: 'email',
@@ -6593,7 +7040,7 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type DonarsScalarFieldEnum = (typeof DonarsScalarFieldEnum)[keyof typeof DonarsScalarFieldEnum]
+  export type DonorScalarFieldEnum = (typeof DonorScalarFieldEnum)[keyof typeof DonorScalarFieldEnum]
 
 
   export const BeneficiaryScalarFieldEnum: {
@@ -6610,8 +7057,11 @@ export namespace Prisma {
   export type BeneficiaryScalarFieldEnum = (typeof BeneficiaryScalarFieldEnum)[keyof typeof BeneficiaryScalarFieldEnum]
 
 
-  export const ColectionPointsScalarFieldEnum: {
+  export const CollectionPointsScalarFieldEnum: {
     id: 'id',
+    beneficiaryId: 'beneficiaryId',
+    impactReportId: 'impactReportId',
+    campaigsAwarenessId: 'campaigsAwarenessId',
     nome: 'nome',
     endereco: 'endereco',
     telefone: 'telefone',
@@ -6620,10 +7070,10 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type ColectionPointsScalarFieldEnum = (typeof ColectionPointsScalarFieldEnum)[keyof typeof ColectionPointsScalarFieldEnum]
+  export type CollectionPointsScalarFieldEnum = (typeof CollectionPointsScalarFieldEnum)[keyof typeof CollectionPointsScalarFieldEnum]
 
 
-  export const CampaingsAwarenessScalarFieldEnum: {
+  export const CampaigsAwarenessScalarFieldEnum: {
     id: 'id',
     nome: 'nome',
     descricao: 'descricao',
@@ -6634,7 +7084,7 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type CampaingsAwarenessScalarFieldEnum = (typeof CampaingsAwarenessScalarFieldEnum)[keyof typeof CampaingsAwarenessScalarFieldEnum]
+  export type CampaigsAwarenessScalarFieldEnum = (typeof CampaigsAwarenessScalarFieldEnum)[keyof typeof CampaigsAwarenessScalarFieldEnum]
 
 
   export const ReportsCampaignScalarFieldEnum: {
@@ -6731,21 +7181,21 @@ export namespace Prisma {
    */
 
 
-  export type DonarsWhereInput = {
-    AND?: DonarsWhereInput | DonarsWhereInput[]
-    OR?: DonarsWhereInput[]
-    NOT?: DonarsWhereInput | DonarsWhereInput[]
-    id?: IntFilter<"Donars"> | number
-    nome?: StringFilter<"Donars"> | string
-    email?: StringFilter<"Donars"> | string
-    telefone?: StringFilter<"Donars"> | string
-    endereco?: StringFilter<"Donars"> | string
-    cnpj?: StringFilter<"Donars"> | string
-    createdAt?: DateTimeFilter<"Donars"> | Date | string
-    updatedAt?: DateTimeFilter<"Donars"> | Date | string
+  export type DonorWhereInput = {
+    AND?: DonorWhereInput | DonorWhereInput[]
+    OR?: DonorWhereInput[]
+    NOT?: DonorWhereInput | DonorWhereInput[]
+    id?: IntFilter<"Donor"> | number
+    nome?: StringFilter<"Donor"> | string
+    email?: StringFilter<"Donor"> | string
+    telefone?: StringFilter<"Donor"> | string
+    endereco?: StringFilter<"Donor"> | string
+    cnpj?: StringFilter<"Donor"> | string
+    createdAt?: DateTimeFilter<"Donor"> | Date | string
+    updatedAt?: DateTimeFilter<"Donor"> | Date | string
   }
 
-  export type DonarsOrderByWithRelationInput = {
+  export type DonorOrderByWithRelationInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -6756,21 +7206,21 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type DonarsWhereUniqueInput = Prisma.AtLeast<{
+  export type DonorWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: DonarsWhereInput | DonarsWhereInput[]
-    OR?: DonarsWhereInput[]
-    NOT?: DonarsWhereInput | DonarsWhereInput[]
-    nome?: StringFilter<"Donars"> | string
-    email?: StringFilter<"Donars"> | string
-    telefone?: StringFilter<"Donars"> | string
-    endereco?: StringFilter<"Donars"> | string
-    cnpj?: StringFilter<"Donars"> | string
-    createdAt?: DateTimeFilter<"Donars"> | Date | string
-    updatedAt?: DateTimeFilter<"Donars"> | Date | string
+    AND?: DonorWhereInput | DonorWhereInput[]
+    OR?: DonorWhereInput[]
+    NOT?: DonorWhereInput | DonorWhereInput[]
+    nome?: StringFilter<"Donor"> | string
+    email?: StringFilter<"Donor"> | string
+    telefone?: StringFilter<"Donor"> | string
+    endereco?: StringFilter<"Donor"> | string
+    cnpj?: StringFilter<"Donor"> | string
+    createdAt?: DateTimeFilter<"Donor"> | Date | string
+    updatedAt?: DateTimeFilter<"Donor"> | Date | string
   }, "id">
 
-  export type DonarsOrderByWithAggregationInput = {
+  export type DonorOrderByWithAggregationInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -6779,25 +7229,25 @@ export namespace Prisma {
     cnpj?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: DonarsCountOrderByAggregateInput
-    _avg?: DonarsAvgOrderByAggregateInput
-    _max?: DonarsMaxOrderByAggregateInput
-    _min?: DonarsMinOrderByAggregateInput
-    _sum?: DonarsSumOrderByAggregateInput
+    _count?: DonorCountOrderByAggregateInput
+    _avg?: DonorAvgOrderByAggregateInput
+    _max?: DonorMaxOrderByAggregateInput
+    _min?: DonorMinOrderByAggregateInput
+    _sum?: DonorSumOrderByAggregateInput
   }
 
-  export type DonarsScalarWhereWithAggregatesInput = {
-    AND?: DonarsScalarWhereWithAggregatesInput | DonarsScalarWhereWithAggregatesInput[]
-    OR?: DonarsScalarWhereWithAggregatesInput[]
-    NOT?: DonarsScalarWhereWithAggregatesInput | DonarsScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Donars"> | number
-    nome?: StringWithAggregatesFilter<"Donars"> | string
-    email?: StringWithAggregatesFilter<"Donars"> | string
-    telefone?: StringWithAggregatesFilter<"Donars"> | string
-    endereco?: StringWithAggregatesFilter<"Donars"> | string
-    cnpj?: StringWithAggregatesFilter<"Donars"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Donars"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"Donars"> | Date | string
+  export type DonorScalarWhereWithAggregatesInput = {
+    AND?: DonorScalarWhereWithAggregatesInput | DonorScalarWhereWithAggregatesInput[]
+    OR?: DonorScalarWhereWithAggregatesInput[]
+    NOT?: DonorScalarWhereWithAggregatesInput | DonorScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Donor"> | number
+    nome?: StringWithAggregatesFilter<"Donor"> | string
+    email?: StringWithAggregatesFilter<"Donor"> | string
+    telefone?: StringWithAggregatesFilter<"Donor"> | string
+    endereco?: StringWithAggregatesFilter<"Donor"> | string
+    cnpj?: StringWithAggregatesFilter<"Donor"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Donor"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Donor"> | Date | string
   }
 
   export type BeneficiaryWhereInput = {
@@ -6812,6 +7262,7 @@ export namespace Prisma {
     cpf?: StringFilter<"Beneficiary"> | string
     createdAt?: DateTimeFilter<"Beneficiary"> | Date | string
     updatedAt?: DateTimeFilter<"Beneficiary"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }
 
   export type BeneficiaryOrderByWithRelationInput = {
@@ -6823,6 +7274,7 @@ export namespace Prisma {
     cpf?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    collectionPoints?: CollectionPointsOrderByRelationAggregateInput
   }
 
   export type BeneficiaryWhereUniqueInput = Prisma.AtLeast<{
@@ -6837,6 +7289,7 @@ export namespace Prisma {
     cpf?: StringFilter<"Beneficiary"> | string
     createdAt?: DateTimeFilter<"Beneficiary"> | Date | string
     updatedAt?: DateTimeFilter<"Beneficiary"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }, "id">
 
   export type BeneficiaryOrderByWithAggregationInput = {
@@ -6869,85 +7322,110 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"Beneficiary"> | Date | string
   }
 
-  export type ColectionPointsWhereInput = {
-    AND?: ColectionPointsWhereInput | ColectionPointsWhereInput[]
-    OR?: ColectionPointsWhereInput[]
-    NOT?: ColectionPointsWhereInput | ColectionPointsWhereInput[]
-    id?: IntFilter<"ColectionPoints"> | number
-    nome?: StringFilter<"ColectionPoints"> | string
-    endereco?: StringFilter<"ColectionPoints"> | string
-    telefone?: StringFilter<"ColectionPoints"> | string
-    horario_de_funcionamento?: DateTimeFilter<"ColectionPoints"> | Date | string
-    createdAt?: DateTimeFilter<"ColectionPoints"> | Date | string
-    updatedAt?: DateTimeFilter<"ColectionPoints"> | Date | string
+  export type CollectionPointsWhereInput = {
+    AND?: CollectionPointsWhereInput | CollectionPointsWhereInput[]
+    OR?: CollectionPointsWhereInput[]
+    NOT?: CollectionPointsWhereInput | CollectionPointsWhereInput[]
+    id?: IntFilter<"CollectionPoints"> | number
+    beneficiaryId?: IntFilter<"CollectionPoints"> | number
+    impactReportId?: IntFilter<"CollectionPoints"> | number
+    campaigsAwarenessId?: IntFilter<"CollectionPoints"> | number
+    nome?: StringFilter<"CollectionPoints"> | string
+    endereco?: StringFilter<"CollectionPoints"> | string
+    telefone?: StringFilter<"CollectionPoints"> | string
+    horario_de_funcionamento?: DateTimeFilter<"CollectionPoints"> | Date | string
+    createdAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+    updatedAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+    beneficiary?: XOR<BeneficiaryScalarRelationFilter, BeneficiaryWhereInput>
+    impactReport?: XOR<ReportsCampaignScalarRelationFilter, ReportsCampaignWhereInput>
+    campaigsAwareness?: XOR<CampaigsAwarenessScalarRelationFilter, CampaigsAwarenessWhereInput>
   }
 
-  export type ColectionPointsOrderByWithRelationInput = {
+  export type CollectionPointsOrderByWithRelationInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
     nome?: SortOrder
     endereco?: SortOrder
     telefone?: SortOrder
     horario_de_funcionamento?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    beneficiary?: BeneficiaryOrderByWithRelationInput
+    impactReport?: ReportsCampaignOrderByWithRelationInput
+    campaigsAwareness?: CampaigsAwarenessOrderByWithRelationInput
   }
 
-  export type ColectionPointsWhereUniqueInput = Prisma.AtLeast<{
+  export type CollectionPointsWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: ColectionPointsWhereInput | ColectionPointsWhereInput[]
-    OR?: ColectionPointsWhereInput[]
-    NOT?: ColectionPointsWhereInput | ColectionPointsWhereInput[]
-    nome?: StringFilter<"ColectionPoints"> | string
-    endereco?: StringFilter<"ColectionPoints"> | string
-    telefone?: StringFilter<"ColectionPoints"> | string
-    horario_de_funcionamento?: DateTimeFilter<"ColectionPoints"> | Date | string
-    createdAt?: DateTimeFilter<"ColectionPoints"> | Date | string
-    updatedAt?: DateTimeFilter<"ColectionPoints"> | Date | string
+    AND?: CollectionPointsWhereInput | CollectionPointsWhereInput[]
+    OR?: CollectionPointsWhereInput[]
+    NOT?: CollectionPointsWhereInput | CollectionPointsWhereInput[]
+    beneficiaryId?: IntFilter<"CollectionPoints"> | number
+    impactReportId?: IntFilter<"CollectionPoints"> | number
+    campaigsAwarenessId?: IntFilter<"CollectionPoints"> | number
+    nome?: StringFilter<"CollectionPoints"> | string
+    endereco?: StringFilter<"CollectionPoints"> | string
+    telefone?: StringFilter<"CollectionPoints"> | string
+    horario_de_funcionamento?: DateTimeFilter<"CollectionPoints"> | Date | string
+    createdAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+    updatedAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+    beneficiary?: XOR<BeneficiaryScalarRelationFilter, BeneficiaryWhereInput>
+    impactReport?: XOR<ReportsCampaignScalarRelationFilter, ReportsCampaignWhereInput>
+    campaigsAwareness?: XOR<CampaigsAwarenessScalarRelationFilter, CampaigsAwarenessWhereInput>
   }, "id">
 
-  export type ColectionPointsOrderByWithAggregationInput = {
+  export type CollectionPointsOrderByWithAggregationInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
     nome?: SortOrder
     endereco?: SortOrder
     telefone?: SortOrder
     horario_de_funcionamento?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: ColectionPointsCountOrderByAggregateInput
-    _avg?: ColectionPointsAvgOrderByAggregateInput
-    _max?: ColectionPointsMaxOrderByAggregateInput
-    _min?: ColectionPointsMinOrderByAggregateInput
-    _sum?: ColectionPointsSumOrderByAggregateInput
+    _count?: CollectionPointsCountOrderByAggregateInput
+    _avg?: CollectionPointsAvgOrderByAggregateInput
+    _max?: CollectionPointsMaxOrderByAggregateInput
+    _min?: CollectionPointsMinOrderByAggregateInput
+    _sum?: CollectionPointsSumOrderByAggregateInput
   }
 
-  export type ColectionPointsScalarWhereWithAggregatesInput = {
-    AND?: ColectionPointsScalarWhereWithAggregatesInput | ColectionPointsScalarWhereWithAggregatesInput[]
-    OR?: ColectionPointsScalarWhereWithAggregatesInput[]
-    NOT?: ColectionPointsScalarWhereWithAggregatesInput | ColectionPointsScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"ColectionPoints"> | number
-    nome?: StringWithAggregatesFilter<"ColectionPoints"> | string
-    endereco?: StringWithAggregatesFilter<"ColectionPoints"> | string
-    telefone?: StringWithAggregatesFilter<"ColectionPoints"> | string
-    horario_de_funcionamento?: DateTimeWithAggregatesFilter<"ColectionPoints"> | Date | string
-    createdAt?: DateTimeWithAggregatesFilter<"ColectionPoints"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"ColectionPoints"> | Date | string
+  export type CollectionPointsScalarWhereWithAggregatesInput = {
+    AND?: CollectionPointsScalarWhereWithAggregatesInput | CollectionPointsScalarWhereWithAggregatesInput[]
+    OR?: CollectionPointsScalarWhereWithAggregatesInput[]
+    NOT?: CollectionPointsScalarWhereWithAggregatesInput | CollectionPointsScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"CollectionPoints"> | number
+    beneficiaryId?: IntWithAggregatesFilter<"CollectionPoints"> | number
+    impactReportId?: IntWithAggregatesFilter<"CollectionPoints"> | number
+    campaigsAwarenessId?: IntWithAggregatesFilter<"CollectionPoints"> | number
+    nome?: StringWithAggregatesFilter<"CollectionPoints"> | string
+    endereco?: StringWithAggregatesFilter<"CollectionPoints"> | string
+    telefone?: StringWithAggregatesFilter<"CollectionPoints"> | string
+    horario_de_funcionamento?: DateTimeWithAggregatesFilter<"CollectionPoints"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"CollectionPoints"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"CollectionPoints"> | Date | string
   }
 
-  export type CampaingsAwarenessWhereInput = {
-    AND?: CampaingsAwarenessWhereInput | CampaingsAwarenessWhereInput[]
-    OR?: CampaingsAwarenessWhereInput[]
-    NOT?: CampaingsAwarenessWhereInput | CampaingsAwarenessWhereInput[]
-    id?: IntFilter<"CampaingsAwareness"> | number
-    nome?: StringFilter<"CampaingsAwareness"> | string
-    descricao?: StringFilter<"CampaingsAwareness"> | string
-    data_inicio?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    data_fim?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    localizacao?: StringFilter<"CampaingsAwareness"> | string
-    createdAt?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    updatedAt?: DateTimeFilter<"CampaingsAwareness"> | Date | string
+  export type CampaigsAwarenessWhereInput = {
+    AND?: CampaigsAwarenessWhereInput | CampaigsAwarenessWhereInput[]
+    OR?: CampaigsAwarenessWhereInput[]
+    NOT?: CampaigsAwarenessWhereInput | CampaigsAwarenessWhereInput[]
+    id?: IntFilter<"CampaigsAwareness"> | number
+    nome?: StringFilter<"CampaigsAwareness"> | string
+    descricao?: StringFilter<"CampaigsAwareness"> | string
+    data_inicio?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    data_fim?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    localizacao?: StringFilter<"CampaigsAwareness"> | string
+    createdAt?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    updatedAt?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }
 
-  export type CampaingsAwarenessOrderByWithRelationInput = {
+  export type CampaigsAwarenessOrderByWithRelationInput = {
     id?: SortOrder
     nome?: SortOrder
     descricao?: SortOrder
@@ -6956,23 +7434,25 @@ export namespace Prisma {
     localizacao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    collectionPoints?: CollectionPointsOrderByRelationAggregateInput
   }
 
-  export type CampaingsAwarenessWhereUniqueInput = Prisma.AtLeast<{
+  export type CampaigsAwarenessWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: CampaingsAwarenessWhereInput | CampaingsAwarenessWhereInput[]
-    OR?: CampaingsAwarenessWhereInput[]
-    NOT?: CampaingsAwarenessWhereInput | CampaingsAwarenessWhereInput[]
-    nome?: StringFilter<"CampaingsAwareness"> | string
-    descricao?: StringFilter<"CampaingsAwareness"> | string
-    data_inicio?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    data_fim?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    localizacao?: StringFilter<"CampaingsAwareness"> | string
-    createdAt?: DateTimeFilter<"CampaingsAwareness"> | Date | string
-    updatedAt?: DateTimeFilter<"CampaingsAwareness"> | Date | string
+    AND?: CampaigsAwarenessWhereInput | CampaigsAwarenessWhereInput[]
+    OR?: CampaigsAwarenessWhereInput[]
+    NOT?: CampaigsAwarenessWhereInput | CampaigsAwarenessWhereInput[]
+    nome?: StringFilter<"CampaigsAwareness"> | string
+    descricao?: StringFilter<"CampaigsAwareness"> | string
+    data_inicio?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    data_fim?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    localizacao?: StringFilter<"CampaigsAwareness"> | string
+    createdAt?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    updatedAt?: DateTimeFilter<"CampaigsAwareness"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }, "id">
 
-  export type CampaingsAwarenessOrderByWithAggregationInput = {
+  export type CampaigsAwarenessOrderByWithAggregationInput = {
     id?: SortOrder
     nome?: SortOrder
     descricao?: SortOrder
@@ -6981,25 +7461,25 @@ export namespace Prisma {
     localizacao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: CampaingsAwarenessCountOrderByAggregateInput
-    _avg?: CampaingsAwarenessAvgOrderByAggregateInput
-    _max?: CampaingsAwarenessMaxOrderByAggregateInput
-    _min?: CampaingsAwarenessMinOrderByAggregateInput
-    _sum?: CampaingsAwarenessSumOrderByAggregateInput
+    _count?: CampaigsAwarenessCountOrderByAggregateInput
+    _avg?: CampaigsAwarenessAvgOrderByAggregateInput
+    _max?: CampaigsAwarenessMaxOrderByAggregateInput
+    _min?: CampaigsAwarenessMinOrderByAggregateInput
+    _sum?: CampaigsAwarenessSumOrderByAggregateInput
   }
 
-  export type CampaingsAwarenessScalarWhereWithAggregatesInput = {
-    AND?: CampaingsAwarenessScalarWhereWithAggregatesInput | CampaingsAwarenessScalarWhereWithAggregatesInput[]
-    OR?: CampaingsAwarenessScalarWhereWithAggregatesInput[]
-    NOT?: CampaingsAwarenessScalarWhereWithAggregatesInput | CampaingsAwarenessScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"CampaingsAwareness"> | number
-    nome?: StringWithAggregatesFilter<"CampaingsAwareness"> | string
-    descricao?: StringWithAggregatesFilter<"CampaingsAwareness"> | string
-    data_inicio?: DateTimeWithAggregatesFilter<"CampaingsAwareness"> | Date | string
-    data_fim?: DateTimeWithAggregatesFilter<"CampaingsAwareness"> | Date | string
-    localizacao?: StringWithAggregatesFilter<"CampaingsAwareness"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"CampaingsAwareness"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"CampaingsAwareness"> | Date | string
+  export type CampaigsAwarenessScalarWhereWithAggregatesInput = {
+    AND?: CampaigsAwarenessScalarWhereWithAggregatesInput | CampaigsAwarenessScalarWhereWithAggregatesInput[]
+    OR?: CampaigsAwarenessScalarWhereWithAggregatesInput[]
+    NOT?: CampaigsAwarenessScalarWhereWithAggregatesInput | CampaigsAwarenessScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"CampaigsAwareness"> | number
+    nome?: StringWithAggregatesFilter<"CampaigsAwareness"> | string
+    descricao?: StringWithAggregatesFilter<"CampaigsAwareness"> | string
+    data_inicio?: DateTimeWithAggregatesFilter<"CampaigsAwareness"> | Date | string
+    data_fim?: DateTimeWithAggregatesFilter<"CampaigsAwareness"> | Date | string
+    localizacao?: StringWithAggregatesFilter<"CampaigsAwareness"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"CampaigsAwareness"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"CampaigsAwareness"> | Date | string
   }
 
   export type ReportsCampaignWhereInput = {
@@ -7014,6 +7494,7 @@ export namespace Prisma {
     quantidade_beneficiarios?: IntFilter<"ReportsCampaign"> | number
     createdAt?: DateTimeFilter<"ReportsCampaign"> | Date | string
     updatedAt?: DateTimeFilter<"ReportsCampaign"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }
 
   export type ReportsCampaignOrderByWithRelationInput = {
@@ -7025,6 +7506,7 @@ export namespace Prisma {
     quantidade_beneficiarios?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    collectionPoints?: CollectionPointsOrderByRelationAggregateInput
   }
 
   export type ReportsCampaignWhereUniqueInput = Prisma.AtLeast<{
@@ -7039,6 +7521,7 @@ export namespace Prisma {
     quantidade_beneficiarios?: IntFilter<"ReportsCampaign"> | number
     createdAt?: DateTimeFilter<"ReportsCampaign"> | Date | string
     updatedAt?: DateTimeFilter<"ReportsCampaign"> | Date | string
+    collectionPoints?: CollectionPointsListRelationFilter
   }, "id">
 
   export type ReportsCampaignOrderByWithAggregationInput = {
@@ -7071,7 +7554,7 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"ReportsCampaign"> | Date | string
   }
 
-  export type DonarsCreateInput = {
+  export type DonorCreateInput = {
     nome: string
     email: string
     telefone: string
@@ -7081,7 +7564,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type DonarsUncheckedCreateInput = {
+  export type DonorUncheckedCreateInput = {
     id?: number
     nome: string
     email: string
@@ -7092,7 +7575,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type DonarsUpdateInput = {
+  export type DonorUpdateInput = {
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
@@ -7102,7 +7585,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type DonarsUncheckedUpdateInput = {
+  export type DonorUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -7113,7 +7596,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type DonarsCreateManyInput = {
+  export type DonorCreateManyInput = {
     id?: number
     nome: string
     email: string
@@ -7124,7 +7607,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type DonarsUpdateManyMutationInput = {
+  export type DonorUpdateManyMutationInput = {
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
@@ -7134,7 +7617,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type DonarsUncheckedUpdateManyInput = {
+  export type DonorUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -7153,6 +7636,7 @@ export namespace Prisma {
     cpf: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    collectionPoints?: CollectionPointsCreateNestedManyWithoutBeneficiaryInput
   }
 
   export type BeneficiaryUncheckedCreateInput = {
@@ -7164,6 +7648,7 @@ export namespace Prisma {
     cpf: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    collectionPoints?: CollectionPointsUncheckedCreateNestedManyWithoutBeneficiaryInput
   }
 
   export type BeneficiaryUpdateInput = {
@@ -7174,6 +7659,7 @@ export namespace Prisma {
     cpf?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUpdateManyWithoutBeneficiaryNestedInput
   }
 
   export type BeneficiaryUncheckedUpdateInput = {
@@ -7185,6 +7671,7 @@ export namespace Prisma {
     cpf?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUncheckedUpdateManyWithoutBeneficiaryNestedInput
   }
 
   export type BeneficiaryCreateManyInput = {
@@ -7219,7 +7706,23 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ColectionPointsCreateInput = {
+  export type CollectionPointsCreateInput = {
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    beneficiary: BeneficiaryCreateNestedOneWithoutCollectionPointsInput
+    impactReport: ReportsCampaignCreateNestedOneWithoutCollectionPointsInput
+    campaigsAwareness: CampaigsAwarenessCreateNestedOneWithoutCollectionPointsInput
+  }
+
+  export type CollectionPointsUncheckedCreateInput = {
+    id?: number
+    beneficiaryId: number
+    impactReportId: number
+    campaigsAwarenessId: number
     nome: string
     endereco: string
     telefone: string
@@ -7228,65 +7731,114 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type ColectionPointsUncheckedCreateInput = {
+  export type CollectionPointsUpdateInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    beneficiary?: BeneficiaryUpdateOneRequiredWithoutCollectionPointsNestedInput
+    impactReport?: ReportsCampaignUpdateOneRequiredWithoutCollectionPointsNestedInput
+    campaigsAwareness?: CampaigsAwarenessUpdateOneRequiredWithoutCollectionPointsNestedInput
+  }
+
+  export type CollectionPointsUncheckedUpdateInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsCreateManyInput = {
+    id?: number
+    beneficiaryId: number
+    impactReportId: number
+    campaigsAwarenessId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsUpdateManyMutationInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsUncheckedUpdateManyInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CampaigsAwarenessCreateInput = {
+    nome: string
+    descricao: string
+    data_inicio: Date | string
+    data_fim: Date | string
+    localizacao: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    collectionPoints?: CollectionPointsCreateNestedManyWithoutCampaigsAwarenessInput
+  }
+
+  export type CampaigsAwarenessUncheckedCreateInput = {
     id?: number
     nome: string
-    endereco: string
-    telefone: string
-    horario_de_funcionamento: Date | string
+    descricao: string
+    data_inicio: Date | string
+    data_fim: Date | string
+    localizacao: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    collectionPoints?: CollectionPointsUncheckedCreateNestedManyWithoutCampaigsAwarenessInput
   }
 
-  export type ColectionPointsUpdateInput = {
+  export type CampaigsAwarenessUpdateInput = {
     nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    telefone?: StringFieldUpdateOperationsInput | string
-    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
+    localizacao?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUpdateManyWithoutCampaigsAwarenessNestedInput
   }
 
-  export type ColectionPointsUncheckedUpdateInput = {
+  export type CampaigsAwarenessUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    telefone?: StringFieldUpdateOperationsInput | string
-    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
+    localizacao?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUncheckedUpdateManyWithoutCampaigsAwarenessNestedInput
   }
 
-  export type ColectionPointsCreateManyInput = {
+  export type CampaigsAwarenessCreateManyInput = {
     id?: number
-    nome: string
-    endereco: string
-    telefone: string
-    horario_de_funcionamento: Date | string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-  }
-
-  export type ColectionPointsUpdateManyMutationInput = {
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    telefone?: StringFieldUpdateOperationsInput | string
-    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type ColectionPointsUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    telefone?: StringFieldUpdateOperationsInput | string
-    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type CampaingsAwarenessCreateInput = {
     nome: string
     descricao: string
     data_inicio: Date | string
@@ -7296,18 +7848,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CampaingsAwarenessUncheckedCreateInput = {
-    id?: number
-    nome: string
-    descricao: string
-    data_inicio: Date | string
-    data_fim: Date | string
-    localizacao: string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-  }
-
-  export type CampaingsAwarenessUpdateInput = {
+  export type CampaigsAwarenessUpdateManyMutationInput = {
     nome?: StringFieldUpdateOperationsInput | string
     descricao?: StringFieldUpdateOperationsInput | string
     data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7317,39 +7858,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CampaingsAwarenessUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    nome?: StringFieldUpdateOperationsInput | string
-    descricao?: StringFieldUpdateOperationsInput | string
-    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
-    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
-    localizacao?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type CampaingsAwarenessCreateManyInput = {
-    id?: number
-    nome: string
-    descricao: string
-    data_inicio: Date | string
-    data_fim: Date | string
-    localizacao: string
-    createdAt?: Date | string
-    updatedAt?: Date | string
-  }
-
-  export type CampaingsAwarenessUpdateManyMutationInput = {
-    nome?: StringFieldUpdateOperationsInput | string
-    descricao?: StringFieldUpdateOperationsInput | string
-    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
-    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
-    localizacao?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type CampaingsAwarenessUncheckedUpdateManyInput = {
+  export type CampaigsAwarenessUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     descricao?: StringFieldUpdateOperationsInput | string
@@ -7368,6 +7877,7 @@ export namespace Prisma {
     quantidade_beneficiarios: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    collectionPoints?: CollectionPointsCreateNestedManyWithoutImpactReportInput
   }
 
   export type ReportsCampaignUncheckedCreateInput = {
@@ -7379,6 +7889,7 @@ export namespace Prisma {
     quantidade_beneficiarios: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    collectionPoints?: CollectionPointsUncheckedCreateNestedManyWithoutImpactReportInput
   }
 
   export type ReportsCampaignUpdateInput = {
@@ -7389,6 +7900,7 @@ export namespace Prisma {
     quantidade_beneficiarios?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUpdateManyWithoutImpactReportNestedInput
   }
 
   export type ReportsCampaignUncheckedUpdateInput = {
@@ -7400,6 +7912,7 @@ export namespace Prisma {
     quantidade_beneficiarios?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    collectionPoints?: CollectionPointsUncheckedUpdateManyWithoutImpactReportNestedInput
   }
 
   export type ReportsCampaignCreateManyInput = {
@@ -7471,7 +7984,7 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type DonarsCountOrderByAggregateInput = {
+  export type DonorCountOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -7482,22 +7995,11 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type DonarsAvgOrderByAggregateInput = {
+  export type DonorAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type DonarsMaxOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    email?: SortOrder
-    telefone?: SortOrder
-    endereco?: SortOrder
-    cnpj?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-  }
-
-  export type DonarsMinOrderByAggregateInput = {
+  export type DonorMaxOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -7508,7 +8010,18 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type DonarsSumOrderByAggregateInput = {
+  export type DonorMinOrderByAggregateInput = {
+    id?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    telefone?: SortOrder
+    endereco?: SortOrder
+    cnpj?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DonorSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -7560,6 +8073,16 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type CollectionPointsListRelationFilter = {
+    every?: CollectionPointsWhereInput
+    some?: CollectionPointsWhereInput
+    none?: CollectionPointsWhereInput
+  }
+
+  export type CollectionPointsOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
   export type BeneficiaryCountOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
@@ -7601,8 +8124,26 @@ export namespace Prisma {
     id?: SortOrder
   }
 
-  export type ColectionPointsCountOrderByAggregateInput = {
+  export type BeneficiaryScalarRelationFilter = {
+    is?: BeneficiaryWhereInput
+    isNot?: BeneficiaryWhereInput
+  }
+
+  export type ReportsCampaignScalarRelationFilter = {
+    is?: ReportsCampaignWhereInput
+    isNot?: ReportsCampaignWhereInput
+  }
+
+  export type CampaigsAwarenessScalarRelationFilter = {
+    is?: CampaigsAwarenessWhereInput
+    isNot?: CampaigsAwarenessWhereInput
+  }
+
+  export type CollectionPointsCountOrderByAggregateInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
     nome?: SortOrder
     endereco?: SortOrder
     telefone?: SortOrder
@@ -7611,12 +8152,18 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type ColectionPointsAvgOrderByAggregateInput = {
+  export type CollectionPointsAvgOrderByAggregateInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
   }
 
-  export type ColectionPointsMaxOrderByAggregateInput = {
+  export type CollectionPointsMaxOrderByAggregateInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
     nome?: SortOrder
     endereco?: SortOrder
     telefone?: SortOrder
@@ -7625,8 +8172,11 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type ColectionPointsMinOrderByAggregateInput = {
+  export type CollectionPointsMinOrderByAggregateInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
     nome?: SortOrder
     endereco?: SortOrder
     telefone?: SortOrder
@@ -7635,11 +8185,14 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type ColectionPointsSumOrderByAggregateInput = {
+  export type CollectionPointsSumOrderByAggregateInput = {
     id?: SortOrder
+    beneficiaryId?: SortOrder
+    impactReportId?: SortOrder
+    campaigsAwarenessId?: SortOrder
   }
 
-  export type CampaingsAwarenessCountOrderByAggregateInput = {
+  export type CampaigsAwarenessCountOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     descricao?: SortOrder
@@ -7650,22 +8203,11 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type CampaingsAwarenessAvgOrderByAggregateInput = {
+  export type CampaigsAwarenessAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type CampaingsAwarenessMaxOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    descricao?: SortOrder
-    data_inicio?: SortOrder
-    data_fim?: SortOrder
-    localizacao?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-  }
-
-  export type CampaingsAwarenessMinOrderByAggregateInput = {
+  export type CampaigsAwarenessMaxOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     descricao?: SortOrder
@@ -7676,7 +8218,18 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type CampaingsAwarenessSumOrderByAggregateInput = {
+  export type CampaigsAwarenessMinOrderByAggregateInput = {
+    id?: SortOrder
+    nome?: SortOrder
+    descricao?: SortOrder
+    data_inicio?: SortOrder
+    data_fim?: SortOrder
+    localizacao?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CampaigsAwarenessSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -7739,6 +8292,174 @@ export namespace Prisma {
     decrement?: number
     multiply?: number
     divide?: number
+  }
+
+  export type CollectionPointsCreateNestedManyWithoutBeneficiaryInput = {
+    create?: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput> | CollectionPointsCreateWithoutBeneficiaryInput[] | CollectionPointsUncheckedCreateWithoutBeneficiaryInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutBeneficiaryInput | CollectionPointsCreateOrConnectWithoutBeneficiaryInput[]
+    createMany?: CollectionPointsCreateManyBeneficiaryInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUncheckedCreateNestedManyWithoutBeneficiaryInput = {
+    create?: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput> | CollectionPointsCreateWithoutBeneficiaryInput[] | CollectionPointsUncheckedCreateWithoutBeneficiaryInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutBeneficiaryInput | CollectionPointsCreateOrConnectWithoutBeneficiaryInput[]
+    createMany?: CollectionPointsCreateManyBeneficiaryInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUpdateManyWithoutBeneficiaryNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput> | CollectionPointsCreateWithoutBeneficiaryInput[] | CollectionPointsUncheckedCreateWithoutBeneficiaryInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutBeneficiaryInput | CollectionPointsCreateOrConnectWithoutBeneficiaryInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutBeneficiaryInput | CollectionPointsUpsertWithWhereUniqueWithoutBeneficiaryInput[]
+    createMany?: CollectionPointsCreateManyBeneficiaryInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutBeneficiaryInput | CollectionPointsUpdateWithWhereUniqueWithoutBeneficiaryInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutBeneficiaryInput | CollectionPointsUpdateManyWithWhereWithoutBeneficiaryInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutBeneficiaryNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput> | CollectionPointsCreateWithoutBeneficiaryInput[] | CollectionPointsUncheckedCreateWithoutBeneficiaryInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutBeneficiaryInput | CollectionPointsCreateOrConnectWithoutBeneficiaryInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutBeneficiaryInput | CollectionPointsUpsertWithWhereUniqueWithoutBeneficiaryInput[]
+    createMany?: CollectionPointsCreateManyBeneficiaryInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutBeneficiaryInput | CollectionPointsUpdateWithWhereUniqueWithoutBeneficiaryInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutBeneficiaryInput | CollectionPointsUpdateManyWithWhereWithoutBeneficiaryInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+  }
+
+  export type BeneficiaryCreateNestedOneWithoutCollectionPointsInput = {
+    create?: XOR<BeneficiaryCreateWithoutCollectionPointsInput, BeneficiaryUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: BeneficiaryCreateOrConnectWithoutCollectionPointsInput
+    connect?: BeneficiaryWhereUniqueInput
+  }
+
+  export type ReportsCampaignCreateNestedOneWithoutCollectionPointsInput = {
+    create?: XOR<ReportsCampaignCreateWithoutCollectionPointsInput, ReportsCampaignUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: ReportsCampaignCreateOrConnectWithoutCollectionPointsInput
+    connect?: ReportsCampaignWhereUniqueInput
+  }
+
+  export type CampaigsAwarenessCreateNestedOneWithoutCollectionPointsInput = {
+    create?: XOR<CampaigsAwarenessCreateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: CampaigsAwarenessCreateOrConnectWithoutCollectionPointsInput
+    connect?: CampaigsAwarenessWhereUniqueInput
+  }
+
+  export type BeneficiaryUpdateOneRequiredWithoutCollectionPointsNestedInput = {
+    create?: XOR<BeneficiaryCreateWithoutCollectionPointsInput, BeneficiaryUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: BeneficiaryCreateOrConnectWithoutCollectionPointsInput
+    upsert?: BeneficiaryUpsertWithoutCollectionPointsInput
+    connect?: BeneficiaryWhereUniqueInput
+    update?: XOR<XOR<BeneficiaryUpdateToOneWithWhereWithoutCollectionPointsInput, BeneficiaryUpdateWithoutCollectionPointsInput>, BeneficiaryUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type ReportsCampaignUpdateOneRequiredWithoutCollectionPointsNestedInput = {
+    create?: XOR<ReportsCampaignCreateWithoutCollectionPointsInput, ReportsCampaignUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: ReportsCampaignCreateOrConnectWithoutCollectionPointsInput
+    upsert?: ReportsCampaignUpsertWithoutCollectionPointsInput
+    connect?: ReportsCampaignWhereUniqueInput
+    update?: XOR<XOR<ReportsCampaignUpdateToOneWithWhereWithoutCollectionPointsInput, ReportsCampaignUpdateWithoutCollectionPointsInput>, ReportsCampaignUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type CampaigsAwarenessUpdateOneRequiredWithoutCollectionPointsNestedInput = {
+    create?: XOR<CampaigsAwarenessCreateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedCreateWithoutCollectionPointsInput>
+    connectOrCreate?: CampaigsAwarenessCreateOrConnectWithoutCollectionPointsInput
+    upsert?: CampaigsAwarenessUpsertWithoutCollectionPointsInput
+    connect?: CampaigsAwarenessWhereUniqueInput
+    update?: XOR<XOR<CampaigsAwarenessUpdateToOneWithWhereWithoutCollectionPointsInput, CampaigsAwarenessUpdateWithoutCollectionPointsInput>, CampaigsAwarenessUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type CollectionPointsCreateNestedManyWithoutCampaigsAwarenessInput = {
+    create?: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput> | CollectionPointsCreateWithoutCampaigsAwarenessInput[] | CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput | CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput[]
+    createMany?: CollectionPointsCreateManyCampaigsAwarenessInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUncheckedCreateNestedManyWithoutCampaigsAwarenessInput = {
+    create?: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput> | CollectionPointsCreateWithoutCampaigsAwarenessInput[] | CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput | CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput[]
+    createMany?: CollectionPointsCreateManyCampaigsAwarenessInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUpdateManyWithoutCampaigsAwarenessNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput> | CollectionPointsCreateWithoutCampaigsAwarenessInput[] | CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput | CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutCampaigsAwarenessInput | CollectionPointsUpsertWithWhereUniqueWithoutCampaigsAwarenessInput[]
+    createMany?: CollectionPointsCreateManyCampaigsAwarenessInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutCampaigsAwarenessInput | CollectionPointsUpdateWithWhereUniqueWithoutCampaigsAwarenessInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutCampaigsAwarenessInput | CollectionPointsUpdateManyWithWhereWithoutCampaigsAwarenessInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutCampaigsAwarenessNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput> | CollectionPointsCreateWithoutCampaigsAwarenessInput[] | CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput | CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutCampaigsAwarenessInput | CollectionPointsUpsertWithWhereUniqueWithoutCampaigsAwarenessInput[]
+    createMany?: CollectionPointsCreateManyCampaigsAwarenessInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutCampaigsAwarenessInput | CollectionPointsUpdateWithWhereUniqueWithoutCampaigsAwarenessInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutCampaigsAwarenessInput | CollectionPointsUpdateManyWithWhereWithoutCampaigsAwarenessInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+  }
+
+  export type CollectionPointsCreateNestedManyWithoutImpactReportInput = {
+    create?: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput> | CollectionPointsCreateWithoutImpactReportInput[] | CollectionPointsUncheckedCreateWithoutImpactReportInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutImpactReportInput | CollectionPointsCreateOrConnectWithoutImpactReportInput[]
+    createMany?: CollectionPointsCreateManyImpactReportInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUncheckedCreateNestedManyWithoutImpactReportInput = {
+    create?: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput> | CollectionPointsCreateWithoutImpactReportInput[] | CollectionPointsUncheckedCreateWithoutImpactReportInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutImpactReportInput | CollectionPointsCreateOrConnectWithoutImpactReportInput[]
+    createMany?: CollectionPointsCreateManyImpactReportInputEnvelope
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+  }
+
+  export type CollectionPointsUpdateManyWithoutImpactReportNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput> | CollectionPointsCreateWithoutImpactReportInput[] | CollectionPointsUncheckedCreateWithoutImpactReportInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutImpactReportInput | CollectionPointsCreateOrConnectWithoutImpactReportInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutImpactReportInput | CollectionPointsUpsertWithWhereUniqueWithoutImpactReportInput[]
+    createMany?: CollectionPointsCreateManyImpactReportInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutImpactReportInput | CollectionPointsUpdateWithWhereUniqueWithoutImpactReportInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutImpactReportInput | CollectionPointsUpdateManyWithWhereWithoutImpactReportInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutImpactReportNestedInput = {
+    create?: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput> | CollectionPointsCreateWithoutImpactReportInput[] | CollectionPointsUncheckedCreateWithoutImpactReportInput[]
+    connectOrCreate?: CollectionPointsCreateOrConnectWithoutImpactReportInput | CollectionPointsCreateOrConnectWithoutImpactReportInput[]
+    upsert?: CollectionPointsUpsertWithWhereUniqueWithoutImpactReportInput | CollectionPointsUpsertWithWhereUniqueWithoutImpactReportInput[]
+    createMany?: CollectionPointsCreateManyImpactReportInputEnvelope
+    set?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    disconnect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    delete?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    connect?: CollectionPointsWhereUniqueInput | CollectionPointsWhereUniqueInput[]
+    update?: CollectionPointsUpdateWithWhereUniqueWithoutImpactReportInput | CollectionPointsUpdateWithWhereUniqueWithoutImpactReportInput[]
+    updateMany?: CollectionPointsUpdateManyWithWhereWithoutImpactReportInput | CollectionPointsUpdateManyWithWhereWithoutImpactReportInput[]
+    deleteMany?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -7833,6 +8554,484 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type CollectionPointsCreateWithoutBeneficiaryInput = {
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    impactReport: ReportsCampaignCreateNestedOneWithoutCollectionPointsInput
+    campaigsAwareness: CampaigsAwarenessCreateNestedOneWithoutCollectionPointsInput
+  }
+
+  export type CollectionPointsUncheckedCreateWithoutBeneficiaryInput = {
+    id?: number
+    impactReportId: number
+    campaigsAwarenessId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsCreateOrConnectWithoutBeneficiaryInput = {
+    where: CollectionPointsWhereUniqueInput
+    create: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput>
+  }
+
+  export type CollectionPointsCreateManyBeneficiaryInputEnvelope = {
+    data: CollectionPointsCreateManyBeneficiaryInput | CollectionPointsCreateManyBeneficiaryInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type CollectionPointsUpsertWithWhereUniqueWithoutBeneficiaryInput = {
+    where: CollectionPointsWhereUniqueInput
+    update: XOR<CollectionPointsUpdateWithoutBeneficiaryInput, CollectionPointsUncheckedUpdateWithoutBeneficiaryInput>
+    create: XOR<CollectionPointsCreateWithoutBeneficiaryInput, CollectionPointsUncheckedCreateWithoutBeneficiaryInput>
+  }
+
+  export type CollectionPointsUpdateWithWhereUniqueWithoutBeneficiaryInput = {
+    where: CollectionPointsWhereUniqueInput
+    data: XOR<CollectionPointsUpdateWithoutBeneficiaryInput, CollectionPointsUncheckedUpdateWithoutBeneficiaryInput>
+  }
+
+  export type CollectionPointsUpdateManyWithWhereWithoutBeneficiaryInput = {
+    where: CollectionPointsScalarWhereInput
+    data: XOR<CollectionPointsUpdateManyMutationInput, CollectionPointsUncheckedUpdateManyWithoutBeneficiaryInput>
+  }
+
+  export type CollectionPointsScalarWhereInput = {
+    AND?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+    OR?: CollectionPointsScalarWhereInput[]
+    NOT?: CollectionPointsScalarWhereInput | CollectionPointsScalarWhereInput[]
+    id?: IntFilter<"CollectionPoints"> | number
+    beneficiaryId?: IntFilter<"CollectionPoints"> | number
+    impactReportId?: IntFilter<"CollectionPoints"> | number
+    campaigsAwarenessId?: IntFilter<"CollectionPoints"> | number
+    nome?: StringFilter<"CollectionPoints"> | string
+    endereco?: StringFilter<"CollectionPoints"> | string
+    telefone?: StringFilter<"CollectionPoints"> | string
+    horario_de_funcionamento?: DateTimeFilter<"CollectionPoints"> | Date | string
+    createdAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+    updatedAt?: DateTimeFilter<"CollectionPoints"> | Date | string
+  }
+
+  export type BeneficiaryCreateWithoutCollectionPointsInput = {
+    nome: string
+    email: string
+    telefone: string
+    endereco: string
+    cpf: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type BeneficiaryUncheckedCreateWithoutCollectionPointsInput = {
+    id?: number
+    nome: string
+    email: string
+    telefone: string
+    endereco: string
+    cpf: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type BeneficiaryCreateOrConnectWithoutCollectionPointsInput = {
+    where: BeneficiaryWhereUniqueInput
+    create: XOR<BeneficiaryCreateWithoutCollectionPointsInput, BeneficiaryUncheckedCreateWithoutCollectionPointsInput>
+  }
+
+  export type ReportsCampaignCreateWithoutCollectionPointsInput = {
+    nome: string
+    descricao: string
+    localizacao: string
+    quantidade_alimentos: number
+    quantidade_beneficiarios: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReportsCampaignUncheckedCreateWithoutCollectionPointsInput = {
+    id?: number
+    nome: string
+    descricao: string
+    localizacao: string
+    quantidade_alimentos: number
+    quantidade_beneficiarios: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReportsCampaignCreateOrConnectWithoutCollectionPointsInput = {
+    where: ReportsCampaignWhereUniqueInput
+    create: XOR<ReportsCampaignCreateWithoutCollectionPointsInput, ReportsCampaignUncheckedCreateWithoutCollectionPointsInput>
+  }
+
+  export type CampaigsAwarenessCreateWithoutCollectionPointsInput = {
+    nome: string
+    descricao: string
+    data_inicio: Date | string
+    data_fim: Date | string
+    localizacao: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CampaigsAwarenessUncheckedCreateWithoutCollectionPointsInput = {
+    id?: number
+    nome: string
+    descricao: string
+    data_inicio: Date | string
+    data_fim: Date | string
+    localizacao: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CampaigsAwarenessCreateOrConnectWithoutCollectionPointsInput = {
+    where: CampaigsAwarenessWhereUniqueInput
+    create: XOR<CampaigsAwarenessCreateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedCreateWithoutCollectionPointsInput>
+  }
+
+  export type BeneficiaryUpsertWithoutCollectionPointsInput = {
+    update: XOR<BeneficiaryUpdateWithoutCollectionPointsInput, BeneficiaryUncheckedUpdateWithoutCollectionPointsInput>
+    create: XOR<BeneficiaryCreateWithoutCollectionPointsInput, BeneficiaryUncheckedCreateWithoutCollectionPointsInput>
+    where?: BeneficiaryWhereInput
+  }
+
+  export type BeneficiaryUpdateToOneWithWhereWithoutCollectionPointsInput = {
+    where?: BeneficiaryWhereInput
+    data: XOR<BeneficiaryUpdateWithoutCollectionPointsInput, BeneficiaryUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type BeneficiaryUpdateWithoutCollectionPointsInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    cpf?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BeneficiaryUncheckedUpdateWithoutCollectionPointsInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    cpf?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportsCampaignUpsertWithoutCollectionPointsInput = {
+    update: XOR<ReportsCampaignUpdateWithoutCollectionPointsInput, ReportsCampaignUncheckedUpdateWithoutCollectionPointsInput>
+    create: XOR<ReportsCampaignCreateWithoutCollectionPointsInput, ReportsCampaignUncheckedCreateWithoutCollectionPointsInput>
+    where?: ReportsCampaignWhereInput
+  }
+
+  export type ReportsCampaignUpdateToOneWithWhereWithoutCollectionPointsInput = {
+    where?: ReportsCampaignWhereInput
+    data: XOR<ReportsCampaignUpdateWithoutCollectionPointsInput, ReportsCampaignUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type ReportsCampaignUpdateWithoutCollectionPointsInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    localizacao?: StringFieldUpdateOperationsInput | string
+    quantidade_alimentos?: IntFieldUpdateOperationsInput | number
+    quantidade_beneficiarios?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportsCampaignUncheckedUpdateWithoutCollectionPointsInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    localizacao?: StringFieldUpdateOperationsInput | string
+    quantidade_alimentos?: IntFieldUpdateOperationsInput | number
+    quantidade_beneficiarios?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CampaigsAwarenessUpsertWithoutCollectionPointsInput = {
+    update: XOR<CampaigsAwarenessUpdateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedUpdateWithoutCollectionPointsInput>
+    create: XOR<CampaigsAwarenessCreateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedCreateWithoutCollectionPointsInput>
+    where?: CampaigsAwarenessWhereInput
+  }
+
+  export type CampaigsAwarenessUpdateToOneWithWhereWithoutCollectionPointsInput = {
+    where?: CampaigsAwarenessWhereInput
+    data: XOR<CampaigsAwarenessUpdateWithoutCollectionPointsInput, CampaigsAwarenessUncheckedUpdateWithoutCollectionPointsInput>
+  }
+
+  export type CampaigsAwarenessUpdateWithoutCollectionPointsInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
+    localizacao?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CampaigsAwarenessUncheckedUpdateWithoutCollectionPointsInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    descricao?: StringFieldUpdateOperationsInput | string
+    data_inicio?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_fim?: DateTimeFieldUpdateOperationsInput | Date | string
+    localizacao?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsCreateWithoutCampaigsAwarenessInput = {
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    beneficiary: BeneficiaryCreateNestedOneWithoutCollectionPointsInput
+    impactReport: ReportsCampaignCreateNestedOneWithoutCollectionPointsInput
+  }
+
+  export type CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput = {
+    id?: number
+    beneficiaryId: number
+    impactReportId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsCreateOrConnectWithoutCampaigsAwarenessInput = {
+    where: CollectionPointsWhereUniqueInput
+    create: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput>
+  }
+
+  export type CollectionPointsCreateManyCampaigsAwarenessInputEnvelope = {
+    data: CollectionPointsCreateManyCampaigsAwarenessInput | CollectionPointsCreateManyCampaigsAwarenessInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type CollectionPointsUpsertWithWhereUniqueWithoutCampaigsAwarenessInput = {
+    where: CollectionPointsWhereUniqueInput
+    update: XOR<CollectionPointsUpdateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedUpdateWithoutCampaigsAwarenessInput>
+    create: XOR<CollectionPointsCreateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedCreateWithoutCampaigsAwarenessInput>
+  }
+
+  export type CollectionPointsUpdateWithWhereUniqueWithoutCampaigsAwarenessInput = {
+    where: CollectionPointsWhereUniqueInput
+    data: XOR<CollectionPointsUpdateWithoutCampaigsAwarenessInput, CollectionPointsUncheckedUpdateWithoutCampaigsAwarenessInput>
+  }
+
+  export type CollectionPointsUpdateManyWithWhereWithoutCampaigsAwarenessInput = {
+    where: CollectionPointsScalarWhereInput
+    data: XOR<CollectionPointsUpdateManyMutationInput, CollectionPointsUncheckedUpdateManyWithoutCampaigsAwarenessInput>
+  }
+
+  export type CollectionPointsCreateWithoutImpactReportInput = {
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    beneficiary: BeneficiaryCreateNestedOneWithoutCollectionPointsInput
+    campaigsAwareness: CampaigsAwarenessCreateNestedOneWithoutCollectionPointsInput
+  }
+
+  export type CollectionPointsUncheckedCreateWithoutImpactReportInput = {
+    id?: number
+    beneficiaryId: number
+    campaigsAwarenessId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsCreateOrConnectWithoutImpactReportInput = {
+    where: CollectionPointsWhereUniqueInput
+    create: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput>
+  }
+
+  export type CollectionPointsCreateManyImpactReportInputEnvelope = {
+    data: CollectionPointsCreateManyImpactReportInput | CollectionPointsCreateManyImpactReportInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type CollectionPointsUpsertWithWhereUniqueWithoutImpactReportInput = {
+    where: CollectionPointsWhereUniqueInput
+    update: XOR<CollectionPointsUpdateWithoutImpactReportInput, CollectionPointsUncheckedUpdateWithoutImpactReportInput>
+    create: XOR<CollectionPointsCreateWithoutImpactReportInput, CollectionPointsUncheckedCreateWithoutImpactReportInput>
+  }
+
+  export type CollectionPointsUpdateWithWhereUniqueWithoutImpactReportInput = {
+    where: CollectionPointsWhereUniqueInput
+    data: XOR<CollectionPointsUpdateWithoutImpactReportInput, CollectionPointsUncheckedUpdateWithoutImpactReportInput>
+  }
+
+  export type CollectionPointsUpdateManyWithWhereWithoutImpactReportInput = {
+    where: CollectionPointsScalarWhereInput
+    data: XOR<CollectionPointsUpdateManyMutationInput, CollectionPointsUncheckedUpdateManyWithoutImpactReportInput>
+  }
+
+  export type CollectionPointsCreateManyBeneficiaryInput = {
+    id?: number
+    impactReportId: number
+    campaigsAwarenessId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsUpdateWithoutBeneficiaryInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    impactReport?: ReportsCampaignUpdateOneRequiredWithoutCollectionPointsNestedInput
+    campaigsAwareness?: CampaigsAwarenessUpdateOneRequiredWithoutCollectionPointsNestedInput
+  }
+
+  export type CollectionPointsUncheckedUpdateWithoutBeneficiaryInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutBeneficiaryInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsCreateManyCampaigsAwarenessInput = {
+    id?: number
+    beneficiaryId: number
+    impactReportId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsUpdateWithoutCampaigsAwarenessInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    beneficiary?: BeneficiaryUpdateOneRequiredWithoutCollectionPointsNestedInput
+    impactReport?: ReportsCampaignUpdateOneRequiredWithoutCollectionPointsNestedInput
+  }
+
+  export type CollectionPointsUncheckedUpdateWithoutCampaigsAwarenessInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutCampaigsAwarenessInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    impactReportId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsCreateManyImpactReportInput = {
+    id?: number
+    beneficiaryId: number
+    campaigsAwarenessId: number
+    nome: string
+    endereco: string
+    telefone: string
+    horario_de_funcionamento: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CollectionPointsUpdateWithoutImpactReportInput = {
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    beneficiary?: BeneficiaryUpdateOneRequiredWithoutCollectionPointsNestedInput
+    campaigsAwareness?: CampaigsAwarenessUpdateOneRequiredWithoutCollectionPointsNestedInput
+  }
+
+  export type CollectionPointsUncheckedUpdateWithoutImpactReportInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CollectionPointsUncheckedUpdateManyWithoutImpactReportInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    beneficiaryId?: IntFieldUpdateOperationsInput | number
+    campaigsAwarenessId?: IntFieldUpdateOperationsInput | number
+    nome?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    horario_de_funcionamento?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

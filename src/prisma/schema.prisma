@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Donars{ 
+model Donor { 
   id          Int     @id @default(autoincrement())
   nome        String
   email       String
@@ -27,6 +27,7 @@ model Donars{
 
 model Beneficiary {
   id          Int      @id @default(autoincrement())
+  collectionPoints   CollectionPoints[]
   nome        String
   email       String
   telefone    String
@@ -36,8 +37,14 @@ model Beneficiary {
   updatedAt   DateTime @updatedAt
 }
 
-model ColectionPoints {
+model CollectionPoints {
   id          Int     @id @default(autoincrement())
+  beneficiaryId Int
+  beneficiary      Beneficiary @relation(fields: [beneficiaryId], references: [id])
+  impactReportId Int
+  impactReport      ReportsCampaign @relation(fields: [impactReportId], references: [id])
+  campaigsAwarenessId Int
+  campaigsAwareness      CampaigsAwareness @relation(fields: [campaigsAwarenessId], references: [id])
   nome        String
   endereco    String
   telefone    String
@@ -46,8 +53,9 @@ model ColectionPoints {
   updatedAt   DateTime @updatedAt
 }
 
-model CampaingsAwareness {
+model CampaigsAwareness {
   id          Int      @id @default(autoincrement())
+  collectionPoints   CollectionPoints[] 
   nome        String
   descricao   String
   data_inicio DateTime
@@ -59,6 +67,7 @@ model CampaingsAwareness {
 
 model ReportsCampaign {
   id          Int      @id @default(autoincrement())
+  collectionPoints   CollectionPoints[] 
   nome        String
   descricao   String
   localizacao String
@@ -68,6 +77,4 @@ model ReportsCampaign {
   updatedAt   DateTime @updatedAt
 }
 
-
-
-
+//--------------------------------------------------------------------------------//

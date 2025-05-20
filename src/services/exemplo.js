@@ -11,13 +11,14 @@
 //   Recebido
 // }
 
-// model Alimento {
+// model Food {
 //   id          Int     @id @default(autoincrement())
 //   nome        String
 //   validade    DateTime
 //   quantidade  Int
 //   categoria   String
 //   descricao   String
+//   doadorId  Donors @relation(fields: [donorId], references: [id])
 //   createdAt   DateTime @default(now())
 //   updatedAt   DateTime @updatedAt
 // }
@@ -30,4 +31,23 @@
 //   createdAt   DateTime @default(now())
 //   updatedAt   DateTime @updatedAt
 //   doadorId Int
+// }
+
+
+
+
+
+
+
+
+// model CollectionPoints {
+//   id          Int     @id @default(autoincrement())
+//   beneficiaryId Int
+//   beneficiary      Beneficiary @relation(fields: [beneficiaryId], references: [id])
+//   nome        String
+//   endereco    String
+//   telefone    String
+//   horario_de_funcionamento DateTime
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
 // }
