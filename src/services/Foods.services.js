@@ -69,20 +69,6 @@ export const deleteFood = async (req, res) => {
     }
 }
 
-export const getFoodByName = async (req, res) => {
-    try {
-        const food = await prisma.food.findMany({
-            where: { name: req.params.name },
-        });
-        if (!food) {
-            return res.status(404).json({ message: "Food not found" });
-        }
-        res.json(food);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-}
-
 export const getFoodByCategory = async (req, res) => {
     try {
         const food = await prisma.food.findMany({

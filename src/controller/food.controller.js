@@ -76,22 +76,6 @@ const deleteFood = async (req, res) => {
   }
 };  
 
-const getFoodByName = async (req, res) => {
-  try {
-    const food = await Food.getFoodByName(req.params.name);
-    if (!food) {
-      return res.status(404).json({ message: "Food not found" });
-    }
-    res.status(200).json({
-      message: "O alimento foi encontrado com sucesso",
-      food,
-    });
-    res.json(food);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-}
-
 const getFoodByCategory = async (req, res) => {
   try {
     const food = await Food.getFoodByCategory(req.params.category);
@@ -107,22 +91,6 @@ const getFoodByCategory = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
-const getFoodByExpirationDate = async (req, res) => {
-  try {
-    const food = await Food.getFoodByExpirationDate(new Date(req.params.expirationDate));
-    if (!food) {
-      return res.status(404).json({ message: "Food not found" });
-    }
-    res.status(200).json({
-      message: "O alimento foi encontrado com sucesso",
-      food,
-    });
-    res.json(food);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-}
 
 export default {
   createFood,
