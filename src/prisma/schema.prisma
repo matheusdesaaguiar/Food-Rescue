@@ -44,25 +44,10 @@ model CollectionPoints {
   food        Food[]
   beneficiaryId Int
   beneficiary      Beneficiary @relation(fields: [beneficiaryId], references: [id])
-  campaigsAwarenessId Int
-  campaigsAwareness      CampaigsAwareness @relation(fields: [campaigsAwarenessId], references: [id])
   name        String
   address   String
   phone    String
   hoursOfOperetion DateTime
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-model CampaigsAwareness {
-  id          Int      @id @default(autoincrement())
-  food        Food[]
-  collectionPoints   CollectionPoints[] 
-  name         String
-  description   String
-  startDate DateTime
-  endDate    DateTime
-  loction String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -91,8 +76,6 @@ model Food {
   donor       Donor   @relation("DonorFood", fields: [donorId], references: [id])
   collectionPointsId  Int
   collectionPoints    CollectionPoints @relation(fields: [collectionPointsId], references: [id])
-  AwarenessId Int
-  Awareness    CampaigsAwareness @relation(fields: [AwarenessId], references: [id])
   notificationEngagements NotificationEngagement[]
   name       String
   validity    DateTime
