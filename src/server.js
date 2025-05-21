@@ -5,6 +5,7 @@ import donorRoutes from './routes/donor.routes.js';
 import swaggerSpec from './docs/SwaggerSpec.js';
 import swaggerUi from 'swagger-ui-express';
 import notificationRoutes from './routes/notificationEngagement.routes.js';
+import collectionPointRoutes from '../src/routes/collectionPoints.routes.js';
 const app = express();
 const PORT = 3000;
 
