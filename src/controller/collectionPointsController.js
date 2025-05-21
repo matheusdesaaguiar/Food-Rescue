@@ -1,4 +1,4 @@
-import service from '../services/collectionPointsService.js';
+import service from '../services/collectionPoints.service.js';
 
 // GET/collection-points → Listar todos
 const getAll = async (req, res) => {
