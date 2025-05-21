@@ -1,9 +1,4 @@
-//adicionarei os testes das rotas impact
-//testes unitários para o service usando o Jest e mock do Prisma Client(cria um prisma somente para testes)
-// só implementei, preciso conectar 
 import impactService from '../services/impact.service.js';
-
-
 //chama as funções dos "espiões"
 const mockCreate = jest.fn();
 const mockFindUnique = jest.fn();
@@ -60,11 +55,6 @@ describe('Impact Service', () => {
         expect(mockDelete).toHaveBeenCalledWith({ where: { id: 1 } });
     });
 // teste para Calcular impacto global
-    /*it('deve calcular o total de alimentos salvos', async () => {
-        const result = await impactService.getGlobalImpact(mockPrisma);
-        expect(result).toBe(250);
-        expect(mockAggregate).toHaveBeenCalledWith({ _sum: { savedFoodKg: true }, });
-    });*/
     it('deve calcular o total de alimentos salvos', async () => {
     const mockAggregate = jest.fn().mockResolvedValue({
       _sum: { savedFoodKg: 250 }
@@ -93,15 +83,11 @@ describe('Impact Service', () => {
             co2Kg: 10
         });
     });// esse vai ser o único teste que vai usar o mock do prisma, vai utilizar apenas os calculos
-    //Apenas porque pela extensão puxa automáticamente para os testes
-   
 });
 /*
-1 resultado relevante, arrumar depois
-  √ deve criar um relatório (21 ms)                                                                                       
-    √ deve buscar um relatório por ID (3 ms)                                                                                
-    √ deve atualizar um relatório (2 ms)                                                                                    
-    √ deve deletar um relatório (1 ms)                                                                                      
-    × deve calcular o total de alimentos salvos (5 ms)                                                                      
-    √ deve calcular a equivalência em água e CO2 (1 ms)  
+2° resultado relevante, arrumar depois
+  Test Suites: 1 failed, 1 passed, 2 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        3.494 s, estimated 4 s
 */
