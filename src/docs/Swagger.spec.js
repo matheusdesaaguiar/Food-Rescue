@@ -9,7 +9,7 @@ const swaggerDocument = {
     { name: 'Alimentos', description: 'Gestão de alimentos disponíveis para doação' },
     { name: 'Beneficiários', description: 'Cadastro e consulta de pessoas que recebem doações' },
     { name: 'Pontos de Coleta', description: 'Locais de entrega e retirada dos alimentos' },
-    { name: 'Impact Report', description: 'Relatórios de impacto e métricas ambientais' },
+    { name: 'Relatórios de Impacto', description: 'Relatórios de impacto e métricas ambientais' },
     { name: 'Notificações', description: 'Alertas e mensagens para engajamento dos usuários' },
     { name: 'Doadores', description: 'Empresas e entidades que doam alimentos' },
   ],
@@ -62,11 +62,11 @@ const swaggerDocument = {
       },// e os outros depois
     },
 
-    // === Impact Report ===
+    // === Relatórios de Impacto ===
     '/impact/reports': {
       post: {
         summary: 'Criar um novo relatório de impacto',
-        tags: ['Impact Report'],
+        tags: ['Relatórios de Impacto'],
         requestBody: {
           required: true,
           content: {
