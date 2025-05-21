@@ -1,6 +1,7 @@
 import express from 'express';
-import cors from 'cors';
+import corsMiddleware from './middleware/cors.middleware.js';
 import impactRoutes from './routes/impact.routes.js';
+
 
 app.use('/impact', impactRoutes);
 app.use('/donors', donorRoutes);
