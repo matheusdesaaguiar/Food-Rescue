@@ -3,6 +3,7 @@
 // só implementei, preciso conectar 
 import impactService from '../services/impact.service.js';
 
+
 //chama as funções dos "espiões"
 const mockCreate = jest.fn();
 const mockFindUnique = jest.fn();
@@ -59,11 +60,30 @@ describe('Impact Service', () => {
         expect(mockDelete).toHaveBeenCalledWith({ where: { id: 1 } });
     });
 // teste para Calcular impacto global
-    it('deve calcular o total de alimentos salvos', async () => {
+    /*it('deve calcular o total de alimentos salvos', async () => {
         const result = await impactService.getGlobalImpact(mockPrisma);
         expect(result).toBe(250);
-        expect(mockAggragate).toHaveBeenCalledWith({ _sum: { savedFoodKg: true }, });
+        expect(mockAggregate).toHaveBeenCalledWith({ _sum: { savedFoodKg: true }, });
+    });*/
+    it('deve calcular o total de alimentos salvos', async () => {
+    const mockAggregate = jest.fn().mockResolvedValue({
+      _sum: { savedFoodKg: 250 }
     });
+
+    const mockPrisma = {
+      impactReport: {
+        aggregate: mockAggregate
+      }
+    };
+
+    const result = await impactService.getGlobalImpact(mockPrisma);
+    
+    expect(result).toBe(250);
+    expect(mockAggregate).toHaveBeenCalledWith({
+      _sum: { savedFoodKg: true }
+    });
+    });
+
 // teste para Calcular equivalência
     it('deve calcular a equivalência em água e CO2', () => {
         const result = impactService.calculateEquivalence(10);
@@ -73,6 +93,8 @@ describe('Impact Service', () => {
             co2Kg: 10
         });
     });// esse vai ser o único teste que vai usar o mock do prisma, vai utilizar apenas os calculos
+    //Apenas porque pela extensão puxa automáticamente para os testes
+   
 });
 /*
 1 resultado relevante, arrumar depois
