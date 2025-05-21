@@ -1,11 +1,11 @@
 import { Router } from "express";
 import notificationController from "../controller/notificationengagement.controller.js";
 
-const notification = Router();
+const notificationRoutes = Router();
 
-notification.post('/create', notificationController.createNotification);
-notification.get('/getall', notificationController.getAllNotifications);
-notification.put('/update/:id', notificationController.updateNotification);
-notification.delete('/delete/:id', notificationController.deleteNotification);
+notificationRoutes.post('/create', notificationController.createNotification);
+notificationRoutes.get('/getall', notificationController.getAllNotifications);
+notificationRoutes.put('/update/:id', notificationController.updateNotification);
+notificationRoutes.delete('/delete/:id', notificationController.deleteNotification);
 
-export default notification;
+export default notificationRoutes;
