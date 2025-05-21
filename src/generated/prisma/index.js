@@ -205,7 +205,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\plugify\\OneDrive\\Desktop\\SquadM4\\src\\generated\\prisma",
+      "value": "C:\\Users\\is064\\OneDrive\\Documentos\\GitHub\\BackEnd\\SquadM4\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -219,12 +219,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\plugify\\OneDrive\\Desktop\\SquadM4\\src\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\is064\\OneDrive\\Documentos\\GitHub\\BackEnd\\SquadM4\\src\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.7.0",
@@ -233,11 +232,12 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://neondb_owner:npg_XA6iBdEcqsu3@ep-withered-art-aclhg6b6-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require"
+        "value": null
       }
     }
   },
