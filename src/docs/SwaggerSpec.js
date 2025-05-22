@@ -176,19 +176,133 @@ const swaggerDocument = {
 
     // === Beneficiários ===
     '/beneficiaries': {
-      get: {
-        summary: 'Listar beneficiários cadastrados',
-        tags: ['Beneficiários'],
-        responses: {
-          '200': {
-            description: 'Lista de beneficiários retornada com sucesso',
-          },
-        },
+  get: {
+    summary: 'Listar beneficiários cadastrados',
+    tags: ['Beneficiários'],
+    responses: {
+      '200': {
+        description: 'Lista de beneficiários retornada com sucesso',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/Beneficiary' }
+            }
+          }
+        }
       },
-      post:{
-        //coloca o código aqui
-      },// e os outros depois
+      '500': {
+        description: 'Erro interno ao listar beneficiários'
+      }
+    }
+  },
+  post: {
+    summary: 'Cadastrar um novo beneficiário',
+    tags: ['Beneficiários'],
+    requestBody: {
+      required: true,
+      content: {
+        'application/json': {
+          schema: { $ref: '#/components/schemas/BeneficiaryInput' }
+        }
+      }
     },
+    responses: {
+      '201': {
+        description: 'Beneficiário criado com sucesso',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Beneficiary' }
+          }
+        }
+      },
+      '500': {
+        description: 'Erro interno ao criar o beneficiário'
+      }
+    }
+  }
+},
+'/beneficiaries/{id}': {
+  get: {
+    summary: 'Buscar beneficiário por ID',
+    tags: ['Beneficiários'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    responses: {
+      '200': {
+        description: 'Beneficiário encontrado',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Beneficiary' }
+          }
+        }
+      },
+      '404': {
+        description: 'Beneficiário não encontrado'
+      }
+    }
+  },
+  put: {
+    summary: 'Atualizar beneficiário por ID',
+    tags: ['Beneficiários'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    requestBody: {
+      required: true,
+      content: {
+        'application/json': {
+          schema: { $ref: '#/components/schemas/BeneficiaryInput' }
+        }
+      }
+    },
+    responses: {
+      '200': {
+        description: 'Beneficiário atualizado com sucesso',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Beneficiary' }
+          }
+        }
+      },
+      '500': {
+        description: 'Erro ao atualizar o beneficiário'
+      }
+    }
+  },
+  delete: {
+    summary: 'Remover beneficiário por ID',
+    tags: ['Beneficiários'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    responses: {
+      '204': {
+        description: 'Beneficiário removido com sucesso'
+      },
+      '500': {
+        description: 'Erro ao remover o beneficiário'
+      }
+    }
+  }
+},
+
 
     // === Pontos de Coleta ===
     '/collection-points': {
@@ -455,8 +569,31 @@ FoodInput: {
   }
 },
 
-//beneficiary:{
-//},
+Beneficiary: {
+  type: 'object',
+  properties: {
+    id: { type: 'integer', example: 1 },
+    name: { type: 'string', example: 'João da Silva' },
+    email: { type: 'string', example: 'joao@email.com' },
+    phone: { type: 'string', example: '+244911223344' },
+    address: { type: 'string', example: 'Rua das Flores, 123 - Luanda' },
+    cpf: { type: 'string', example: '123.456.789-00' },
+    createdAt: { type: 'string', format: 'date-time', example: '2025-05-21T14:00:00Z' },
+    updatedAt: { type: 'string', format: 'date-time', example: '2025-05-21T15:30:00Z' }
+  }
+},
+BeneficiaryInput: {
+  type: 'object',
+  required: ['name', 'email', 'phone', 'address', 'cpf'],
+  properties: {
+    name: { type: 'string', example: 'João da Silva' },
+    email: { type: 'string', example: 'joao@email.com' },
+    phone: { type: 'string', example: '+244911223344' },
+    address: { type: 'string', example: 'Rua das Flores, 123 - Luanda' },
+    cpf: { type: 'string', example: '123.456.789-00' }
+  }
+},
+
 
 //collectionPoints:{
 //},
