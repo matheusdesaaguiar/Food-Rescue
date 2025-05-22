@@ -198,12 +198,66 @@ const swaggerDocument = {
         responses: {
           '200': {
             description: 'Lista de pontos de coleta retornada com sucesso',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'array',
+                  items: { $ref: '#/components/schemas/CollectionPoint' },
+                },
+              },
+            },
           },
+          '500': { description: 'Erro ao listar pontos de coleta' },
         },
       },
-      post:{
-        //coloca o código aqui
-      },// e os outros depois
+      post: {
+        summary: 'Criar novo ponto de coleta',
+        tags: ['Pontos de Coleta'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/CollectionPointInput' },
+            },
+          },
+        },
+        responses: {
+          '200': { description: 'Ponto de coleta criado com sucesso' },
+          '500': { description: 'Erro ao criar ponto de coleta' },
+        },
+      },
+    },
+    '/collection-points/{id}': {
+      patch: {
+        summary: 'Atualizar informações de um ponto de coleta',
+        tags: ['Pontos de Coleta'],
+        parameters: [
+          { name: 'id', in: 'path', required: true, schema: { type: 'integer' } },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/CollectionPointInput' },
+            },
+          },
+        },
+        responses: {
+          '200': { description: 'Ponto de coleta atualizado com sucesso' },
+          '500': { description: 'Erro ao atualizar ponto de coleta' },
+        },
+      },
+      delete: {
+        summary: 'Remover um ponto de coleta',
+        tags: ['Pontos de Coleta'],
+        parameters: [
+          { name: 'id', in: 'path', required: true, schema: { type: 'integer' } },
+        ],
+        responses: {
+          '200': { description: 'Ponto de coleta removido com sucesso' },
+          '500': { description: 'Erro ao remover ponto de coleta' },
+        },
+      },
     },
 
     // === Relatórios de Impacto ===
@@ -429,6 +483,34 @@ FoodInput: {
         },
         required: ['donorId', 'title', 'description', 'savedFoodKg'],
       },
+      
+      CollectionPoint: {
+        type: 'object',
+        properties: {
+          id: { type: 'integer', example: 1 },
+          beneficiaryId: { type: 'integer', example: 10 },
+          campaigsAwarenessId: { type: 'integer', example: 5 },
+          name: { type: 'string', example: 'Ponto Central' },
+          address: { type: 'string', example: 'Rua das Flores, 123' },
+          phone: { type: 'string', example: '(11) 98765-4321' },
+          hoursOfOperetion: { type: 'string', format: 'date-time', example: '2025-05-21T08:00:00Z' },
+          createdAt: { type: 'string', format: 'date-time', example: '2025-05-21T10:00:00Z' },
+          updatedAt: { type: 'string', format: 'date-time', example: '2025-05-21T12:00:00Z' },
+      },
+      },
+      CollectionPointInput: {
+        type: 'object',
+        properties: {
+          beneficiaryId: { type: 'integer', example: 10 },
+          campaigsAwarenessId: { type: 'integer', example: 5 },
+          name: { type: 'string', example: 'Ponto Central' },
+          address: { type: 'string', example: 'Rua das Flores, 123' },
+          phone: { type: 'string', example: '(11) 98765-4321' },
+          hoursOfOperetion: { type: 'string', format: 'date-time', example: '2025-05-21T08:00:00Z' },
+        },
+        required: ['beneficiaryId', 'campaigsAwarenessId', 'name', 'address', 'phone', 'hoursOfOperetion'],
+      },
+      
       //pode adicionar mais schemas aqui em ordem da rotas
         /*Donors:{
         },
