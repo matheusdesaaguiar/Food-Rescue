@@ -1,9 +1,5 @@
-import {
-    createNotification,
-    getAllNotifications,
-    updateNotification,
-    deleteNotification
-} from '../services/NotificationEngagement.service.js'
+import notificationService from '../services/NotificationEngagement.service.js'
+const { createNotification, getAllNotifications, updateNotification, deleteNotification } = notificationService;
 
 class NotificationController {
 
@@ -57,7 +53,7 @@ class NotificationController {
         const {id} = req.params;
         const deleteN = await deleteNotification(id);
         if(!deleteN) {
-            return res.send(404).send({ message: 'Essa notificação não foi encontrada' });
+            return res.status(400).send({ message: 'Essa notificação não foi encontrada' });
         };
         res.status(200).send({ message: 'Notificação deletada com sucesso!' })
     };
