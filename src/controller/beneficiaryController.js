@@ -1,100 +1,77 @@
-// controllers/beneficiaryController.js
+// src/controller/beneficiaryController.js
 
-const verifyBeneficiary = async (req, res) => {
-  try {
-    const { name, registrationNumber } = req.body;
+import * as BeneficiaryService from '../services/beneficiaryServices.js';
+import { PrismaClient } from '@prisma/client';
 
-    if (!name || !registrationNumber) {
-      return res.status(400).json({ message: 'Nome e número de registro são obrigatórios.' });
-    }
-
-    const isValid = true;
-
-    if (isValid) {
-      res.json({ message: 'Instituição verificada com sucesso.' });
-    } else {
-      res.status(401).json({ message: 'Instituição inválida.' });
-    }
-  } catch (error) {
-    res.status(500).json({ message: 'Erro ao verificar instituição', error: error.message });
-  }
-};
+const prisma = new PrismaClient();
 
 const createBeneficiary = async (req, res) => {
   try {
-    const { name, email, registrationNumber } = req.body;
-
-    if (!name || !email || !registrationNumber) {
-      return res.status(400).json({ message: 'Nome, email e número de registro são obrigatórios.' });
-    }
-
-    const newBeneficiary = {
-      id: Date.now(),
-      name,
-      email,
-      registrationNumber,
-    };
-
-    res.status(201).json({ message: 'Beneficiário criado com sucesso!', beneficiary: newBeneficiary });
+    const newBeneficiary = await BeneficiaryService.createBeneficiary(req.body, prisma);
+    res.status(201).json(newBeneficiary);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao criar beneficiário', error: error.message });
-  }
-};
-
-const updateBeneficiary = async (req, res) => {
-  try {
-    const id = Number(req.params.id);
-    const { name, email, registrationNumber } = req.body;
-
-    if (!id) {
-      return res.status(400).json({ message: 'ID do beneficiário é obrigatório.' });
-    }
-
-    const updatedBeneficiary = {
-      id,
-      name: name || 'Nome antigo',
-      email: email || 'Email antigo',
-      registrationNumber: registrationNumber || 'Registro antigo',
-    };
-
-    res.json({ message: 'Beneficiário atualizado com sucesso.', beneficiary: updatedBeneficiary });
-  } catch (error) {
-    res.status(500).json({ message: 'Erro ao atualizar beneficiário', error: error.message });
-  }
-};
-
-const deleteBeneficiary = async (req, res) => {
-  try {
-    const id = Number(req.params.id);
-
-    if (!id) {
-      return res.status(400).json({ message: 'ID do beneficiário é obrigatório.' });
-    }
-
-    res.status(204).send(); // 204 não retorna body
-  } catch (error) {
-    res.status(500).json({ message: 'Erro ao deletar beneficiário', error: error.message });
+    res.status(400).json({ error: error.message });
   }
 };
 
 const getAllBeneficiaries = async (req, res) => {
   try {
-    // Simulação de lista de beneficiários
-    const beneficiaries = [
-      { id: 1, name: "João", email: "joao@email.com", registrationNumber: "123" },
-      { id: 2, name: "Maria", email: "maria@email.com", registrationNumber: "456" },
-    ];
-
-    res.json({ beneficiaries });
+    const list = await BeneficiaryService.getAllBeneficiaries(prisma);
+    res.status(200).json(list);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao buscar beneficiários', error: error.message });
+    res.status(500).json({ error: error.message });
+  }
+};
+
+const getBeneficiaryById = async (req, res) => {
+  try {
+    const beneficiary = await BeneficiaryService.getBeneficiaryById(Number(req.params.id), prisma);
+    if (!beneficiary) {
+      return res.status(404).json({ message: 'Beneficiário não encontrado' });
+    }
+    res.status(200).json(beneficiary);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+const updateBeneficiary = async (req, res) => {
+  try {
+    const updated = await BeneficiaryService.updateBeneficiary(Number(req.params.id), req.body, prisma);
+    res.status(200).json(updated);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+const deleteBeneficiary = async (req, res) => {
+  try {
+    await BeneficiaryService.deleteBeneficiary(Number(req.params.id), prisma);
+    res.status(200).json({ message: 'Beneficiário deletado com sucesso' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+const verifyBeneficiary = async (req, res) => {
+  try {
+    const { cpf } = req.body;
+    if (!cpf) {
+      return res.status(400).json({ error: 'CPF é obrigatório.' });
+    }
+
+    const existing = await prisma.beneficiary.findFirst({ where: { cpf } });
+    res.status(200).json({ exists: !!existing, id: existing?.id || null });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 
 export default {
-  verifyBeneficiary,
   createBeneficiary,
+  getAllBeneficiaries,
+  getBeneficiaryById,
   updateBeneficiary,
   deleteBeneficiary,
-  getAllBeneficiaries
+  verifyBeneficiary
 };

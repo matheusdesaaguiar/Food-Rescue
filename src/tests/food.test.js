@@ -64,21 +64,29 @@ describe('Food Service', () => {
       const newFood = {
         name: 'Apple',
         category: 'Fruit',
-        expirationDate: '2025-12-01'
+        expirationDate: '2025-12-01' // string ISO
       };
 
       const mockCreatedFood = {
         id: 1,
         ...newFood,
-        expirationDate: new Date(newFood.expirationDate)
+        expirationDate: new Date(newFood.expirationDate) // simula retorno do banco com Date
       };
 
       mockCreate.mockResolvedValue(mockCreatedFood);
 
       const result = await foodService.createFood(newFood, mockPrisma);
 
-      expect(result).toMatchObject(newFood);
-      expect(mockCreate).toHaveBeenCalledWith({ data: newFood });
+      expect(result.name).toBe(newFood.name);
+      expect(result.category).toBe(newFood.category);
+      expect(new Date(result.expirationDate)).toEqual(new Date(newFood.expirationDate));
+
+      expect(mockCreate).toHaveBeenCalledWith({
+        data: {
+          ...newFood,
+          expirationDate: new Date(newFood.expirationDate) // garantir consistência no input
+        }
+      });
     });
   });
 

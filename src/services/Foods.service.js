@@ -2,8 +2,16 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-const createFood = (data, client = prisma) => {
-  return client.food.create({ data });
+const createFood = async (foodData, prisma = prismaClient) => {
+  const { name, category, expirationDate } = foodData;
+
+  return await prisma.food.create({
+    data: {
+      name,
+      category,
+      expirationDate: new Date(expirationDate) // <- aqui está o ponto
+    }
+  });
 };
 
 const getAllFoods = (client = prisma) => {

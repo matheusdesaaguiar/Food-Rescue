@@ -6,7 +6,6 @@ const mockUpdate = jest.fn();
 const mockDelete = jest.fn();
 const mockAggregate = jest.fn();
 
-//simulações, como vai funcionar
 const mockPrisma = {
   impactReport: {
     create: mockCreate,
@@ -20,8 +19,7 @@ const mockPrisma = {
 beforeEach(() => {
     jest.clearAllMocks();
 });
-// necessário limpar os mocks antes de cada teste
-// testes individuais >it
+
 describe('Impact Service', () => {
     //teste para verificar a criação de relatórios
     it('deve criar um relatório', async () => {

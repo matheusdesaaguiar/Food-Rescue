@@ -9,8 +9,6 @@
     import FoodsRoutes from './routes/foods.routes.js';
     import beneficiaryRoutes from './routes/beneficiary.routes.js';
 
-
-
     const app = express();
     const PORT = 3000;
 
@@ -22,7 +20,8 @@
     app.use('/notification', notificationRoutes)
     app.use('/collectionPoints', collectionPointRoutes);
     app.use('/foods', FoodsRoutes);
-    app.use('/beneficiary',beneficiaryRoutes)
+    app.use('/beneficiary',beneficiaryRoutes);
+
     app.listen(PORT, ()=>{
         console.log(`Servidor rodando na porta ${PORT}`);
     });
