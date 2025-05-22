@@ -57,9 +57,9 @@ class NotificationController {
         const {id} = req.params;
         const deleteN = await deleteNotification(id);
         if(!deleteN) {
-            return res.send(404).send({ message: 'Essa notificação não foi encontrada' });
+            return res.send(400).send({ message: 'Essa notificação não foi encontrada' });
         };
-        res.status(200).send({ message: 'Notificação deletada com sucesso!' })
+        res.status(204).send({ message: 'Notificação deletada com sucesso!' })
     };
 };
 

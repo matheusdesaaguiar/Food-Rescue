@@ -506,20 +506,8 @@ const swaggerDocument = {
     },
 
     // === Notificações ===
-    '/notifications': {
-      get: {
-        summary: 'Listar notificações e mensagens',
-        tags: ['Notificações'],
-        responses: {
-          '200': {
-            description: 'Notificações retornadas com sucesso',
-          },
-        },
-      },
-      post:{
-        //coloca o código aqui
-      },// e os outros depois
-    },
+    
+    }, //Fecha aqui 
 
     // === Doadores ===
     '/donors': {
