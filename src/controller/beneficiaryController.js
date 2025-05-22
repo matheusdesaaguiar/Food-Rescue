@@ -1,13 +1,13 @@
+// controllers/beneficiaryController.js
+
 const verifyBeneficiary = async (req, res) => {
   try {
     const { name, registrationNumber } = req.body;
 
-    // Verifica se os campos obrigatórios foram enviados
     if (!name || !registrationNumber) {
       return res.status(400).json({ message: 'Nome e número de registro são obrigatórios.' });
     }
 
-    // Simula uma verificação simples
     const isValid = true;
 
     if (isValid) {
@@ -20,19 +20,16 @@ const verifyBeneficiary = async (req, res) => {
   }
 };
 
-//logica para o criate
 const createBeneficiary = async (req, res) => {
   try {
     const { name, email, registrationNumber } = req.body;
 
-    // Validação simples: campos obrigatórios
     if (!name || !email || !registrationNumber) {
       return res.status(400).json({ message: 'Nome, email e número de registro são obrigatórios.' });
     }
 
-    // Simulação de criação (no futuro você salvará no banco)
     const newBeneficiary = {
-      id: Date.now(), // gerador simples de ID (só para teste)
+      id: Date.now(),
       name,
       email,
       registrationNumber,
@@ -53,7 +50,6 @@ const updateBeneficiary = async (req, res) => {
       return res.status(400).json({ message: 'ID do beneficiário é obrigatório.' });
     }
 
-    // Simulação de busca e atualização (em um banco, você buscaria pelo ID e atualizaria)
     const updatedBeneficiary = {
       id,
       name: name || 'Nome antigo',
@@ -75,21 +71,30 @@ const deleteBeneficiary = async (req, res) => {
       return res.status(400).json({ message: 'ID do beneficiário é obrigatório.' });
     }
 
-    // Simulação: apenas confirma a exclusão
-    res.status(204).json({ message: 'Beneficiário deletado com sucesso.' });
+    res.status(204).send(); // 204 não retorna body
   } catch (error) {
     res.status(500).json({ message: 'Erro ao deletar beneficiário', error: error.message });
   }
 };
 
+const getAllBeneficiaries = async (req, res) => {
+  try {
+    // Simulação de lista de beneficiários
+    const beneficiaries = [
+      { id: 1, name: "João", email: "joao@email.com", registrationNumber: "123" },
+      { id: 2, name: "Maria", email: "maria@email.com", registrationNumber: "456" },
+    ];
 
-
-
-
+    res.json({ beneficiaries });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar beneficiários', error: error.message });
+  }
+};
 
 export default {
   verifyBeneficiary,
   createBeneficiary,
   updateBeneficiary,
-  deleteBeneficiary
+  deleteBeneficiary,
+  getAllBeneficiaries
 };
