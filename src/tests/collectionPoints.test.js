@@ -1,8 +1,8 @@
-import pointsController from '../src/controller/collectionPointsController.js';
-import service from '../src/services/collectionPoints.service.js';
+import pointsController from '../controller/collectionPointsController.js';
+import service from '../services/collectionPoints.service.js';
 
-// Mocks do service
-jest.mock('../src/services/collectionPoints.service.js');
+jest.mock('../services/collectionPoints.service.js');
+
 
 describe('CollectionPoints Controller', () => {
   let req;
