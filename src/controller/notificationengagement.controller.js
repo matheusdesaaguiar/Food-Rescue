@@ -1,9 +1,5 @@
-import {
-    createNotification,
-    getAllNotifications,
-    updateNotification,
-    deleteNotification
-} from '../services/NotificationEngagement.service.js'
+import notificationService from '../services/NotificationEngagement.service.js'
+const { createNotification, getAllNotifications, updateNotification, deleteNotification } = notificationService;
 
 class NotificationController {
 
