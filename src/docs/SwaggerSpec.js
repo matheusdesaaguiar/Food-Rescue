@@ -194,7 +194,7 @@ const swaggerDocument = {
     },
 
     // === Beneficiários ===
-    "/beneficiaries": {
+    "/beneficiary": {
       get: {
         summary: "Listar beneficiários cadastrados",
         tags: ["Beneficiários"],
@@ -241,7 +241,7 @@ const swaggerDocument = {
         },
       },
     },
-    "/beneficiaries/{id}": {
+    "/beneficiary/{id}": {
       get: {
         summary: "Buscar beneficiário por ID",
         tags: ["Beneficiários"],
@@ -424,7 +424,7 @@ const swaggerDocument = {
     "/impact/reports/{id}": {
       get: {
         summary: "Buscar um relatório por ID",
-        tags: ["Impact Report"],
+        tags: ["Relatórios de Impacto"],
         parameters: [
           {
             name: "id",
@@ -447,7 +447,7 @@ const swaggerDocument = {
       },
       put: {
         summary: "Atualizar um relatório existente",
-        tags: ["Impact Report"],
+        tags: ["Relatórios de Impacto"],
         parameters: [
           {
             name: "id",
@@ -471,7 +471,7 @@ const swaggerDocument = {
       },
       delete: {
         summary: "Remover um relatório por ID",
-        tags: ["Impact Report"],
+        tags: ["Relatórios de Impacto"],
         parameters: [
           {
             name: "id",
@@ -489,7 +489,7 @@ const swaggerDocument = {
     "/impact/global": {
       get: {
         summary: "Obter o total de alimentos salvos (kg)",
-        tags: ["Impact Report"],
+        tags: ["Relatórios de Impacto"],
         responses: {
           200: {
             description: "Total calculado com sucesso",
@@ -516,7 +516,7 @@ const swaggerDocument = {
       post: {
         summary:
           "Calcular equivalência ambiental com base nos kg de alimentos salvos",
-        tags: ["Impact Report"],
+        tags: ["Relatórios de Impacto"],
         requestBody: {
           required: true,
           content: {

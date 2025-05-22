@@ -21,7 +21,7 @@ beforeEach(() => {
 });
 
 describe('Impact Service', () => {
-    //teste para verificar a criação de relatórios
+//teste para verificar a criação de relatórios
     it('deve criar um relatório', async () => {
         const data = { title: 'Doação', description: 'Descrição', savedFoodKg: 10};
         mockCreate.mockResolvedValue({ id: 1, ...data });
@@ -80,12 +80,7 @@ describe('Impact Service', () => {
             waterLiters: 10000,
             co2Kg: 10
         });
-    });// esse vai ser o único teste que vai usar o mock do prisma, vai utilizar apenas os calculos
+    });
+    // esse vai ser o único teste que vai usar o mock do prisma, vai utilizar apenas os calculos
 });
-/*
-2° resultado relevante, arrumar depois
-  Test Suites: 1 failed, 1 passed, 2 total
-Tests:       6 passed, 6 total
-Snapshots:   0 total
-Time:        3.494 s, estimated 4 s
-*/
+

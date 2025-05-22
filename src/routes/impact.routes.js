@@ -1,6 +1,6 @@
 import express from 'express';
 import impactController from '../controller/impact.controller.js';
-//depois preciso conectar no server js para pegar as rotas corretamente 
+
 const router = express.Router();
 
 router.post('/reports', impactController.createReport);
