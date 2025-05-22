@@ -1,5 +1,5 @@
 // 📦 Controller responsável por lidar com as requisições HTTP (Express)
-import * as donorService from '../services/donorService.js';
+import * as donorService from '../services/donor.service.js';
 
 // 🆕 Criar novo doador
 export const createDonor = async (req, res) => {

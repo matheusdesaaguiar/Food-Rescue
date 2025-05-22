@@ -20,8 +20,8 @@
     app.use('/notification', notificationRoutes)
     app.use('/collection-points', collectionPointRoutes);
     app.use('/foods', FoodsRoutes);
-    app.use('/beneficiary',beneficiaryRoutes)
-
+    app.use('/beneficiary',beneficiaryRoutes);
     app.listen(PORT, ()=>{
         console.log(`Servidor rodando na porta ${PORT}`);
     });
+    
