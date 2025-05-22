@@ -553,19 +553,69 @@ const swaggerDocument = {
     },
 
     // === Notificações ===
-    "/notifications": {
+    '/notification/getall': {
       get: {
-        summary: "Listar notificações e mensagens",
-        tags: ["Notificações"],
+        summary: 'Listar notificações e mensagens',
+        tags: ['Notificações'],
         responses: {
-          200: {
-            description: "Notificações retornadas com sucesso",
+          '200': {
+            description: 'Notificações retornadas com sucesso',
           },
         },
       },
-      post: {
-        //coloca o código aqui
-      }, // e os outros depois
+    },
+    'notification/create': {
+      post:{
+        summary: 'Criar uma nova notificação',
+        tags: ['Notificações'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/NotificationEngagementInput' }
+            },
+          },
+        },
+        responses: {
+          '201': { description: 'Busca por todas as notificações concluidada!' },
+          '500': { description: 'Erro ao criar a notificação' },
+        },
+      },
+    },
+    '/notification/update/{id}': {
+      put: {
+        summary: 'Atualizar uma notificação existente',
+        tags: ['Notificações'],
+        parameters: [
+          { name: 'id', in: 'path', required: true, schema: {
+            type: 'integer'} },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            'aplication/json': {
+              schema: { $ref: '#/components/schemas/NotificationEngagementInput' }
+            },
+          },
+        },
+        responses: {
+          '200': { description: 'Notificação atualizada com sucesso!' },
+          '500': { description: 'Erro ao atualizar a notificação' },
+        },
+      },
+    },
+    '/notification/delete/{id}': {
+      delete: {
+        summary: 'Remove uma notificação por ID',
+        tags: ['Notificações'],
+        parameters: [
+          { name: 'id', in: 'path', required: true, schema: {type: 'integer'} },
+        ],
+        responses: {
+          '204': { description: 'Notificação deletada com sucesso' },
+          '500': { description: 'Erro ao deletar notificação ' }
+        },
+      },
     },
 
     // === Doadores ===
