@@ -16,19 +16,163 @@ const swaggerDocument = {
   paths: {
     // === Alimentos ===
     '/foods': {
-      get: {
-        summary: 'Listar alimentos disponíveis para doação',
-        tags: ['Alimentos'],
-        responses: {
-          '200': {
-            description: 'Lista de alimentos retornada com sucesso',
-          },
-        },
-      },
-      post:{
-        //coloca o código aqui
-      },// e os outros depois
+  get: {
+    summary: 'Listar alimentos disponíveis para doação',
+    tags: ['Alimentos'],
+    responses: {
+      '200': {
+        description: 'Lista de alimentos retornada com sucesso',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/Food' }
+            }
+          }
+        }
+      }
+    }
+  },
+  post: {
+    summary: 'Criar um novo alimento',
+    tags: ['Alimentos'],
+    requestBody: {
+      required: true,
+      content: {
+        'application/json': {
+          schema: { $ref: '#/components/schemas/FoodInput' }
+        }
+      }
     },
+    responses: {
+      '201': {
+        description: 'Alimento criado com sucesso',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Food' }
+          }
+        }
+      },
+      '500': {
+        description: 'Erro interno ao criar o alimento'
+      }
+    }
+  }
+},
+'/foods/byid/{id}': {
+  get: {
+    summary: 'Buscar um alimento por ID',
+    tags: ['Alimentos'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    responses: {
+      '200': {
+        description: 'Alimento encontrado',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Food' }
+          }
+        }
+      },
+      '404': {
+        description: 'Alimento não encontrado'
+      }
+    }
+  }
+},
+'/foods/update/{id}': {
+  put: {
+    summary: 'Atualizar um alimento existente',
+    tags: ['Alimentos'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    requestBody: {
+      required: true,
+      content: {
+        'application/json': {
+          schema: { $ref: '#/components/schemas/FoodInput' }
+        }
+      }
+    },
+    responses: {
+      '200': {
+        description: 'Alimento atualizado com sucesso',
+        content: {
+          'application/json': {
+            schema: { $ref: '#/components/schemas/Food' }
+          }
+        }
+      },
+      '500': {
+        description: 'Erro ao atualizar o alimento'
+      }
+    }
+  }
+},
+'/foods/delete/{id}': {
+  delete: {
+    summary: 'Remover um alimento por ID',
+    tags: ['Alimentos'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'integer' }
+      }
+    ],
+    responses: {
+      '204': {
+        description: 'Alimento deletado com sucesso'
+      },
+      '500': {
+        description: 'Erro ao deletar o alimento'
+      }
+    }
+  }
+},
+'/foods/category/{id}': {
+  get: {
+    summary: 'Buscar alimentos por categoria',
+    tags: ['Alimentos'],
+    parameters: [
+      {
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: { type: 'string' }
+      }
+    ],
+    responses: {
+      '200': {
+        description: 'Alimentos encontrados na categoria',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/Food' }
+            }
+          }
+        }
+      },
+      '404': {
+        description: 'Nenhum alimento encontrado na categoria'
+      }
+    }
+  }
+},
 
     // === Beneficiários ===
     '/beneficiaries': {
@@ -228,10 +372,41 @@ const swaggerDocument = {
 
   components: {
     schemas: {
-        //pode adicionar mais schemas aqui em ordem da rotas
-        /*Food:{
-        },
-        */
+       Food: {
+  type: 'object',
+  properties: {
+    id: { type: 'integer', example: 1 },
+    donorId: { type: 'integer', example: 5 },
+    collectionPointsId: { type: 'integer', example: 2 },
+    name: { type: 'string', example: 'Arroz Integral' },
+    validity: { type: 'string', format: 'date-time', example: '2025-06-30T00:00:00Z' },
+    quantity: { type: 'integer', example: 10 },
+    category: { type: 'string', example: 'Grãos' },
+    description: { type: 'string', example: 'Pacotes de arroz integral 1kg' },
+    createdAt: { type: 'string', format: 'date-time', example: '2025-05-21T12:00:00Z' },
+    updatedAt: { type: 'string', format: 'date-time', example: '2025-05-21T12:30:00Z' },
+  }
+},
+FoodInput: {
+  type: 'object',
+  required: ['donorId', 'collectionPointsId', 'name', 'validity', 'quantity', 'category', 'description'],
+  properties: {
+    donorId: { type: 'integer', example: 5 },
+    collectionPointsId: { type: 'integer', example: 2 },
+    name: { type: 'string', example: 'Arroz Integral' },
+    validity: { type: 'string', format: 'date-time', example: '2025-06-30T00:00:00Z' },
+    quantity: { type: 'integer', example: 10 },
+    category: { type: 'string', example: 'Grãos' },
+    description: { type: 'string', example: 'Pacotes de arroz integral 1kg' },
+  }
+},
+
+//beneficiary:{
+//},
+
+//collectionPoints:{
+//},
+
       ImpactReport: {
         type: 'object',
         properties: {

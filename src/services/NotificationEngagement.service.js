@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 // CREATE (C) - CRIA NOTIFICAÇÃO (POST)
 const createNotification = async(data)=>{
-    const create = await prisma.notificationengagement.create({
+    const create = await prisma.notificationEngagement.create({
         data: {
             foodId: data.foodId,
             beneficiaryId: data.beneficiaryId,
@@ -24,7 +24,7 @@ const getAllNotifications = async()=>{
 
 // UPDATE (U) - ATUALIZAR OS DADOS DE UMA NOTIFICAÇÃO (PUT)
 const updateNotification = async(id, data)=>{
-    const update = await prisma.notificationengagement.update({
+    const update = await prisma.notificationEngagement.update({
         where: {id},
         data: {
             foodId: data.foodId,
@@ -39,7 +39,7 @@ const updateNotification = async(id, data)=>{
 
 // DELETE (D) - DELETA UMA NOTIFICAÇÃO (DELETE)
 const deleteNotification = async(id)=>{
-    const deleteN = await prisma.notificationengagement.delete({ where: {id} });
+    const deleteN = await prisma.notificationEngagement.delete({ where: {id} });
 
     return deleteN;
 }
