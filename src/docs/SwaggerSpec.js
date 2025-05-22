@@ -58,8 +58,8 @@ const swaggerDocument = {
         },
       },
       post:{
-        //coloca o código aqui
-      },// e os outros depois
+        
+      },
     },
 
     // === Relatórios de Impacto ===
