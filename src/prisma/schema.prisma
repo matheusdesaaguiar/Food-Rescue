@@ -3,10 +3,9 @@
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
+//output   = "../generated/prisma"
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -14,12 +13,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Donars{ 
+model Donor { 
   id          Int     @id @default(autoincrement())
-  nome        String
+  Food        Food[]  @relation("DonorFood")
+  ImpactReport ImpactReport[]
+  name       String
   email       String
-  telefone    String
-  endereco    String
+  phone   String
+  address    String
   cnpj        String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -27,47 +28,71 @@ model Donars{
 
 model Beneficiary {
   id          Int      @id @default(autoincrement())
-  nome        String
+  collectionPoints   CollectionPoints[]
+  notificationEngagements NotificationEngagement[]
+  name       String
   email       String
-  telefone    String
-  endereco    String
+  phone    String
+  address    String
   cpf         String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
 
-model ColectionPoints {
+model CollectionPoints {
   id          Int     @id @default(autoincrement())
-  nome        String
-  endereco    String
-  telefone    String
-  horario_de_funcionamento DateTime
+  food        Food[]
+  beneficiaryId Int
+  beneficiary      Beneficiary @relation(fields: [beneficiaryId], references: [id])
+  name        String
+  address   String
+  phone    String
+  hoursOfOperetion DateTime
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
 
-model CampaingsAwareness {
+//--------------------------------------------------------------------------------//
+
+model NotificationEngagement {
+  id Int @id @default(autoincrement())
+  foodId Int
+  food Food @relation(fields: [foodId], references: [id])
+  beneficiary Beneficiary @relation(fields: [beneficiaryId], references: [id])
+  beneficiaryId Int
+  NotificationType NotificationType
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum NotificationType {
+  sent
+  received
+}
+
+model Food {
+  id          Int     @id @default(autoincrement())
+  donorId     Int
+  donor       Donor   @relation("DonorFood", fields: [donorId], references: [id])
+  collectionPointsId  Int
+  collectionPoints    CollectionPoints @relation(fields: [collectionPointsId], references: [id])
+  notificationEngagements NotificationEngagement[]
+  name       String
+  validity    DateTime
+  quantity Int
+  category  String
+  description   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ImpactReport {
   id          Int      @id @default(autoincrement())
-  nome        String
-  descricao   String
-  data_inicio DateTime
-  data_fim    DateTime
-  localizacao String
+  donorId Int
+  donor    Donor @relation(fields: [donorId], references: [id])
+  title       String
+  description String
+  savedFoodKg Float
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
-
-model ReportsCampaign {
-  id          Int      @id @default(autoincrement())
-  nome        String
-  descricao   String
-  localizacao String
-  quantidade_alimentos Int
-  quantidade_beneficiarios Int
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-
-
-

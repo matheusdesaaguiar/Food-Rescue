@@ -120,12 +120,12 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.DonarsScalarFieldEnum = {
+exports.Prisma.DonorScalarFieldEnum = {
   id: 'id',
-  nome: 'nome',
+  name: 'name',
   email: 'email',
-  telefone: 'telefone',
-  endereco: 'endereco',
+  phone: 'phone',
+  address: 'address',
   cnpj: 'cnpj',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
@@ -133,43 +133,67 @@ exports.Prisma.DonarsScalarFieldEnum = {
 
 exports.Prisma.BeneficiaryScalarFieldEnum = {
   id: 'id',
-  nome: 'nome',
+  name: 'name',
   email: 'email',
-  telefone: 'telefone',
-  endereco: 'endereco',
+  phone: 'phone',
+  address: 'address',
   cpf: 'cpf',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ColectionPointsScalarFieldEnum = {
+exports.Prisma.CollectionPointsScalarFieldEnum = {
   id: 'id',
-  nome: 'nome',
-  endereco: 'endereco',
-  telefone: 'telefone',
-  horario_de_funcionamento: 'horario_de_funcionamento',
+  beneficiaryId: 'beneficiaryId',
+  campaigsAwarenessId: 'campaigsAwarenessId',
+  name: 'name',
+  address: 'address',
+  phone: 'phone',
+  hoursOfOperetion: 'hoursOfOperetion',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.CampaingsAwarenessScalarFieldEnum = {
+exports.Prisma.CampaigsAwarenessScalarFieldEnum = {
   id: 'id',
-  nome: 'nome',
-  descricao: 'descricao',
-  data_inicio: 'data_inicio',
-  data_fim: 'data_fim',
-  localizacao: 'localizacao',
+  name: 'name',
+  description: 'description',
+  startDate: 'startDate',
+  endDate: 'endDate',
+  loction: 'loction',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ReportsCampaignScalarFieldEnum = {
+exports.Prisma.NotificationEngagementScalarFieldEnum = {
   id: 'id',
-  nome: 'nome',
-  descricao: 'descricao',
-  localizacao: 'localizacao',
-  quantidade_alimentos: 'quantidade_alimentos',
-  quantidade_beneficiarios: 'quantidade_beneficiarios',
+  foodId: 'foodId',
+  beneficiaryId: 'beneficiaryId',
+  NotificationType: 'NotificationType',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.FoodScalarFieldEnum = {
+  id: 'id',
+  donorId: 'donorId',
+  collectionPointsId: 'collectionPointsId',
+  AwarenessId: 'AwarenessId',
+  name: 'name',
+  validity: 'validity',
+  quantity: 'quantity',
+  category: 'category',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ImpactReportScalarFieldEnum = {
+  id: 'id',
+  donorId: 'donorId',
+  title: 'title',
+  description: 'description',
+  savedFoodKg: 'savedFoodKg',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -183,14 +207,19 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
-
+exports.NotificationType = exports.$Enums.NotificationType = {
+  sent: 'sent',
+  received: 'received'
+};
 
 exports.Prisma.ModelName = {
-  Donars: 'Donars',
+  Donor: 'Donor',
   Beneficiary: 'Beneficiary',
-  ColectionPoints: 'ColectionPoints',
-  CampaingsAwareness: 'CampaingsAwareness',
-  ReportsCampaign: 'ReportsCampaign'
+  CollectionPoints: 'CollectionPoints',
+  CampaigsAwareness: 'CampaigsAwareness',
+  NotificationEngagement: 'NotificationEngagement',
+  Food: 'Food',
+  ImpactReport: 'ImpactReport'
 };
 
 /**
