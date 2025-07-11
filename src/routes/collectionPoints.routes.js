@@ -1,6 +1,6 @@
 // src/routes/collectionPointRoutes.js
 import express from 'express';
-import pointsController from '../controller/collectionPointsController.js'
+import pointsController from '../controller/collectionPoints.controller.js'
 
 const router = express.Router();
 

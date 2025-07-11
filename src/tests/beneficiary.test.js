@@ -1,6 +1,6 @@
 // src/tests/beneficiary.test.js
 
-import * as beneficiaryService from '../services/beneficiaryServices.js';
+import * as beneficiaryService from '../services/beneficiary.services.js';
 
 const mockCreate = jest.fn();
 const mockFindMany = jest.fn();

@@ -1,6 +1,6 @@
 // src/controller/beneficiaryController.js
 
-import * as BeneficiaryService from '../services/beneficiaryServices.js';
+import * as BeneficiaryService from '../services/beneficiary.service.js';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

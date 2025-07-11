@@ -1,4 +1,4 @@
-import pointsController from '../controller/collectionPointsController.js';
+import pointsController from '../controller/collectionPoints.controller.js';
 import service from '../services/collectionPoints.service.js';
 
 jest.mock('../services/collectionPoints.service.js');
