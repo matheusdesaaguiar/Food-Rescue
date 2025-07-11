@@ -8,9 +8,9 @@
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "seed": "node src/prisma/seed.js",
-    "prisma:migrate": "prisma migrate dev --schema=src/prisma/schema.prisma",
-    "prisma:generate": "prisma generate --schema=src/prisma/schema.prisma",
-    "prisma:studio": "prisma studio --schema=src/prisma/schema.prisma"
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/hadiel7/SquadM4#readme",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^6.7.0",
+    "@prisma/client": "^6.11.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
